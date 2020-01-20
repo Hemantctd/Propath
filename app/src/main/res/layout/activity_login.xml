@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="org.ctdworld.propath.activity.ActivityLogin"
+    android:background="@color/colorWhite">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        tools:ignore="UselessParent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+             <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                 <!--<ImageView
+                     style="@style/StyleLogo"/>-->
+                 <include layout="@layout/layout_logo"/>
+
+
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_16"
+                        android:layout_marginRight="@dimen/dp_16"
+                        android:layout_marginBottom="@dimen/dp_40"
+                        android:orientation="vertical"
+                        android:layout_marginTop="@dimen/dp_50">
+
+
+                        <LinearLayout
+                            style="@style/StyleEditContainer">
+                            <ImageView
+                                style="@style/StyleEditImgInContainer"
+                                android:src="@drawable/ic_email"
+                                tools:ignore="ContentDescription" />
+
+                            <EditText
+                                android:id="@+id/login_edit_email"
+                                style="@style/StyleEditInContainer"
+                                android:hint="@string/email"
+                                android:inputType="textEmailAddress"
+                                tools:ignore="Autofill" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            style="@style/StyleEditContainer"
+                            android:layout_marginTop="@dimen/dp_18">
+                            <ImageView
+                                style="@style/StyleEditImgInContainer"
+                                android:src="@drawable/ic_password"
+                                tools:ignore="ContentDescription" />
+
+                            <EditText
+                                android:id="@+id/login_edit_password"
+                                style="@style/StyleEditInContainer"
+                                android:hint="@string/password"
+                                android:inputType="textPassword"
+                                tools:ignore="Autofill" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/login_txt_forgot_password"
+                            style="@style/StyleTextView"
+                            android:text="@string/forgot_password"
+                            android:layout_gravity="right"
+                            android:layout_marginTop="@dimen/dp_16"
+                            tools:ignore="RtlHardcoded" />
+
+                        <Button
+                            android:id="@+id/login_btn_login"
+                            style="@style/StyleButton"
+                            android:text="@string/login"
+                            android:layout_marginTop="@dimen/dp_36"
+                            android:layout_marginRight="@dimen/dp_40"
+                            android:layout_marginLeft="@dimen/dp_40"/>
+
+                    </LinearLayout>
+
+        </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/login_progressbar"
+                android:layout_width="@dimen/dp_60"
+                android:layout_height="@dimen/dp_60"
+                android:layout_centerInParent="true"
+                android:visibility="gone"/>
+        </RelativeLayout>
+
+    </ScrollView>
+
+</FrameLayout>

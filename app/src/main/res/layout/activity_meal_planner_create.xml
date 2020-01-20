@@ -1,0 +1,796 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context="org.ctdworld.propath.activity.ActivityTrainingPlanCreate">
+
+
+    <!--toolbar-->
+    <include layout="@layout/toolbar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginBottom="@dimen/footerHeight">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            >
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorWhite"
+                android:orientation="vertical">
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="@dimen/dp_16">
+
+
+                    <!--fragment container for creator details-->
+                    <FrameLayout
+                        android:id="@+id/_fragment_container_creator_details"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+
+                    <!--title-->
+                    <RelativeLayout
+                        style="@style/StyleEditContainer"
+                        android:layout_marginTop="@dimen/dp_18">
+
+
+                        <EditText
+                            android:id="@+id/activity_meal_plan_create_edit_plan_title"
+                            style="@style/StyleEditInContainer"
+                            android:layout_marginEnd="@dimen/dp_16"
+                            android:layout_marginRight="@dimen/dp_16"
+                            android:layout_toStartOf="@id/activity_meal_plan_create_img_mic_plan_title"
+                            android:layout_toLeftOf="@id/activity_meal_plan_create_img_mic_plan_title"
+                            android:hint="@string/enter_title"
+                            android:inputType="text"
+                            tools:ignore="Autofill" />
+
+                        <ImageView
+                            android:id="@+id/activity_meal_plan_create_img_mic_plan_title"
+                            style="@style/StyleImageLightTheme"
+                            android:layout_width="@dimen/dp_24"
+                            android:layout_height="@dimen/dp_24"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:contentDescription="@string/title"
+                            android:src="@drawable/ic_mic" />
+
+                    </RelativeLayout>
+
+
+                    <!--Snacks-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_15"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/snacks"
+                            android:textColor="@color/colorTheme"
+                            android:textSize="@dimen/txtSize"
+
+                            />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rv_snacks"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_18"
+                            android:nestedScrollingEnabled="false"
+                            tools:targetApi="lollipop" />
+
+
+                        <!--title and image or video-->
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <EditText
+                                android:id="@+id/snacks_title"
+                                style="@style/StyleEdit"
+                                android:layout_centerVertical="true"
+                                android:layout_marginTop="@dimen/dp_18"
+                                android:layout_marginEnd="@dimen/dp_16"
+                                android:layout_marginRight="@dimen/dp_16"
+                                android:layout_toStartOf="@id/snacks_image_layout"
+                                android:layout_toLeftOf="@id/snacks_image_layout"
+                                android:hint="@string/plan_item_title"
+                                android:inputType="text"
+                                tools:ignore="Autofill" />
+
+
+                            <FrameLayout
+                                android:id="@+id/snacks_image_layout"
+                                android:layout_width="@dimen/dp_64"
+                                android:layout_height="@dimen/dp_64"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentRight="true">
+
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    android:id="@+id/snacks_image"
+                                    style="@style/StyleImageLightTheme"
+                                    android:layout_width="@dimen/dp_64"
+                                    android:layout_height="@dimen/dp_64"
+                                    android:src="@drawable/img_default_black" />
+
+                                <ImageView
+                                    android:id="@+id/snacks_img_video_icon"
+                                    android:layout_width="@dimen/dp_24"
+                                    android:layout_height="@dimen/dp_24"
+                                    android:layout_gravity="center"
+                                    android:contentDescription="@string/media"
+                                    android:src="@drawable/ic_video_play"
+                                    android:tint="@color/colorTheme"
+                                    android:visibility="gone" />
+
+                            </FrameLayout>
+
+
+                        </RelativeLayout>
+
+
+                        <!--link text and add icon-->
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <!--icon to add document-->
+                            <ImageView
+                                android:id="@+id/add_snacks_item_row"
+                                style="@style/StyleImageLightTheme"
+                                android:layout_width="@dimen/dp_24"
+                                android:layout_height="@dimen/dp_24"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginTop="@dimen/dp_16"
+                                android:layout_marginEnd="@dimen/dp_16"
+                                android:layout_marginRight="@dimen/dp_16"
+                                android:contentDescription="@string/add"
+                                android:src="@drawable/ic_plus"
+                                android:tint="@android:color/transparent" />
+
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+
+
+                    <!--Breakfast-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/breakfast"
+                            android:textColor="@color/colorTheme"
+                            android:textSize="@dimen/txtSize"
+
+                            />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rv_breakfast"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_18"
+                            android:nestedScrollingEnabled="false"
+                            tools:targetApi="lollipop" />
+
+                        <!--title and image or video-->
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <EditText
+                                android:id="@+id/breakfast_title"
+                                style="@style/StyleEdit"
+                                android:layout_centerVertical="true"
+                                android:layout_marginTop="@dimen/dp_18"
+                                android:layout_marginEnd="@dimen/dp_16"
+                                android:layout_marginRight="@dimen/dp_16"
+                                android:layout_toStartOf="@id/breakfast_layout"
+                                android:layout_toLeftOf="@id/breakfast_layout"
+                                android:hint="@string/plan_item_title"
+                                android:inputType="text"
+                                tools:ignore="Autofill" />
+
+
+                            <FrameLayout
+                                android:id="@+id/breakfast_layout"
+                                android:layout_width="@dimen/dp_64"
+                                android:layout_height="@dimen/dp_64"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentRight="true">
+
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    android:id="@+id/breakfast_image_or_video"
+                                    style="@style/StyleImageLightTheme"
+                                    android:layout_width="@dimen/dp_64"
+                                    android:layout_height="@dimen/dp_64"
+                                    android:src="@drawable/img_default_black" />
+
+                                <ImageView
+                                    android:id="@+id/breakfast_img_video_icon"
+                                    android:layout_width="@dimen/dp_24"
+                                    android:layout_height="@dimen/dp_24"
+                                    android:layout_gravity="center"
+                                    android:contentDescription="@string/media"
+                                    android:src="@drawable/ic_video_play"
+                                    android:tint="@color/colorTheme"
+                                    android:visibility="gone" />
+
+                            </FrameLayout>
+
+
+                        </RelativeLayout>
+
+
+                        <!--link text and add icon-->
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <!--icon to add document-->
+                            <ImageView
+                                android:id="@+id/add_breakfast_item_row"
+                                style="@style/StyleImageLightTheme"
+                                android:layout_width="@dimen/dp_24"
+                                android:layout_height="@dimen/dp_24"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginTop="@dimen/dp_16"
+                                android:layout_marginEnd="@dimen/dp_16"
+                                android:layout_marginRight="@dimen/dp_16"
+                                android:contentDescription="@string/add"
+                                android:src="@drawable/ic_plus"
+                                android:tint="@android:color/transparent" />
+
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+
+                    <!--Breakfast Snack-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/snacks"
+                            android:textColor="@color/colorTheme"
+                            android:textSize="@dimen/txtSize"
+
+                            />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rv_snack1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_18"
+                            android:nestedScrollingEnabled="false"
+                            tools:targetApi="lollipop" />
+
+                        <!--title and image or video-->
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <EditText
+                                android:id="@+id/snacks_title2"
+                                style="@style/StyleEdit"
+                                android:layout_centerVertical="true"
+                                android:layout_marginTop="@dimen/dp_18"
+                                android:layout_marginEnd="@dimen/dp_16"
+                                android:layout_marginRight="@dimen/dp_16"
+                                android:layout_toStartOf="@id/snack_layout1"
+                                android:layout_toLeftOf="@id/snack_layout1"
+                                android:hint="@string/plan_item_title"
+                                android:inputType="text"
+                                tools:ignore="Autofill" />
+
+
+                            <FrameLayout
+                                android:id="@+id/snack_layout1"
+                                android:layout_width="@dimen/dp_64"
+                                android:layout_height="@dimen/dp_64"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentRight="true">
+
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    android:id="@+id/snacks_image2"
+                                    style="@style/StyleImageLightTheme"
+                                    android:layout_width="@dimen/dp_64"
+                                    android:layout_height="@dimen/dp_64"
+                                    android:src="@drawable/img_default_black" />
+
+                                <ImageView
+                                    android:id="@+id/snacks_img_video_icon2"
+                                    android:layout_width="@dimen/dp_24"
+                                    android:layout_height="@dimen/dp_24"
+                                    android:layout_gravity="center"
+                                    android:contentDescription="@string/media"
+                                    android:src="@drawable/ic_video_play"
+                                    android:tint="@color/colorTheme"
+                                    android:visibility="gone" />
+
+                            </FrameLayout>
+
+
+                        </RelativeLayout>
+
+
+                        <!--link text and add icon-->
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <!--icon to add document-->
+                            <ImageView
+                                android:id="@+id/add_snacks_item_row2"
+                                style="@style/StyleImageLightTheme"
+                                android:layout_width="@dimen/dp_24"
+                                android:layout_height="@dimen/dp_24"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginTop="@dimen/dp_16"
+                                android:layout_marginEnd="@dimen/dp_16"
+                                android:layout_marginRight="@dimen/dp_16"
+                                android:contentDescription="@string/add"
+                                android:src="@drawable/ic_plus"
+                                android:tint="@android:color/transparent" />
+
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+
+                    <!--Lunch-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/lunch"
+                            android:textColor="@color/colorTheme"
+                            android:textSize="@dimen/txtSize"
+
+                            />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rv_lunch"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_18"
+                            android:nestedScrollingEnabled="false"
+                            tools:targetApi="lollipop" />
+
+                        <!--title and image or video-->
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <EditText
+                                android:id="@+id/lunch_title"
+                                style="@style/StyleEdit"
+                                android:layout_centerVertical="true"
+                                android:layout_marginTop="@dimen/dp_18"
+                                android:layout_marginEnd="@dimen/dp_16"
+                                android:layout_marginRight="@dimen/dp_16"
+                                android:layout_toStartOf="@id/lunch_image_or_video_layout"
+                                android:layout_toLeftOf="@id/lunch_image_or_video_layout"
+                                android:hint="@string/plan_item_title"
+                                android:inputType="text"
+                                tools:ignore="Autofill" />
+
+
+                            <FrameLayout
+                                android:id="@+id/lunch_image_or_video_layout"
+                                android:layout_width="@dimen/dp_64"
+                                android:layout_height="@dimen/dp_64"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentRight="true">
+
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    android:id="@+id/lunch_image_or_video"
+                                    style="@style/StyleImageLightTheme"
+                                    android:layout_width="@dimen/dp_64"
+                                    android:layout_height="@dimen/dp_64"
+                                    android:src="@drawable/img_default_black" />
+
+                                <ImageView
+                                    android:id="@+id/lunch_img_video_icon"
+                                    android:layout_width="@dimen/dp_24"
+                                    android:layout_height="@dimen/dp_24"
+                                    android:layout_gravity="center"
+                                    android:contentDescription="@string/media"
+                                    android:src="@drawable/ic_video_play"
+                                    android:tint="@color/colorTheme"
+                                    android:visibility="gone" />
+
+                            </FrameLayout>
+
+
+                        </RelativeLayout>
+
+
+                        <!--link text and add icon-->
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <!--icon to add document-->
+                            <ImageView
+                                android:id="@+id/add_lunch_item_row"
+                                style="@style/StyleImageLightTheme"
+                                android:layout_width="@dimen/dp_24"
+                                android:layout_height="@dimen/dp_24"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginTop="@dimen/dp_16"
+                                android:layout_marginEnd="@dimen/dp_16"
+                                android:layout_marginRight="@dimen/dp_16"
+                                android:contentDescription="@string/add"
+                                android:src="@drawable/ic_plus"
+                                android:tint="@android:color/transparent" />
+
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+
+                    <!--Lunch Snack-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/snacks"
+                            android:textColor="@color/colorTheme"
+                            android:textSize="@dimen/txtSize"
+
+                            />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rv_snack2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_18"
+                            android:nestedScrollingEnabled="false"
+                            tools:targetApi="lollipop" />
+
+                        <!--title and image or video-->
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <EditText
+                                android:id="@+id/snacks_title3"
+                                style="@style/StyleEdit"
+                                android:layout_centerVertical="true"
+                                android:layout_marginTop="@dimen/dp_18"
+                                android:layout_marginEnd="@dimen/dp_16"
+                                android:layout_marginRight="@dimen/dp_16"
+                                android:layout_toStartOf="@id/snack_layout2"
+                                android:layout_toLeftOf="@id/snack_layout2"
+                                android:hint="@string/plan_item_title"
+                                android:inputType="text"
+                                tools:ignore="Autofill" />
+
+
+                            <FrameLayout
+                                android:id="@+id/snack_layout2"
+                                android:layout_width="@dimen/dp_64"
+                                android:layout_height="@dimen/dp_64"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentRight="true">
+
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    android:id="@+id/snacks_image3"
+                                    style="@style/StyleImageLightTheme"
+                                    android:layout_width="@dimen/dp_64"
+                                    android:layout_height="@dimen/dp_64"
+                                    android:src="@drawable/img_default_black" />
+
+                                <ImageView
+                                    android:id="@+id/snacks_img_video_icon3"
+                                    android:layout_width="@dimen/dp_24"
+                                    android:layout_height="@dimen/dp_24"
+                                    android:layout_gravity="center"
+                                    android:contentDescription="@string/media"
+                                    android:src="@drawable/ic_video_play"
+                                    android:tint="@color/colorTheme"
+                                    android:visibility="gone" />
+
+                            </FrameLayout>
+
+
+                        </RelativeLayout>
+
+
+                        <!--link text and add icon-->
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <!--icon to add document-->
+                            <ImageView
+                                android:id="@+id/add_snacks_item_row3"
+                                style="@style/StyleImageLightTheme"
+                                android:layout_width="@dimen/dp_24"
+                                android:layout_height="@dimen/dp_24"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginTop="@dimen/dp_16"
+                                android:layout_marginEnd="@dimen/dp_16"
+                                android:layout_marginRight="@dimen/dp_16"
+                                android:contentDescription="@string/add"
+                                android:src="@drawable/ic_plus"
+                                android:tint="@android:color/transparent" />
+
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+
+                    <!--Dinner-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/dinner"
+                            android:textColor="@color/colorTheme"
+                            android:textSize="@dimen/txtSize"
+
+                            />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rv_dinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_18"
+                            android:nestedScrollingEnabled="false"
+                            tools:targetApi="lollipop" />
+
+
+                        <!--title and image or video-->
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <EditText
+                                android:id="@+id/dinner_title"
+                                style="@style/StyleEdit"
+                                android:layout_centerVertical="true"
+                                android:layout_marginTop="@dimen/dp_18"
+                                android:layout_marginEnd="@dimen/dp_16"
+                                android:layout_marginRight="@dimen/dp_16"
+                                android:layout_toStartOf="@id/dinner_image_or_video_layout"
+                                android:layout_toLeftOf="@id/dinner_image_or_video_layout"
+                                android:hint="@string/plan_item_title"
+                                android:inputType="text"
+                                tools:ignore="Autofill" />
+
+
+                            <FrameLayout
+                                android:id="@+id/dinner_image_or_video_layout"
+                                android:layout_width="@dimen/dp_64"
+                                android:layout_height="@dimen/dp_64"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentRight="true">
+
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    android:id="@+id/dinner_image_or_video"
+                                    style="@style/StyleImageLightTheme"
+                                    android:layout_width="@dimen/dp_64"
+                                    android:layout_height="@dimen/dp_64"
+                                    android:src="@drawable/img_default_black" />
+
+                                <ImageView
+                                    android:id="@+id/dinner_img_video_icon"
+                                    android:layout_width="@dimen/dp_24"
+                                    android:layout_height="@dimen/dp_24"
+                                    android:layout_gravity="center"
+                                    android:contentDescription="@string/media"
+                                    android:src="@drawable/ic_video_play"
+                                    android:tint="@color/colorTheme"
+                                    android:visibility="gone" />
+
+                            </FrameLayout>
+
+
+                        </RelativeLayout>
+
+
+                        <!--link text and add icon-->
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <!--icon to add document-->
+                            <ImageView
+                                android:id="@+id/add_dinner_item_row"
+                                style="@style/StyleImageLightTheme"
+                                android:layout_width="@dimen/dp_24"
+                                android:layout_height="@dimen/dp_24"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginTop="@dimen/dp_16"
+                                android:layout_marginEnd="@dimen/dp_16"
+                                android:layout_marginRight="@dimen/dp_16"
+                                android:contentDescription="@string/add"
+                                android:src="@drawable/ic_plus"
+                                android:tint="@android:color/transparent" />
+
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+
+                    <!--Dinner Snack-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/snacks"
+                            android:textColor="@color/colorTheme"
+                            android:textSize="@dimen/txtSize"
+
+                            />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rv_snack3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_18"
+                            android:nestedScrollingEnabled="false"
+                            tools:targetApi="lollipop" />
+
+                        <!--title and image or video-->
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <EditText
+                                android:id="@+id/snacks_title4"
+                                style="@style/StyleEdit"
+                                android:layout_centerVertical="true"
+                                android:layout_marginTop="@dimen/dp_18"
+                                android:layout_marginEnd="@dimen/dp_16"
+                                android:layout_marginRight="@dimen/dp_16"
+                                android:layout_toStartOf="@id/snack_layout3"
+                                android:layout_toLeftOf="@id/snack_layout3"
+                                android:hint="@string/plan_item_title"
+                                android:inputType="text"
+                                tools:ignore="Autofill" />
+
+
+                            <FrameLayout
+                                android:id="@+id/snack_layout3"
+                                android:layout_width="@dimen/dp_64"
+                                android:layout_height="@dimen/dp_64"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentRight="true">
+
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    android:id="@+id/snacks_image4"
+                                    style="@style/StyleImageLightTheme"
+                                    android:layout_width="@dimen/dp_64"
+                                    android:layout_height="@dimen/dp_64"
+                                    android:src="@drawable/img_default_black" />
+
+                                <ImageView
+                                    android:id="@+id/snacks_img_video_icon4"
+                                    android:layout_width="@dimen/dp_24"
+                                    android:layout_height="@dimen/dp_24"
+                                    android:layout_gravity="center"
+                                    android:contentDescription="@string/media"
+                                    android:src="@drawable/ic_video_play"
+                                    android:tint="@color/colorTheme"
+                                    android:visibility="gone" />
+
+                            </FrameLayout>
+
+
+                        </RelativeLayout>
+
+
+                        <!--link text and add icon-->
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <!--icon to add document-->
+                            <ImageView
+                                android:id="@+id/add_snacks_item_row4"
+                                style="@style/StyleImageLightTheme"
+                                android:layout_width="@dimen/dp_24"
+                                android:layout_height="@dimen/dp_24"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginTop="@dimen/dp_16"
+                                android:layout_marginEnd="@dimen/dp_16"
+                                android:layout_marginRight="@dimen/dp_16"
+                                android:contentDescription="@string/add"
+                                android:src="@drawable/ic_plus"
+                                android:tint="@android:color/transparent" />
+
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+
+
+    </LinearLayout>
+
+        <fragment
+            android:id="@+id/container_footer"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_60"
+            android:layout_alignParentBottom="true"
+            android:name="org.ctdworld.propath.fragment.FragmentFooter"/>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

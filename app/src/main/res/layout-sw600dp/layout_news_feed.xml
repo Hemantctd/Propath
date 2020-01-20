@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?><!--common layout for news feed and food diary and some others-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView style="@style/StyleAdapterCardView">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/adapterCardViewInnerMargin"
+            android:layout_marginTop="@dimen/adapterCardViewInnerMargin"
+            android:layout_marginRight="@dimen/adapterCardViewInnerMargin">
+
+            <!--options menu-->
+            <ImageView
+                android:id="@+id/img_options_menu"
+                style="@style/StyleImageLightTheme"
+                android:layout_width="@dimen/dp_24"
+                android:layout_height="@dimen/dp_24"
+                android:layout_gravity="end"
+                android:layout_marginStart="@dimen/dp_8"
+                android:layout_marginLeft="@dimen/dp_8"
+                android:contentDescription="@string/options_menu"
+                android:src="@drawable/ic_options_menu"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!--post share by, name -->
+                <TextView
+                    android:id="@+id/shared_by"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp_5"
+                    android:textColor="@color/colorTheme"
+                    android:textSize="@dimen/sp_16"
+                    android:visibility="gone" />
+
+
+                <!--post shared, message -->
+                <TextView
+                    android:id="@+id/share_by_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/shared_by"
+                    android:layout_marginEnd="@dimen/dp_5"
+                    android:layout_marginRight="@dimen/dp_5"
+                    android:layout_marginBottom="@dimen/dp_8"
+                    android:autoLink="all"
+                    android:textColor="@color/colorDarkGrey"
+                    android:textSize="@dimen/sp_12"
+                    android:visibility="gone" />
+
+
+                <!--user details-->
+                <RelativeLayout
+                    android:id="@+id/profile_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/share_by_text"
+                    android:layout_marginTop="@dimen/dp_8">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/profile_image"
+                        style="@style/StyleImageLightTheme"
+                        android:layout_width="@dimen/dp_60"
+                        android:layout_height="@dimen/dp_60"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_profile" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/dp_8"
+                        android:layout_marginLeft="@dimen/dp_8"
+                        android:layout_toEndOf="@+id/profile_image"
+                        android:layout_toRightOf="@+id/profile_image">
+
+                        <!--user name-->
+                        <TextView
+                            android:id="@+id/profile_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:includeFontPadding="false"
+                            android:textColor="@color/colorTextBlack"
+                            android:textSize="@dimen/sp_14" />
+
+                        <!--date time-->
+                        <TextView
+                            android:id="@+id/date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/profile_name"
+                            android:layout_marginTop="@dimen/dp_3"
+                            android:textColor="@color/colorTextBlack"
+                            android:textSize="@dimen/sp_12" />
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+
+                <!--post message-->
+                <TextView
+                    android:id="@+id/message"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/profile_details"
+                    android:layout_marginTop="@dimen/dp_12"
+                    android:autoLink="all"
+                    android:textSize="@dimen/sp_14"
+                    android:visibility="visible" />
+
+
+                <!--layout image , video-->
+                <RelativeLayout
+                    android:id="@+id/video_image_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/message"
+                    android:layout_marginTop="@dimen/dp_8">
+
+                    <!--post image, video-->
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+                        <!--post image-->
+                        <ImageView
+                            android:id="@+id/news_feed_image"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/newsFeedPostImageHeight"
+                            android:adjustViewBounds="true"
+                            android:contentDescription="@string/new_password"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_default_black"
+                            android:visibility="gone" />
+
+
+                        <!--video view to play video-->
+                        <VideoView
+                            android:id="@+id/video_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:adjustViewBounds="true"
+                            android:visibility="gone" />
+
+
+
+
+                       <!-- <com.google.android.youtube.player.YouTubePlayerView
+                            android:id="@+id/you_tube_link"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"/>-->
+
+                        <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+                            android:id="@+id/youtube_player"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            app:showFullScreenButton="true"/>
+
+
+                        <!--unmute icon-->
+                        <ImageView
+                            android:id="@+id/unmute"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="@dimen/dp_20"
+                            android:layout_marginRight="@dimen/dp_20"
+                            android:padding="3dp"
+                            android:src="@drawable/ic_mute"
+                            android:visibility="gone"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="@dimen/dp_20"
+                            android:contentDescription="@string/unmute" />
+
+
+                        <!--mute icon-->
+                        <ImageView
+                            android:id="@+id/mute"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="@dimen/dp_20"
+                            android:layout_marginRight="@dimen/dp_20"
+                            android:padding="3dp"
+                            android:src="@drawable/ic_unmute"
+                            android:visibility="gone"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="@dimen/dp_20"
+                            android:contentDescription="@string/mute" />
+
+
+                        <!--video wrapper-->
+                        <FrameLayout
+                            android:id="@+id/videoViewWrapper"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"/>
+
+                    </RelativeLayout>
+
+
+                    <!--video play icon-->
+                    <ImageView
+                        android:id="@+id/play_btn"
+                        android:layout_width="@dimen/dp_56"
+                        android:layout_height="@dimen/dp_56"
+                        android:layout_centerInParent="true"
+                        android:contentDescription="@string/video"
+                        android:src="@drawable/ic_video_play"
+                        android:visibility="gone" />
+
+                    <!--youtube player-->
+                    <FrameLayout
+                        android:id="@+id/fragment_youtube_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"/>
+
+                </RelativeLayout>
+
+
+                <TextView
+                    android:id="@+id/count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/video_image_layout"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:padding="@dimen/dp_3"
+                    android:textColor="@color/colorTextBlack"
+                    android:textSize="@dimen/sp_11" />
+
+
+                <!--footer layout like, comment, share-->
+                <include
+                    layout="@layout/layout_news_feed_footer"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_below="@+id/count"
+                    android:baselineAligned="false" />
+
+
+            </RelativeLayout>
+
+        </FrameLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

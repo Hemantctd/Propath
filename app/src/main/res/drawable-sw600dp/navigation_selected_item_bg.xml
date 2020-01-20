@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:left="@dimen/dp_3_minus"
+        android:right="@dimen/dp_3_minus"
+        android:top="@dimen/dp_3_minus">
+
+        <shape>
+            <stroke android:color="@color/colorTextBlack" android:width="@dimen/dp_1"></stroke>
+            <solid android:color="@color/colorNavigationSelectedItemBg"></solid>
+        </shape>
+    </item>
+
+</layer-list>

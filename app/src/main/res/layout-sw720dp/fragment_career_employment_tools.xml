@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="org.ctdworld.propath.fragment.FragmentCareerPlan"
+    android:fillViewport="true"
+    android:theme="@style/ThemeOverlay.AppCompat.Light">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite">
+
+      <!--  <include layout="@layout/toolbar"
+            android:id="@+id/career_plan_toolbar"/>-->
+
+
+        <!--text employment tools-->
+        <!--<TextView
+            android:id="@+id/employment_tools"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Employment Tools"
+            android:textColor="@color/colorTheme"
+            android:fontFamily="@font/open_sans_bold"
+            android:textSize="20sp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"/>-->
+
+
+        <!--FrameLayout to showing employment tools-->
+        <FrameLayout
+            android:id="@+id/employment_tools_fragment_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/dp_16"/>
+
+
+
+
+        <!--floating button to add employment tools-->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/career_employment_tools_floating_button"
+            android:layout_width="@dimen/dp_56"
+            android:layout_height="@dimen/dp_56"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:visibility="gone"
+            android:layout_marginBottom="@dimen/dp_20"
+            android:layout_marginRight="@dimen/dp_20"
+            android:src="@drawable/ic_plus"
+           />
+
+
+
+      <!--  &lt;!&ndash;footer&ndash;&gt;
+        <fragment
+            android:id="@+id/career_plan_frag_footer"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/footerHeight"
+            android:layout_alignParentBottom="true"
+            android:name="FragmentFooter"/>-->
+    </RelativeLayout>
+
+</ScrollView>

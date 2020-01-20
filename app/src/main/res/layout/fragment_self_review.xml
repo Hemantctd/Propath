@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/self_Review_Layout"
+    android:background="@color/colorWhite"
+    tools:context="org.ctdworld.propath.fragment.FragmentSelfReview">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/dp_16"
+        android:layout_marginRight="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_16">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_bottom_light_grey_1dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_24"
+                    android:id="@+id/school_review_layout">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        style="@style/StyleImageLightTheme"
+                        android:id="@+id/school_review_img_profile"
+                        android:layout_width="@dimen/dp_70"
+                        android:layout_height="@dimen/dp_70"
+                        android:src="@drawable/ic_profile"
+                        android:tint="@color/colorIconLightTheme"/>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/school_review_img_profile"
+                        android:layout_marginLeft="@dimen/dp_16"
+                        >
+
+                        <TextView
+                            android:id="@+id/school_review_txt_user_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Athlete Name"
+                            android:textColor="@color/colorTextBlack"
+                            android:textSize="@dimen/sp_18"
+                            android:textStyle="bold" />
+
+                        <!--<TextView-->
+                        <!--android:id="@+id/school_review_txt_profile_created_date"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_below="@id/school_review_txt_user_name"-->
+                        <!--android:layout_marginTop="@dimen/dp_30"-->
+                        <!--android:text="19-June-18"-->
+                        <!--android:textColor="@color/colorTextBlack"-->
+                        <!--android:textSize="16sp" />-->
+                    </RelativeLayout>
+                </RelativeLayout>
+                <!--<TextView-->
+                <!--android:id="@+id/school_review_txt_user_name"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignParentStart="true"-->
+                <!--android:layout_alignParentTop="true"-->
+                <!--android:layout_marginStart="111dp"-->
+                <!--android:layout_marginTop="38dp"-->
+                <!--android:text="Athlete Name"-->
+                <!--android:textColor="@color/colorTextBlack"-->
+                <!--android:textSize="18sp"-->
+                <!--android:textStyle="bold" />-->
+
+                <!--<TextView-->
+                <!--android:id="@+id/school_review_txt_profile_created_date"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_below="@id/school_review_txt_user_name"-->
+                <!--android:layout_marginBottom="10dp"-->
+                <!--android:layout_marginLeft="20dp"-->
+                <!--android:layout_marginTop="5dp"-->
+                <!--android:layout_toRightOf="@id/school_review_img_profile"-->
+                <!--android:text="19-June-18"-->
+                <!--android:textColor="@color/colorTextBlack"-->
+                <!--android:textSize="16sp" />-->
+                <!--<EditText-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginLeft="20dp"-->
+                    <!--android:layout_marginRight="20dp"-->
+                    <!--android:layout_marginBottom="20dp"-->
+                    <!--style="@style/StyleEditContainer"-->
+                    <!--android:id="@+id/comments_given_by_teacher"-->
+                    <!--android:paddingLeft="10dp"-->
+                    <!--android:paddingTop="10dp"-->
+                    <!--android:maxLength="144"-->
+                    <!--android:textColorHint="@color/colorTextBlack"-->
+                    <!--android:paddingBottom="10dp"-->
+                    <!--android:paddingRight="10dp"-->
+                    <!--android:background="@drawable/border_rectangle_grey1dp"-->
+                    <!--android:layout_below="@+id/school_review_layout"-->
+                    <!--android:hint="Comment"/>-->
+
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/recycler_school_review"
+                android:nestedScrollingEnabled="false"
+                layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                />
+
+
+            <Button
+                android:layout_width="@dimen/dp_24"
+                android:layout_height="@dimen/dp_24"
+                android:layout_marginTop="@dimen/dp_16"
+                android:layout_gravity="right"
+                android:id="@+id/subjectAdd"
+                android:background="@drawable/ic_plus"
+                />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/btnHeight"
+                android:textSize="@dimen/sp_18"
+                android:id="@+id/submitSchoolReview"
+                android:layout_marginLeft="@dimen/dp_36"
+                android:layout_marginRight="@dimen/dp_36"
+                android:background="@drawable/border_transparent_2dp_round_25dp"
+                android:backgroundTint="@color/colorTheme"
+                android:text="@string/submit"
+                android:layout_marginTop="@dimen/dp_36"
+                android:layout_marginBottom="@dimen/dp_20"
+                android:fontFamily="@font/open_sans_bold"
+                android:textColor="@color/colorWhite"/>
+
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+        </FrameLayout>
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+</FrameLayout>

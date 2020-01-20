@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/colorWhite"
+    android:layout_height="match_parent"
+    tools:context="org.ctdworld.propath.activity.ActivityChatGroupProfile">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_220"
+        android:fitsSystemWindows="true"
+        app:layout_anchor="@+id/app_bar_layout"
+        >
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_220"
+            android:fitsSystemWindows="true"
+            app:contentScrim="?attr/colorAccent"
+            app:expandedTitleTextAppearance="@android:color/transparent"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+
+            <!--profile pic-->
+            <ImageView
+                android:id="@+id/activity_group_profile_toolbar_img_profile"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_220"
+                android:contentDescription="@string/app_name"
+                android:scaleType="centerCrop"
+                app:layout_collapseMode="parallax"/>
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/activity_group_profile_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                android:layout_gravity="bottom"
+                android:theme="@style/Theme.AppCompat.NoActionBar">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/activity_group_profile_toolbar_txt_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/group_chat"
+                        android:textSize="@dimen/sp_20"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/colorWhite"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@id/activity_group_profile_img_options_menu"
+                        android:layout_alignParentStart="true"
+                        android:layout_toStartOf="@id/activity_group_profile_img_options_menu" />
+
+
+                    <ImageView
+                        android:id="@+id/activity_group_profile_img_options_menu"
+                        android:layout_width="@dimen/iconSize"
+                        android:layout_height="@dimen/iconSize"
+                        android:src="@drawable/ic_options_menu"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        tools:ignore="ContentDescription"
+                        android:layout_alignParentEnd="true" />
+
+                </RelativeLayout>
+
+
+            </androidx.appcompat.widget.Toolbar>
+
+         <!-- <ImageView
+              android:layout_width="24dp"
+              android:layout_height="24dp"
+              android:src="@drawable/ic_edit"
+              android:layout_marginRight="15dp"
+              android:layout_marginTop="16dp"
+              android:layout_gravity="center|right|top"/>
+
+            <ImageView
+                android:id="@+id/activity_group_profile_img_edit"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_edit"
+                android:layout_gravity="bottom|right"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="10dp"/>-->
+
+
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/activity_group_profile_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:padding="@dimen/dp_20"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

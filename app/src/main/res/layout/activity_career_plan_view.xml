@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="org.ctdworld.propath.activity.ActivityCareerPlanView"
+    android:orientation="vertical"
+    android:background="@color/colorWhite">
+
+    <!--toolbar-->
+    <include layout="@layout/toolbar"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginBottom="@dimen/footerHeight"
+            >
+
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true">
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+
+        <!--data-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--no connection layout-->
+            <include layout="@layout/layout_no_connection"
+                android:id="@+id/included_layout_no_connection"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:visibility="gone"/>
+
+
+            <!--data-->
+            <LinearLayout
+                android:id="@+id/career_plan_layout_details"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/dp_16"
+                android:paddingRight="@dimen/dp_16">
+
+
+                <!--User Details-->
+                <FrameLayout
+                    android:id="@+id/fragment_container_creator_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_30"/>
+
+
+                <!--Career Data-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/dp_16"
+                    android:paddingRight="@dimen/dp_16">
+
+
+                    <!--future career-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_40"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/future_career"
+                            android:textSize="@dimen/sp_18"
+                            android:textColor="@color/colorTheme" />
+
+                        <TextView
+                            android:id="@+id/career_plan_txt_future_career"
+                            style="@style/StyleEdit"
+                            android:layout_marginTop="@dimen/dp_5"/>
+
+
+                    </LinearLayout>
+
+
+
+                    <!--where you can study-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_18"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/location_organization"
+                            android:textSize="@dimen/sp_18"
+                            android:textColor="@color/colorTheme"/>
+                        <TextView
+                            android:id="@+id/career_plan_txt_where_you_can_study"
+                            style="@style/StyleEdit"
+                            android:layout_marginTop="@dimen/dp_5"/>
+
+
+                    </LinearLayout>
+
+
+
+                    <!--where you can study-->
+                    <!--<Spinner
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:entries="@array/entries_scholarship"
+                        android:layout_marginTop="@dimen/dp_18"></Spinner>-->
+
+                    <!--where you can study-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_18"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/scholarships"
+                            android:textSize="@dimen/sp_18"
+                            android:textColor="@color/colorTheme"/>
+
+                        <TextView
+                            android:id="@+id/career_plan_txt_scholarship"
+                            style="@style/StyleEdit"
+                            android:layout_marginTop="@dimen/dp_5"/>
+
+
+                    </LinearLayout>
+
+
+
+                    <!--Internship-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_18"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/internship"
+                            android:textSize="@dimen/sp_18"
+                            android:textColor="@color/colorTheme"/>
+
+
+                        <TextView
+                            android:id="@+id/career_plan_txt_internship"
+                            style="@style/StyleEdit"
+                            android:layout_marginTop="@dimen/dp_5"/>
+
+
+
+                    </LinearLayout>
+
+
+
+                    <!--Apprenticeship-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_18"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/apprenticeship"
+                            android:textSize="@dimen/sp_18"
+                            android:textColor="@color/colorTheme"/>
+
+
+                        <TextView
+                            android:id="@+id/career_plan_txt_apprenticeship"
+                            style="@style/StyleEdit"
+                            android:layout_marginTop="@dimen/dp_5"/>
+
+
+
+                    </LinearLayout>
+
+
+
+                    <!--where you can study-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_18"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/school_subjects_needed"
+                            android:textSize="@dimen/sp_18"
+                            android:textColor="@color/colorTheme"/>
+
+                        <TextView
+                            android:id="@+id/career_plan_txt_subject_needed"
+                            style="@style/StyleEdit"
+                            android:layout_marginTop="@dimen/dp_5"/>
+
+
+
+                    </LinearLayout>
+
+
+
+
+                    <!--Key Contact Person, Email-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_18"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/key_contact_person"
+                            android:textSize="@dimen/sp_18"
+                            android:textColor="@color/colorTheme"/>
+
+                        <TextView
+                            android:id="@+id/career_plan_txt_name"
+                            style="@style/StyleEdit"
+                            android:layout_marginTop="@dimen/dp_5"/>
+
+                        <TextView
+                            android:id="@+id/career_plan_txt_email"
+                            style="@style/StyleEdit"
+                            android:layout_marginTop="@dimen/dp_5"/>
+
+                        <!--phone number-->
+                        <TextView
+                            android:id="@+id/career_plan_txt_phone_number"
+                            style="@style/StyleEdit"
+                            android:layout_marginTop="@dimen/dp_18"/>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+            </ScrollView>
+        </LinearLayout>
+
+        <fragment
+            android:id="@+id/container_footer"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_60"
+            android:layout_alignParentBottom="true"
+            android:name="org.ctdworld.propath.fragment.FragmentFooter"/>
+    </RelativeLayout>
+
+</LinearLayout>

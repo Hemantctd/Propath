@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border_rectangle_light_grey_1dp">
+
+        <!--&lt;!&ndash;yellow circle&ndash;&gt;
+        <View
+            android:id="@+id/recycler_upcoming_events_circle"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/border_circle"
+            android:backgroundTint="@color/colorAccent"
+            android:layout_centerVertical="true"/>-->
+
+
+        <ImageView
+            style="@style/StyleImageLightTheme"
+            android:id="@+id/recycler_upcoming_events_circle"
+            android:layout_width="@dimen/dp_24"
+            android:layout_height="@dimen/dp_24"
+            android:src="@drawable/ic_event"
+            android:layout_centerVertical="true"/>
+
+
+        <!--title and address-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_toLeftOf="@id/date_time"
+            android:layout_marginRight="@dimen/dp_16"
+            android:layout_toRightOf="@id/recycler_upcoming_events_circle"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_16">
+
+            <!--planData title-->
+            <TextView
+                android:id="@+id/adapter_upcoming_events_txt_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="title"
+                android:textColor="@color/colorLightBlack"
+                android:textSize="@dimen/sp_18"
+                android:gravity="center_vertical"
+                android:textStyle="bold"/>
+
+            <!--address-->
+            <TextView
+                android:id="@+id/adapter_upcoming_events_txt_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Video call with com"
+                android:textColor="@color/colorLightBlack"
+                android:textSize="@dimen/sp_14"
+                android:layout_marginTop="@dimen/dp_8"/>
+
+        </LinearLayout>
+
+
+        <!--upcoming event time and location-->
+        <LinearLayout
+            android:id="@+id/date_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:orientation="vertical"
+            android:gravity="center">
+
+        <TextView
+            android:id="@+id/adapter_upcoming_events_txt_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00:00"
+            android:textColor="@color/colorLightBlack"
+            android:textSize="@dimen/sp_14" />
+
+        <TextView
+            android:id="@+id/adapter_upcoming_events_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00-00-0000"
+            android:textColor="@color/colorTextBlack"
+            android:textSize="@dimen/sp_14"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

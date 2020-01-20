@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.ActivitySurveyYesOrNoWithOptions">
+
+    <include layout="@layout/toolbar"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/dp_20">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:layout_marginBottom="@dimen/footerHeight">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_yes_no_questions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+           />
+
+
+        <Button
+            android:id="@+id/btn_next"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/btnHeight"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dp_50"
+            android:paddingLeft="@dimen/dp_50"
+            android:layout_marginBottom="@dimen/dp_60"
+            android:paddingRight="@dimen/dp_50"
+            android:text="@string/next"
+            android:textSize="@dimen/btnTextSize"
+            android:textColor="@color/colorPageBg"
+            android:background="@drawable/bg_button"/>
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+
+        <fragment
+            android:id="@+id/footer"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/footerHeight"
+            android:layout_alignParentBottom="true"
+            android:name="org.ctdworld.propath.fragment.FragmentFooter"/>
+    </RelativeLayout>
+</LinearLayout>

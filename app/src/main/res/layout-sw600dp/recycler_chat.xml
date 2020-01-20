@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:orientation="vertical"
+    android:theme="@style/ThemeChat">
+
+    <!--date-->
+    <TextView
+        android:id="@+id/chat_message_txt_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/dp_40"
+        android:paddingRight="@dimen/dp_40"
+        android:paddingTop="@dimen/dp_3"
+        android:paddingBottom="@dimen/dp_3"
+        android:text="00-00-0000"
+        android:layout_marginTop="@dimen/dp_16"
+        android:layout_marginBottom="@dimen/dp_24"
+        android:textSize="@dimen/sp_18"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/colorDarkGrey"
+        android:visibility="visible"/>
+
+    <!--layout for received messages-->
+    <RelativeLayout
+        android:id="@+id/chat_layout_message_received"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="@dimen/dp_16"
+        android:paddingTop="@dimen/dp_16"
+        android:paddingBottom="@dimen/dp_16"
+        android:layout_marginRight="@dimen/dp_100"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/chat_message_txt_date">
+
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            style="@style/StyleImageLightTheme"
+            android:id="@+id/chat_message_received_img_sender_pic"
+            android:layout_width="@dimen/dp_32"
+            android:layout_height="@dimen/dp_32"
+            android:src="@drawable/ic_profile"/>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_chat_messages_coming"
+            android:layout_toRightOf="@id/chat_message_received_img_sender_pic"
+            android:layout_alignTop="@id/chat_message_received_img_sender_pic"
+            android:layout_marginLeft="@dimen/dp_16"
+            android:paddingLeft="@dimen/dp_8"
+            android:paddingRight="@dimen/dp_8"
+            android:paddingBottom="@dimen/dp_8"
+            android:paddingTop="@dimen/dp_8"
+            android:orientation="vertical">
+
+            <!--sender name-->
+            <TextView
+                android:id="@+id/chat_message_received_txt_user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp_14"
+                android:textColor="@color/colorDarkBlack"
+                android:visibility="gone"/>
+
+
+            <!--layout contains text message, image and video-->
+            <RelativeLayout
+                android:id="@+id/chat_message_received_layout_messages"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/chat_message_received_txt_user_name"
+                android:layout_marginTop="@dimen/dp_8">
+
+
+                <!--messages-->
+                <TextView
+                    android:id="@+id/chat_message_received_txt_message"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/sp_12"
+                    android:textColor="@color/colorDarkBlack"
+                    android:layout_toRightOf="@id/img_user_pic"
+                    android:gravity="top"/>
+
+
+                <!--image-->
+                <ImageView
+                    android:id="@+id/chat_message_received_img_image"
+                    android:layout_width="@dimen/dp_200"
+                    android:layout_height="@dimen/dp_200"
+                    android:layout_toRightOf="@id/img_user_pic"
+                    android:layout_centerHorizontal="true"
+                    android:scaleType="centerCrop"
+                    android:gravity="fill"
+                    android:visibility="gone"/>
+
+                <!--play icon-->
+                <ImageView
+                    android:id="@+id/chat_message_received_img_play_icon"
+                    android:layout_width="@dimen/dp_48"
+                    android:layout_height="@dimen/dp_48"
+                    android:src="@drawable/ic_video_play"
+                    android:tint="@color/colorTheme"
+                    android:layout_centerInParent="true"
+                    android:visibility="gone"/>
+
+
+                <ProgressBar
+                    android:id="@+id/chat_message_received_progressbar_on_file"
+                    android:layout_width="@dimen/dp_36"
+                    android:layout_height="@dimen/dp_36"
+                    android:visibility="gone"
+                    android:layout_centerInParent="true"/>
+
+
+
+            </RelativeLayout>
+
+            <!--time-->
+            <TextView
+                android:id="@+id/chat_message_received_txt_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp_10"
+                android:textColor="@color/colorDarkGrey"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/chat_message_received_layout_messages"
+                android:layout_marginTop="@dimen/dp_12"/>
+
+
+
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+
+    <!--layout for sent messages-->
+    <RelativeLayout
+        android:id="@+id/chat_layout_message_sent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_100"
+        android:layout_marginStart="@dimen/dp_100"
+        android:layout_marginTop="@dimen/dp_16"
+        android:layout_marginBottom="@dimen/dp_24"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/chat_layout_message_received">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            style="@style/StyleImageLightTheme"
+            android:id="@+id/chat_message_sent_img_sender_pic"
+            android:layout_width="@dimen/dp_36"
+            android:layout_height="@dimen/dp_36"
+            android:src="@drawable/ic_profile"
+            android:layout_marginRight="@dimen/dp_16"
+            android:layout_alignParentRight="true"/>
+
+
+        <LinearLayout
+            android:id="@+id/chat_message_sent_layout_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/dp_16"
+            android:layout_toLeftOf="@id/chat_message_sent_img_sender_pic"
+            android:layout_toRightOf="@id/chat_message_sent_progressbar"
+            android:background="@drawable/bg_chat_messages_sent"
+            android:padding="@dimen/dp_8"
+            android:orientation="vertical">
+
+            <!--sender name-->
+            <TextView
+                android:id="@+id/chat_message_sent_txt_user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorDarkBlack"
+                android:textSize="@dimen/sp_14"
+                android:visibility="gone"/>
+
+
+            <RelativeLayout
+                android:id="@+id/chat_message_sent_layout_messages"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/chat_message_sent_txt_user_name"
+                android:layout_marginTop="@dimen/dp_8">
+
+
+                <!--messages-->
+                <TextView
+                    android:id="@+id/chat_message_sent_txt_message"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/img_user_pic"
+                    android:textColor="@color/colorDarkBlack"
+                    android:textSize="@dimen/sp_12" />
+
+
+                <!--image-->
+                <ImageView
+                    style="@style/StyleImageLightTheme"
+                    android:id="@+id/chat_message_sent_img_image"
+                    android:layout_width="@dimen/dp_200"
+                    android:layout_height="@dimen/dp_200"
+                    android:layout_centerHorizontal="true"
+                    android:layout_toRightOf="@id/img_user_pic"
+                    android:tint="@android:color/transparent"
+                    android:gravity="fill"
+                    android:visibility="gone" />
+
+
+                <!--video play icon-->
+                <ImageView
+                    style="@style/StyleImageLightTheme"
+                    android:id="@+id/chat_message_sent_img_play_icon"
+                    android:layout_width="@dimen/dp_48"
+                    android:layout_height="@dimen/dp_48"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_video_play"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+            <!--time-->
+            <TextView
+                android:id="@+id/chat_message_sent_txt_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/chat_message_sent_layout_messages"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/dp_8"
+                android:textColor="@color/colorDarkGrey"
+                android:textSize="@dimen/sp_10" />
+
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/chat_message_sent_progressbar"
+            android:layout_width="@dimen/dp_24"
+            android:layout_height="@dimen/dp_24"
+            android:visibility="gone"
+            android:layout_alignBottom="@id/chat_message_sent_layout_details"
+            android:layout_marginRight="@dimen/dp_8"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
+

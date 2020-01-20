@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="org.ctdworld.propath.activity.ActivityNewsFeed"
+    android:orientation="vertical"
+    android:background="@color/colorWhite">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_above="@id/container_footer">
+
+        <include layout="@layout/toolbar"/>
+
+        <!-- filter layout -->
+        <FrameLayout
+            android:id="@+id/fragment_search_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+
+            <!--recycler to show post list-->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_news_feed"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+
+            <!--float to create new post-->
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/news_feed_floatingActionButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/dp_20"
+                android:layout_alignParentRight="true"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_marginRight="@dimen/dp_20"
+                android:src="@drawable/ic_floating_icon"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/dp_20" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    <fragment
+        android:id="@+id/container_footer"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_60"
+        android:layout_alignParentBottom="true"
+        android:name="org.ctdworld.propath.fragment.FragmentFooter"/>
+
+</RelativeLayout>

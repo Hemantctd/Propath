@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="org.ctdworld.propath.activity.ActivityForgotPass"
+    android:background="@color/colorWhite">
+
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:id="@+id/forgot_pass_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/dp_40"
+        android:layout_marginLeft="@dimen/dp_24"
+        android:layout_marginRight="@dimen/dp_24">
+
+        <TextView
+            style="@style/StyleTextView"
+            android:layout_gravity="center_horizontal"
+            android:textSize="@dimen/sp_18"
+            android:text="@string/forgot_your_password"/>
+
+        <LinearLayout
+            style="@style/StyleEditContainer"
+            android:layout_marginTop="@dimen/dp_50">
+
+            <ImageView
+                style="@style/StyleEditImgInContainer"
+                android:src="@drawable/ic_email"
+                tools:ignore="ContentDescription" />
+
+            <EditText
+                android:id="@+id/forgot_pass_edit_email"
+                style="@style/StyleEditInContainer"
+                android:hint="@string/email"
+                android:inputType="textEmailAddress"
+                tools:ignore="Autofill" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/forgot_pass_btn_send"
+            style="@style/StyleButton"
+            android:text="@string/send"
+            android:layout_marginTop="@dimen/dp_36"/>
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/forgot_pass_progress_bar"
+        android:layout_width="@dimen/dp_60"
+        android:layout_height="@dimen/dp_60"
+        android:layout_below="@id/forgot_pass_layout"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+
+
+</RelativeLayout>

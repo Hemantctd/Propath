@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="org.ctdworld.propath.activity.ActivityNoteView"
+    android:orientation="vertical">
+
+    <!--toolbar-->
+    <include layout="@layout/toolbar"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/footerHeight">
+
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:background="@color/colorWhite">
+
+
+
+                    <!--all data-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/dp_24"
+                        android:orientation="vertical">
+
+
+                        <!--fragment container for creator details-->
+                        <FrameLayout
+                            android:id="@+id/fragment_container_creator_details"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+
+                        <!--title-->
+                        <TextView
+                            android:id="@+id/activity_note_txt_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/title"
+                            android:fontFamily="@font/open_sans_bold"
+                            android:textColor="@color/colorDarkBlack"
+                            android:layout_marginTop="@dimen/dp_24"
+                            android:textSize="@dimen/sp_20"/>
+
+
+                        <!--category-->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="@dimen/dp_10">
+
+                            <!--category text-->
+                            <!-- <TextView
+                                 android:layout_width="match_parent"
+                                 android:layout_height="wrap_content"
+                                 android:text="@string/notes_category_title"
+                                 android:fontFamily="@font/open_sans_bold"
+                                 android:textSize="@dimen/sp_16"
+                                 android:textColor="@color/colorDarkBlack"/>-->
+
+
+                            <!--category content-->
+                            <TextView
+                                android:id="@+id/activity_note_txt_category"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/notes_category_title"
+                                android:textSize="@dimen/sp_14"
+                                android:textColor="@color/colorTextBlack"/>
+
+                        </LinearLayout>
+
+
+                        <!--description-->
+                        <TextView
+                            android:id="@+id/activity_note_txt_description"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_16"
+                            android:textSize="@dimen/sp_14"
+                            android:text="@string/txt_notes_category_description"/>
+
+
+                        <!--images, visibility is gone-->
+                        <LinearLayout
+                            android:id="@+id/activity_note_layout_images"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginTop="@dimen/dp_18"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/media"
+                                android:textColor="@color/colorTextBlack"
+                                android:textSize="@dimen/sp_20"
+                                android:fontFamily="@font/open_sans_bold" />
+
+                            <!--media images-->
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/activity_note_recycler_images"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp_18"
+                                android:scrollbars="horizontal"/>
+
+                        </LinearLayout>
+
+
+                        <!--document visibility is gone-->
+                        <LinearLayout
+                            android:id="@+id/activity_note_layout_document"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginTop="@dimen/dp_30"
+                            android:visibility="gone">
+
+
+                            <!--documents text-->
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/document"
+                                android:textColor="@color/colorTextBlack"
+                                android:textSize="@dimen/sp_20"
+                                android:fontFamily="@font/open_sans_bold" />
+
+
+                            <!--documents recycler-->
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/activity_note_recycler_document"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp_18"
+                                android:nestedScrollingEnabled="false"
+                                tools:ignore="UnusedAttribute" />
+
+                        </LinearLayout>
+
+
+                        <!--Links, link text visibility is gone-->
+                        <LinearLayout
+                            android:id="@+id/activity_note_layout_link"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginTop="@dimen/dp_30"
+                            android:visibility="gone">
+
+                            <!--link text-->
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/link"
+                                android:textColor="@color/colorTextBlack"
+                                android:textSize="@dimen/sp_20"
+                                android:fontFamily="@font/open_sans_bold" />
+
+                            <!--documents recycler-->
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/activity_note_recycler_link"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/sp_18"
+                                android:nestedScrollingEnabled="false"
+                                tools:ignore="UnusedAttribute" />
+
+                        </LinearLayout>
+
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+            </androidx.core.widget.NestedScrollView>
+
+
+        </LinearLayout>
+
+
+
+        <fragment
+            android:id="@+id/container_footer"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_60"
+            android:layout_alignParentBottom="true"
+            android:name="org.ctdworld.propath.fragment.FragmentFooter"/>
+    </RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+</LinearLayout>

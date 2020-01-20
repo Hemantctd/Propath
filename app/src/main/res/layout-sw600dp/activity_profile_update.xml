@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorWhite"
+    tools:context="org.ctdworld.propath.activity.ActivityProfileUpdate">
+
+    <include layout="@layout/toolbar"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/footerHeight">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true">
+
+                <!--profile common details-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_margin="@dimen/paddingMarginLeftRightAllPages">
+
+
+                    <!--user profile pic and detail-->
+                    <RelativeLayout
+                        android:id="@+id/profile_layout_add_profile_pic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/dp_30"
+                        >
+
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            style="@style/StyleImageLightTheme"
+                            android:id="@+id/profile_img_profile_pic"
+                            android:layout_width="@dimen/dp_90"
+                            android:layout_height="@dimen/dp_90"
+                            android:src="@drawable/ic_profile"
+                            android:scaleType="centerCrop"/>
+
+                        <ImageView
+                            style="@style/StyleImageLightTheme"
+                            android:id="@+id/profile_img_plus"
+                            android:layout_width="@dimen/dp_35"
+                            android:layout_height="@dimen/dp_35"
+                            android:layout_centerVertical="true"
+                            android:tint="@android:color/transparent"
+                            android:layout_marginLeft="@dimen/dp_15"
+                            android:layout_toRightOf="@id/profile_img_profile_pic"
+                            android:src="@drawable/ic_plus"/>
+
+                        <!--<TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="15dp"
+                            android:layout_toRightOf="@id/activity_profile_1_img_plus"
+                            android:text="Add Image"
+                            android:textColor="@color/colorTextBlack"
+                            android:textSize="16sp" />-->
+
+                    </RelativeLayout>
+
+                    <!--enter name-->
+                    <EditText
+                        android:id="@+id/profile_edit_name"
+                        style="@style/StyleEdit"
+                        android:hint="Enter Name"/>
+                    <!-- &lt;!&ndash;enter name&ndash;&gt;
+                     <EditText
+                         android:id="@+id/profile_edit_name"
+                         android:layout_width="match_parent"
+                         android:layout_height="@dimen/editHeight"
+                         android:background="@drawable/border_black_2dp_round_10dp"
+                         android:hint="Enter Name"
+                         android:paddingLeft="10dp"
+                         android:paddingRight="10dp"
+                         android:textColorHint="@color/colorDarkGrey"
+                         android:textColor="@color/colorDarkGrey"/>-->
+
+                    <!--enter sport-->
+                    <EditText
+                        android:id="@+id/profile_edit_sport_code"
+                        style="@style/StyleEdit"
+                        android:layout_marginTop="@dimen/dp_18"
+                        android:hint="Enter Sports"/>
+
+                    <!--enter country, town, city-->
+                    <EditText
+                        android:id="@+id/profile_edit_address"
+                        style="@style/StyleEdit"
+                        android:hint="Enter Location" />
+
+
+                    <!--enter athlete bio-->
+                    <EditText
+                        android:id="@+id/profile_edit_athlete_bio"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="@dimen/dp_70"
+                        style="@style/StyleEdit"
+                        android:gravity="top"
+                        android:hint="Enter Athlete Bio"
+                        android:inputType="textLongMessage|textMultiLine"
+                        android:imeOptions="actionNext"/>
+
+
+                    <!-- <Button
+                         android:id="@+id/activity_profile_1_btn_next"
+                         android:layout_width="match_parent"
+                         android:layout_height="@dimen/btnHeight"
+                         android:layout_marginBottom="@dimen/marginTopEditTextButton"
+                         android:layout_marginTop="@dimen/marginTopEditTextButton"
+                         android:background="@drawable/border_white_2dp_round_25dp"
+                         android:backgroundTint="@color/colorTheme"
+                         android:text="Next"
+                         android:textColor="@color/colorWhite"
+                         android:textSize="@dimen/btnTextSize" />-->
+
+
+                    <!--enter athlete hightlights reels-->
+                    <EditText
+                        android:id="@+id/profile_edit_highlight_reel"
+                        style="@style/StyleEdit"
+                        android:layout_height="wrap_content"
+                        android:minHeight="@dimen/editHeight"
+                        android:hint="Enter Link Of  Highlights Reels" />
+
+                    <!--enter athlete hightlights reels-->
+                    <EditText
+                        android:id="@+id/profile_edit_playlist"
+                        style="@style/StyleEdit"
+                        android:layout_height="wrap_content"
+                        android:minHeight="@dimen/editHeight"
+                        android:hint="@string/enter_play_list_link" />
+
+
+
+                    <!-- <Button
+                         android:id="@+id/profile_edit_btn_update_profile"
+                         style="@style/StyleButton"
+                         android:layout_marginRight="@dimen/dp_40"
+                         android:layout_marginLeft="@dimen/dp_40"
+                         android:layout_marginBottom="@dimen/dp_30"
+                         android:layout_marginTop="@dimen/dp_30"
+                         android:text="Update Profile"
+                         />-->
+
+
+                </LinearLayout>
+            </ScrollView>
+
+
+        </LinearLayout>
+
+
+        <ProgressBar
+            android:id="@+id/profile_edit_progress_bar"
+            android:layout_width="@dimen/dp_60"
+            android:layout_height="@dimen/dp_60"
+            android:visibility="gone"
+            android:layout_centerInParent="true"/>
+        <fragment
+            android:id="@+id/container_footer"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_60"
+            android:layout_alignParentBottom="true"
+            android:name="org.ctdworld.propath.fragment.FragmentFooter"/>
+    </RelativeLayout>
+
+
+
+
+
+</LinearLayout>

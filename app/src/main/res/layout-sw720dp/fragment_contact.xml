@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="org.ctdworld.propath.fragment.FragmentContact"
+    android:background="@color/colorWhite"
+    android:id="@+id/contact_refresh_layout">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/fragment_search_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/contact_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/fragment_search_container"
+            android:layout_marginLeft="@dimen/paddingMarginLeftRightAllPages"
+            android:layout_marginRight="@dimen/paddingMarginLeftRightAllPages"/>
+
+
+        <!--no connection message-->
+        <TextView
+            android:id="@+id/contact_txt_no_connection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sp_30"
+            android:text="@string/no_connection"
+            android:layout_centerInParent="true"
+            android:textColor="@color/colorNoConnectionDark"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

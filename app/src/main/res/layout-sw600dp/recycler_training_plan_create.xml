@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+
+
+    <androidx.cardview.widget.CardView
+        style="@style/StyleAdapterCardView">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/adapterCardViewInnerMargin">
+
+            <EditText
+                android:id="@+id/recycler_training_plan_create_txt_title"
+                style="@style/StyleEdit"
+                android:layout_toLeftOf="@id/recycler_training_plan_create_layout_image"
+                android:layout_marginRight="@dimen/dp_18"
+                android:textSize="@dimen/adapterTitleTxtSize"
+                android:text="@string/title"
+                android:textColor="@color/colorTextBlack"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@id/recycler_training_plan_create_layout_image"
+                android:layout_marginEnd="@dimen/dp_18"
+                android:inputType="text"
+                tools:ignore="Autofill,LabelFor" />
+
+
+            <FrameLayout
+                android:id="@+id/recycler_training_plan_create_layout_image"
+                android:layout_width="@dimen/dp_60"
+                android:layout_height="@dimen/dp_60"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/recycler_training_plan_create_img_remove"
+                android:layout_marginRight="@dimen/paddingMarginLeftRightAllPages"
+                android:layout_toStartOf="@id/recycler_training_plan_create_img_remove"
+                android:layout_marginEnd="@dimen/paddingMarginLeftRightAllPages">
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    style="@style/StyleImageLightTheme"
+                    android:id="@+id/recycler_training_plan_create_image_or_video"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/img_default_black"/>
+
+                <ImageView
+                    style="@style/StyleImageLightTheme"
+                    android:id="@+id/recycler_training_plan_create_img_video_play_icon"
+                    android:layout_width="@dimen/iconSize"
+                    android:layout_height="@dimen/iconSize"
+                    android:src="@drawable/ic_video_play"
+                    android:layout_gravity="center"
+                    android:visibility="gone"
+                    android:contentDescription="@string/training_plan_item"/>
+
+            </FrameLayout>
+
+            <ImageView
+                style="@style/StyleImageLightTheme"
+                android:id="@+id/recycler_training_plan_create_img_remove"
+                android:layout_width="@dimen/adapterRemoveImgSize"
+                android:layout_height="@dimen/adapterRemoveImgSize"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_cancel"
+                android:visibility="visible"
+                android:layout_alignParentEnd="true"
+                android:contentDescription="@string/delete" />
+
+
+
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</LinearLayout>

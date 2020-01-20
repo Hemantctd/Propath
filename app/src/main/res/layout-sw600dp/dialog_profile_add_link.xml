@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:context="org.ctdworld.propath.fragment.DialogProfileAddLink"
+    android:padding="20dp"
+    android:background="@drawable/bg_white_round_15_dp">
+
+
+    <!--cancel button-->
+    <ImageView
+        style="@style/StyleImageLightTheme"
+        android:id="@+id/dialog_add_link_img_cancel"
+        android:layout_width="@dimen/dp_24"
+        android:layout_height="@dimen/dp_24"
+        android:src="@drawable/ic_cancel"/>
+
+    <!--title-->
+    <TextView
+        style="@style/StyleTextView"
+        android:layout_toRightOf="@id/dialog_add_link_img_cancel"
+        android:textSize="@dimen/sp_20"
+        android:text="@string/dialog_add_link_title"
+        android:textColor="@color/colorTheme"
+        android:layout_alignBaseline="@id/dialog_add_link_img_cancel"
+        android:layout_centerHorizontal="true"/>
+
+
+    <EditText
+        android:id="@+id/dialog_add_link_edit_link"
+        style="@style/StyleEdit"
+        android:layout_width="@dimen/dp_270"
+        android:layout_below="@id/dialog_add_link_img_cancel"
+        android:hint="Paste or type a link"
+        android:layout_marginTop="@dimen/dp_24"/>
+
+    <Button
+        android:id="@+id/dialog_add_link_btn_save"
+        style="@style/StyleButton"
+        android:minWidth="@dimen/dp_100"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_40"
+        android:layout_below="@id/dialog_add_link_edit_link"
+        android:layout_marginTop="@dimen/dp_24"
+        android:layout_centerHorizontal="true"
+        android:text="@string/save"
+        android:textSize="@dimen/sp_14"/>
+
+    <!--<Button
+        android:id="@+id/btn_cancel"
+        android:layout_width="115dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/create_group_edit_group_name"
+        android:layout_marginTop="@dimen/marginTopEditTextButton"
+        android:background="@drawable/border_transparent_2dp_round_5dp"
+        android:backgroundTint="@color/colorTheme"
+        android:text="@string/cancel"
+        android:textSize="18sp"
+        android:textColor="@color/colorWhite"
+        android:layout_toRightOf="@id/btn_save"
+        android:layout_marginLeft="20dp"/>-->
+
+
+
+
+</RelativeLayout>

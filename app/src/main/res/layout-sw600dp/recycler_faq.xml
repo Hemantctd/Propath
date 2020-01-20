@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/colorWhite"
+    android:padding="@dimen/dp_20">
+
+
+    <TextView
+       android:id="@+id/recycler_faq_txt_title"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="FAQ 1"
+       android:textColor="@color/colorTextBlack"
+       android:textSize="@dimen/sp_20"
+       android:fontFamily="@font/open_sans_bold"/>
+
+    <TextView
+        android:id="@+id/recycler_faq_txt_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="FAQ 1"
+        android:layout_marginTop="@dimen/dp_10"
+        android:textColor="@color/colorTextBlack"
+        android:textSize="16sp" />
+
+</LinearLayout>

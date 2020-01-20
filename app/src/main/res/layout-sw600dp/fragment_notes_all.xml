@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_notes_all_refresh_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context="org.ctdworld.propath.fragment.FragmentNotesAll">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--search with text and voice-->
+        <include layout="@layout/fragment_search" />
+        <!--<RelativeLayout
+            android:id="@+id/layout_filterd:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp">
+
+            <RelativeLayout
+                style="@style/StyleEditContainer">
+
+                <ImageView
+                    android:id="@+id/img_search"
+                    style="@style/StyleEditImgInContainer"
+                    android:src="@drawable/ic_search"/>
+
+                <ImageView
+                    android:id="@+id/img_mic"
+                    style="@style/StyleEditImgInContainer"
+                    android:src="@drawable/ic_mic"
+                    android:layout_alignParentRight="true"/>
+
+                <EditText
+                    android:id="@+id/edit_search"
+                    style="@style/StyleEditInContainer"
+                    android:hint="Search"
+                    android:layout_marginRight="8dp"
+                    android:layout_toRightOf="@id/img_search"
+                    android:layout_toLeftOf="@id/img_mic"/>
+            </RelativeLayout>
+
+        </RelativeLayout>-->
+
+        <!--recycler for all note-->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/unitNotesRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/layout_filter"
+            android:paddingTop="@dimen/dp_16" />
+
+
+        <!--floating button to add note-->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fragment_notes_all_float_btn"
+            android:layout_width="@dimen/dp_56"
+            android:layout_height="@dimen/dp_56"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="@dimen/dp_20"
+            android:layout_marginBottom="@dimen/dp_20"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/ic_floating_icon" />
+
+
+        <!--to show message-->
+        <TextView
+            android:id="@+id/fragment_notes_all_txt_message"
+            style="@style/styleTxtMessage"
+            android:visibility="gone" />
+
+
+    </RelativeLayout>
+
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

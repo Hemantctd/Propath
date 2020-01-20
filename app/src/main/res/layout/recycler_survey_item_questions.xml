@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite">
+
+
+    <RelativeLayout
+        android:id="@+id/profile_layout_add_profile_pic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_36"
+
+        >
+
+
+        <ImageView
+            android:id="@+id/question_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_image_add"
+            android:scaleType="centerCrop"
+            tools:ignore="ContentDescription" />
+
+
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        tools:ignore="UselessParent"
+        android:layout_marginTop="@dimen/dp_10">
+
+
+
+
+        <TextView
+            android:id="@+id/txt_question_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorTheme"
+            android:text="1. "
+            android:textSize="@dimen/sp_18"
+            android:paddingBottom="@dimen/dp_8"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:layout_marginStart="@dimen/dp_5">
+    <EditText
+        android:id="@+id/survey_type_questions"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textColorHint="@color/colorTextBlack"
+        android:textColor="@color/colorTextBlack"
+        android:textSize="@dimen/sp_18"
+        android:hint="Enter Question"
+        android:background="@drawable/border_bottom_light_grey_1dp"
+        android:focusable="true"
+        android:paddingBottom="@dimen/dp_8"
+        tools:ignore="Autofill"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/answerBox"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textColorHint="@color/colorTextBlack"
+        android:textColor="@color/colorTextBlack"
+        android:textSize="@dimen/sp_18"
+        android:visibility="gone"
+        android:layout_marginTop="@dimen/dp_16"
+        android:hint="Type answer here"
+        tools:ignore="Autofill"
+        android:inputType="text"
+        android:paddingBottom="@dimen/dp_8"
+        android:background="@drawable/border_bottom_light_grey_1dp"/>
+    </LinearLayout>
+    </LinearLayout>
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="@dimen/dp_1"-->
+        <!--android:background="@color/colorDarkGrey"-->
+        <!--android:orientation="vertical" />-->
+
+
+
+</LinearLayout>

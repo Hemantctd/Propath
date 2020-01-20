@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorWhite"
+    tools:context="org.ctdworld.propath.activity.ActivityContactAdd"
+    android:id="@+id/contact_search_refresh_layout">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/toolbar"/>
+        <!-- Filter -->
+        <FrameLayout
+            android:id="@+id/fragment_search_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <!--layout for details-->
+        <RelativeLayout
+            android:id="@+id/contact_search_layout_for_details"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/contact_message_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+
+                android:layout_marginRight="@dimen/paddingMarginLeftRightAllPages"
+                android:layout_marginLeft="@dimen/paddingMarginLeftRightAllPages"/>
+
+
+
+            <fragment
+                android:id="@+id/container_footer"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_60"
+                android:layout_alignParentBottom="true"
+                android:name="org.ctdworld.propath.fragment.FragmentFooter"/>-->
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/contact_search_txt_no_connection"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textSize="@dimen/sp_30"
+            android:textColor="@color/colorTheme"
+            android:fontFamily="@font/open_sans_bold"
+            android:text="@string/title_no_connection"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

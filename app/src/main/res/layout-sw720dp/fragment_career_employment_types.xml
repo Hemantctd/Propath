@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="org.ctdworld.propath.fragment.FragmentCareerEmploymentType"
+    android:orientation="vertical"
+    android:background="@color/colorWhite"
+    android:paddingLeft="@dimen/dp_16"
+    android:paddingRight="@dimen/dp_16">
+
+
+
+        <TextView
+            android:id="@+id/fragment_employment_tools_txt_application_letter"
+            android:layout_width="match_parent"
+            style="@style/StyleTextViewWithBottomLine"
+            android:text="Application Letter"
+            android:layout_marginTop="@dimen/dp_30"
+            android:fontFamily="@font/open_sans_regular"
+            android:drawableRight="@drawable/ic_download"
+            android:drawableTint="@color/colorIconLightTheme"
+            android:gravity="center_vertical"/>
+
+
+
+        <TextView
+            android:id="@+id/fragment_employment_tools_txt_curriculum_vitae"
+            android:layout_width="match_parent"
+            style="@style/StyleTextViewWithBottomLine"
+            android:layout_marginTop="@dimen/dp_30"
+            android:fontFamily="@font/open_sans_regular"
+            android:text="Curriculum Vitae"
+            android:drawableRight="@drawable/ic_download"
+            android:drawableTint="@color/colorIconLightTheme"
+            android:gravity="center_vertical"/>
+
+
+
+
+        <TextView
+            android:id="@+id/fragment_employment_tools_txt_interview_checklist"
+            android:layout_width="match_parent"
+            style="@style/StyleTextViewWithBottomLine"
+            android:layout_marginTop="@dimen/dp_30"
+            android:text="Employment Checklist (Australia)"
+            android:fontFamily="@font/open_sans_regular"
+            android:drawableRight="@drawable/ic_download"
+            android:drawableTint="@color/colorIconLightTheme"
+            android:gravity="center_vertical"/>
+
+
+
+
+    <!--old design-->
+    <!-- <RelativeLayout
+        android:id="@+id/career_employment_tools_layout_application_letter"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/editHeight"
+        android:background="@drawable/border_career_plan"
+        android:layout_marginTop="30dp">
+
+        <View
+            android:layout_width="@dimen/careerPlanEditLeftColorWidth"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/colorAccent"
+            android:background="@drawable/border_career_plan"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:text="Application Letter"
+            android:textColor="@color/colorTheme"
+            android:textSize="20sp"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"/>
+
+        &lt;!&ndash;   <ImageView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:src="@drawable/ic_download"
+               android:layout_alignParentRight="true"
+               android:tint="@color/colorGrey"
+               android:layout_marginRight="10dp"
+               android:layout_centerVertical="true"
+               />&ndash;&gt;
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/career_employment_tools_layout_curriculum_vitae"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/editHeight"
+        android:background="@drawable/border_career_plan"
+        android:layout_marginTop="30dp">
+
+        <View
+            android:layout_width="@dimen/careerPlanEditLeftColorWidth"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/colorAccent"
+            android:background="@drawable/border_career_plan"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:text="Curriculum Vitae"
+            android:textColor="@color/colorTheme"
+            android:textSize="20sp"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"/>
+
+        &lt;!&ndash; <ImageView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:src="@drawable/ic_download"
+             android:layout_alignParentRight="true"
+             android:tint="@color/colorGrey"
+             android:layout_marginRight="10dp"
+             android:layout_centerVertical="true"
+             />&ndash;&gt;
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/career_employment_tools_layout_interview_checklist"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/editHeight"
+        android:background="@drawable/border_career_plan"
+        android:layout_marginTop="30dp">
+
+        <View
+            android:layout_width="@dimen/careerPlanEditLeftColorWidth"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/colorAccent"
+            android:background="@drawable/border_career_plan"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:text="Interview Checklist"
+            android:textColor="@color/colorTheme"
+            android:textSize="20sp"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"/>
+
+        &lt;!&ndash; <ImageView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:src="@drawable/ic_download"
+             android:layout_alignParentRight="true"
+             android:tint="@color/colorGrey"
+             android:layout_marginRight="10dp"
+             android:layout_centerVertical="true"
+             />&ndash;&gt;
+
+    </RelativeLayout>-->
+
+</LinearLayout>

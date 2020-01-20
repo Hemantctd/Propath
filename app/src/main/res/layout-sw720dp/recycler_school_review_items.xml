@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite">
+
+    <androidx.cardview.widget.CardView
+        style="@style/StyleAdapterCardView">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/adapterCardViewInnerMargin">
+
+            <EditText
+                android:layout_width="@dimen/dp_220"
+                android:layout_height="wrap_content"
+                android:id="@+id/subjectName"
+                android:layout_centerVertical="true"
+                style="@style/StyleEditInContainer"
+                android:maxLength="30"
+                android:text="@string/subject"
+                android:textColorHint="@color/colorLightBlack"
+                android:textSize="@dimen/sp_18"
+                android:textColor="@color/colorTextBlack"
+                tools:ignore="Autofill,LabelFor"
+                android:inputType="text" />
+
+
+            <!--&lt;!&ndash;name&ndash;&gt;-->
+            <LinearLayout
+                android:layout_width="@dimen/dp_160"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:padding="@dimen/dp_5"
+                android:weightSum="4"
+
+                android:layout_alignParentEnd="true">
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="N"
+                    android:id="@+id/nButtonSelect"
+                    android:padding="@dimen/dp_8"
+                    android:background="@color/colorLightGrey"
+                    android:textSize="@dimen/sp_18"
+                    android:textColor="@color/colorWhite"
+                    android:gravity="center"
+
+                    />
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="A"
+                    android:layout_marginLeft="@dimen/dp_8"
+                    android:textSize="@dimen/sp_18"
+                    android:textColor="@color/colorWhite"
+                    android:gravity="center"
+                    android:id="@+id/aButtonSelect"
+                    android:padding="@dimen/dp_8"
+                    android:background="@color/colorLightGrey"
+                    android:layout_marginStart="@dimen/dp_8"
+                    tools:ignore="ButtonStyle" />
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="M"
+                    android:padding="@dimen/dp_8"
+                    android:background="@color/colorLightGrey"
+                    android:layout_marginLeft="@dimen/dp_8"
+                    android:textSize="@dimen/sp_18"
+                    android:id="@+id/mButtonSelect"
+                    android:textColor="@color/colorWhite"
+                    android:gravity="center"
+                    android:layout_marginStart="@dimen/dp_8"
+                    tools:ignore="ButtonStyle" />
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="E"
+                    android:padding="@dimen/dp_8"
+                    android:background="@color/colorLightGrey"
+                    android:id="@+id/eButtonSelect"
+                    android:layout_marginLeft="@dimen/dp_8"
+                    android:textSize="@dimen/sp_18"
+                    android:textColor="@color/colorWhite"
+                    android:gravity="center"
+                    android:layout_marginStart="@dimen/dp_8"
+                    tools:ignore="ButtonStyle" />
+
+            </LinearLayout>
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

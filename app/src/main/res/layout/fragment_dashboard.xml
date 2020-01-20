@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="org.ctdworld.propath.fragment.FragmentDashboard"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:background="@color/colorWhite">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:weightSum="4"
+            android:orientation="vertical"
+            android:layout_marginLeft="@dimen/dp_16"
+            android:layout_marginBottom="@dimen/dp_16">
+
+            <LinearLayout
+                android:id="@+id/dash_education"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/dash_button_border"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/dp_16"
+                android:weightSum="1">
+
+                <ImageView
+                    style="@style/StyleDashboardButtonImageView"
+                    android:src="@drawable/ic_dash_education" />
+
+                <TextView
+                   style="@style/StyleDashboardButtonTextView"
+                    android:text="@string/education"
+                    android:backgroundTint="@color/colorDashBtnTextBgEducation"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/dash_training_plan"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/dash_button_border"
+                android:orientation="vertical"
+                android:layout_marginTop="16dp"
+                android:weightSum="1">
+
+                <ImageView
+                    style="@style/StyleDashboardButtonImageView"
+                    android:src="@drawable/ic_dash_training_plan"
+                    />
+
+                <TextView
+                    style="@style/StyleDashboardButtonTextView"
+                    android:text="@string/training_plan"
+                    android:backgroundTint="@color/colorDashBtnTextBgTrainingPlan"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/dash_injury_management"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/dash_button_border"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/dp_16"
+                android:weightSum="1">
+
+                <ImageView
+                    style="@style/StyleDashboardButtonImageView"
+                    android:src="@drawable/ic_dash_injury_management" />
+
+                <TextView
+                    style="@style/StyleDashboardButtonTextView"
+                    android:text="Injury Management"
+                    android:backgroundTint="@color/colorDashBtnTextBgInjuryManagement"/>
+
+            </LinearLayout>
+
+
+            <!--match day-->
+            <LinearLayout
+                android:id="@+id/dash_match_day"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/dash_button_border"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/dp_16"
+                android:weightSum="1">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight=".8"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/ic_dash_match_day"
+                    android:padding="@dimen/dp_24"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight=".2"
+                    android:background="@drawable/dash_textview_bottom_border"
+                    android:backgroundTint="@color/colorDashBtnTextBgStatistics"
+                    android:text="@string/dash_match_day"
+                    android:textSize="@dimen/sp_14"
+                    android:textColor="@color/colorWhite"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:ellipsize="end"/>
+
+            </LinearLayout>
+
+
+            <!--statistics-->
+            <!--<LinearLayout
+                android:id="@+id/dash_statistics"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/dash_button_border"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/dp_16"
+                android:weightSum="1">
+
+                <ImageView
+                    style="@style/StyleDashboardButtonImageView"
+                    android:src="@drawable/ic_dash_statistics"/>
+
+                <TextView
+                    style="@style/StyleDashboardButtonTextView"
+                    android:text="Statistics"
+                    android:backgroundTint="@color/colorDashBtnTextBgStatistics"/>
+
+            </LinearLayout>-->
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:weightSum="4"
+            android:orientation="vertical"
+            android:layout_marginLeft="@dimen/dp_16"
+            android:layout_marginRight="@dimen/dp_16"
+            android:layout_marginBottom="@dimen/dp_16">
+
+            <LinearLayout
+                android:id="@+id/dash_career"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/dash_button_border"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/dp_16"
+                android:weightSum="1">
+
+                <ImageView
+                    style="@style/StyleDashboardButtonImageView"
+                    android:src="@drawable/ic_dash_career" />
+
+                <TextView
+                    style="@style/StyleDashboardButtonTextView"
+                    android:text="@string/career"
+                    android:backgroundTint="@color/colorDashBtnTextBgCareer"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/dash_nutrition"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/dash_button_border"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/dp_16"
+                android:weightSum="1">
+
+                <ImageView
+                    style="@style/StyleDashboardButtonImageView"
+                    android:src="@drawable/ic_dash_nutrition"
+                    />
+
+                <TextView
+                    style="@style/StyleDashboardButtonTextView"
+                    android:text="@string/nutrition"
+                    android:backgroundTint="@color/colorDashBtnTextBgNutrition"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+            android:id="@+id/dash_coach_feedback"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/dash_button_border"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/dp_16"
+            android:weightSum="1">
+
+            <ImageView
+                style="@style/StyleDashboardButtonImageView"
+                android:src="@drawable/ic_dash_coach_feedback"
+            />
+
+            <TextView
+                style="@style/StyleDashboardButtonTextView"
+                android:text="Match Feedback"
+                android:backgroundTint="@color/colorDashBtnTextBgCoachFeedback"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/dash_match_analysis"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/dash_button_border"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/dp_16"
+                android:weightSum="1">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight=".8"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/ic_dash_statistics"
+                    android:padding="@dimen/dp_24"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight=".2"
+                    android:background="@drawable/dash_textview_bottom_border"
+                    android:backgroundTint="@color/colorDashBtnTextBgStatistics"
+                    android:text="@string/dash_match_analysis"
+                    android:textSize="@dimen/sp_14"
+                    android:textColor="@color/colorWhite"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:ellipsize="end"/>
+
+            </LinearLayout>
+
+
+
+            <!--video analysis-->
+            <!--<LinearLayout
+                android:id="@+id/dash_video_analysis"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/dash_button_border"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/dp_16"
+                android:weightSum="1">
+
+                <ImageView
+                    style="@style/StyleDashboardButtonImageView"
+                    android:src="@drawable/ic_dash_video_analysis"/>
+
+                <TextView
+                    style="@style/StyleDashboardButtonTextView"
+                    android:text="Video Analysis"
+                    android:backgroundTint="@color/colorDashBtnTextBgVideoAnalysis"/>
+
+            </LinearLayout>-->
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

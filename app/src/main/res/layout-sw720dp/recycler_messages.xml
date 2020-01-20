@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:background="@color/colorWhite">
+
+
+    <androidx.cardview.widget.CardView
+        style="@style/StyleAdapterCardView">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/adapterCardViewInnerMargin">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                style="@style/StyleImageLightTheme"
+                android:id="@+id/recycler_chat_users_img_user_pic"
+                android:layout_width="@dimen/adapterUserPicSize"
+                android:layout_height="@dimen/adapterUserPicSize"
+                android:src="@drawable/ic_profile" />
+
+            <RelativeLayout
+                android:id="@+id/recycler_chat_users_layout_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/recycler_chat_users_img_user_pic"
+                android:layout_marginRight="@dimen/dp_16"
+                android:layout_marginLeft="@dimen/dp_16"
+                android:layout_toEndOf="@id/recycler_chat_users_img_user_pic">
+
+                <!--user name-->
+                <TextView
+                    android:id="@+id/recycler_chat_users_txt_user_name"
+                    android:textSize="@dimen/adapterTitleTxtSize"
+                    android:textColor="@color/colorTextBlack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/name"
+                    android:textStyle="bold"/>
+
+
+            </RelativeLayout>
+
+            <!--message details-->
+            <RelativeLayout
+                android:id="@+id/recycler_chat_layout_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/recycler_chat_users_layout_1"
+                android:layout_below="@id/recycler_chat_users_layout_1"
+                android:layout_marginTop="@dimen/adapterDescriptionMarginTop"
+                android:layout_alignStart="@id/recycler_chat_users_layout_1">
+
+
+                <!-- last message-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_marginRight="@dimen/dp_16"
+                    android:layout_marginEnd="@dimen/dp_16"
+                    tools:ignore="UseCompoundDrawables">
+
+                    <ImageView
+                        style="@style/StyleImageLightTheme"
+                        android:id="@+id/recycler_chat_users_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/dp_8"
+                        android:contentDescription="@string/image"
+                        android:layout_marginEnd="@dimen/dp_8" />
+
+                    <TextView
+                        android:id="@+id/recycler_chat_users_txt_message"
+                        android:textSize="@dimen/adapterDescriptionTxtSize"
+                        android:textColor="@color/colorDarkGrey"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:ellipsize="marquee"/>
+                </LinearLayout>
+
+
+                <!--message counter-->
+                <TextView
+                    android:id="@+id/recycler_chat_users_txt_message_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minWidth="@dimen/dp_20"
+                    android:minHeight="@dimen/dp_20"
+                    android:textSize="@dimen/sp_12"
+                    android:gravity="center"
+                    android:padding="@dimen/dp_3"
+                    android:layout_alignParentRight="true"
+                    android:text=""
+                    android:textColor="@color/colorWhite"
+                    android:background="@drawable/border_transparent_theme_bg_round_25dp"
+                    android:layout_alignParentEnd="true" />
+
+            </RelativeLayout>
+
+
+            <!--date time-->
+            <TextView
+                android:id="@+id/recycler_chat_users_txt_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorDarkGrey"
+                android:layout_alignParentRight="true"
+                android:textSize="@dimen/adapterDateTimeTxtSize"
+                android:lineSpacingExtra="@dimen/dp_0"
+                android:gravity="center"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@id/recycler_chat_layout_2"
+                android:layout_marginTop="@dimen/adapterDateTimeMarginTop"/>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+
+</RelativeLayout>

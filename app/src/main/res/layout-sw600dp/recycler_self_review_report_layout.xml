@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite">
+
+    <androidx.cardview.widget.CardView
+        style="@style/StyleAdapterCardView">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/adapterCardViewInnerMargin">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/dp_16"
+            android:id="@+id/self_review_subjects"
+            android:gravity="bottom"
+            android:layout_toLeftOf="@id/self_review_like"
+            android:textColor="@color/colorDarkBlack"
+            android:textColorHint="@color/colorDarkGrey"
+            android:background="@android:color/transparent"
+            android:layout_marginEnd="@dimen/dp_16"
+            android:layout_toStartOf="@id/self_review_like"
+            tools:ignore="Autofill,LabelFor"
+            android:inputType="text" />
+
+            <ImageView
+                android:layout_width="@dimen/dp_24"
+                android:layout_height="@dimen/dp_24"
+                android:id="@+id/self_review_like"
+                android:layout_toLeftOf="@id/self_review_like_dislike"
+                android:src="@drawable/ic_like"
+                android:layout_marginRight="@dimen/dp_24"
+                android:tint="@color/colorGrey"
+                android:layout_toStartOf="@id/self_review_like_dislike"
+                android:layout_marginEnd="@dimen/dp_24"
+                android:contentDescription="@string/self_review"/>
+
+            <ImageView
+                android:layout_width="@dimen/dp_24"
+                android:layout_height="@dimen/dp_24"
+                android:layout_alignParentRight="true"
+                android:id="@+id/self_review_like_dislike"
+                android:src="@drawable/ic_dislike_icon"
+                android:tint="@color/colorGrey"
+                android:layout_alignParentEnd="true"
+                android:contentDescription="@string/self_review"/>
+
+    </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="org.ctdworld.propath.activity.ActivityChat"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
+
+
+            <!--toolbar-->
+            <include layout="@layout/toolbar"/>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/chat_refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <!--chats recycler view-->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_chat"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_above="@id/chat_layout_send_message"/>
+                
+                <!--send message layout-->
+                <LinearLayout
+                    android:id="@+id/chat_layout_send_message"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="@dimen/dp_60"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/dp_10"
+                    android:paddingRight="@dimen/dp_10"
+                    android:orientation="horizontal"
+                    android:weightSum="1"
+                    android:layout_alignParentBottom="true">
+                    
+                    <ImageView
+                        android:id="@+id/chat_img_camera"
+                        android:layout_width="0dp"
+                        android:layout_height="24dp"
+                        android:layout_weight=".1"
+                        android:src="@drawable/ic_camera"
+                        android:tint="@color/colorIconLightTheme"
+                        tools:ignore="ContentDescription" />
+
+                    <ImageView
+                        android:id="@+id/chat_add_media"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dp_24"
+                        android:layout_weight=".1"
+                        android:src="@drawable/ic_attach"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:tint="@color/colorIconLightTheme"
+                        android:layout_marginStart="@dimen/dp_10"
+                        tools:ignore="ContentDescription" />
+
+                    <EditText
+                        android:id="@+id/chat_edit_message"
+                        style="@style/StyleEdit"
+                        android:layout_marginTop="0dp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:minHeight="@dimen/dp_45"
+                        android:maxHeight="@dimen/dp_150"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_weight=".7"
+                        android:layout_marginStart="@dimen/dp_10"
+                        android:inputType="text"
+                        tools:ignore="Autofill,LabelFor" />
+
+
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_weight=".1"
+                        android:layout_height="@dimen/dp_24"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_marginStart="@dimen/dp_10">
+
+                        <ImageView
+                            android:id="@+id/chat_img_send"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/ic_send"
+                            android:tint="@color/colorIconLightTheme"
+                            tools:ignore="ContentDescription" />
+
+                      <!--  <ProgressBar
+                            android:id="@+id/chat_progress_bar_send_message"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:tint="@color/colorDarkBlack"
+                            android:visibility="gone"/>-->
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+               <!-- &lt;!&ndash;footer&ndash;&gt;
+                <fragment
+                    android:id="@+id/fragment_footer"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/footerHeight"
+                    android:layout_alignParentBottom="true"
+                    android:name="FragmentFooter"/>
+-->
+            </RelativeLayout>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</LinearLayout>

@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="org.ctdworld.propath.activity.ActivityCoachSelfReviewDescription"
+    android:background="@color/colorWhite">
+
+
+    <include layout="@layout/toolbar"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true"
+                android:layout_marginBottom="@dimen/footerHeight">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/dp_16"
+                    android:layout_marginLeft="@dimen/dp_16"
+                    android:orientation="vertical">
+
+
+
+                    <RelativeLayout
+                        android:id="@+id/self_review_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                      >
+                        <!--User Details-->
+                        <FrameLayout
+                            android:id="@+id/fragment_container_creator_details"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_30"/>
+                    </RelativeLayout>
+
+
+
+                    <LinearLayout
+                        android:id="@+id/layout_event"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="@dimen/dp_40"
+                        android:layout_marginBottom="@dimen/dp_5"
+                        >
+                        <TextView
+                            android:id="@+id/txt_event"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/events"
+                            android:textColor="@color/colorTheme"
+                            android:textSize="@dimen/txtSize"
+                            android:layout_marginBottom="@dimen/dp_5"/>
+
+                        <RelativeLayout
+                            style="@style/StyleEditContainer">
+
+                            <TextView
+                                android:id="@+id/event_edit"
+                                style="@style/StyleEditInContainer"
+                                android:hint="@string/events"
+                                android:textSize="@dimen/txtSize"
+                                android:textColor="@color/colorDarkGrey"
+
+                                />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_strength"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:layout_marginBottom="@dimen/dp_5"
+                        >
+
+                        <TextView
+                            android:id="@+id/txt_strength"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/strengths"
+                            android:textColor="@color/colorTheme"
+                            android:textSize="@dimen/txtSize"
+                            android:layout_marginBottom="@dimen/dp_5"/>
+                        <RelativeLayout
+                            style="@style/StyleEditContainer"
+                        >
+
+                            <TextView
+                                android:id="@+id/strengths_edit"
+                                style="@style/StyleEditInContainer"
+                                android:hint="@string/strengths_desc"
+                                android:textColor="@color/colorDarkGrey"
+                                android:textSize="@dimen/txtSize"
+
+                                />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_improvements"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:orientation="vertical"
+                        android:layout_marginBottom="@dimen/dp_5"
+                        >
+
+                        <TextView
+                            android:id="@+id/txt_improvements"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/improvements"
+                            android:textColor="@color/colorTheme"
+                            android:textSize="@dimen/txtSize"
+                            android:layout_marginBottom="@dimen/dp_5"/>
+
+                        <RelativeLayout
+                            style="@style/StyleEditContainer"
+                           >
+
+
+                            <TextView
+                                android:id="@+id/improvements_edit"
+                                style="@style/StyleEditInContainer"
+                                android:hint="@string/improvements_desc"
+                                android:textSize="@dimen/txtSize"
+                                android:textColor="@color/colorDarkGrey"
+                                />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_suggestion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:orientation="vertical"
+                        android:layout_marginBottom="@dimen/dp_5"
+                        >
+
+                        <TextView
+                            android:id="@+id/txt_suggestions"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/suggestions"
+                            android:textColor="@color/colorTheme"
+                            android:textSize="@dimen/txtSize"
+                            android:layout_marginBottom="@dimen/dp_5"/>
+
+                        <RelativeLayout
+                            style="@style/StyleEditContainer"
+                         >
+
+
+                            <TextView
+                                android:id="@+id/suggestion_edit"
+                                style="@style/StyleEditInContainer"
+                                android:hint="@string/suggestions_desc"
+                                android:textSize="@dimen/txtSize"
+                                android:textColor="@color/colorDarkGrey"
+
+                                />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_assistance"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:orientation="vertical"
+                        android:layout_marginBottom="@dimen/dp_20"
+                        >
+
+                        <TextView
+                            android:id="@+id/txt_assistance"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/assistance_requested"
+                            android:textColor="@color/colorTheme"
+                            android:textSize="@dimen/txtSize"
+                            android:layout_marginBottom="@dimen/dp_5"/>
+
+                        <RelativeLayout
+                            style="@style/StyleEditContainer"
+                           >
+
+                            <TextView
+                                android:id="@+id/assistance_edit"
+                                style="@style/StyleEditInContainer"
+                                android:hint="@string/assistance_desc"
+                                android:textSize="@dimen/txtSize"
+                                android:textColorHint="@color/colorDarkGrey"
+                                android:textColor="@color/colorTextBlack"
+                                />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+
+
+
+
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:visibility="gone"/>
+
+
+        <fragment
+            android:id="@+id/container_footer"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_60"
+            android:layout_alignParentBottom="true"
+            android:name="org.ctdworld.propath.fragment.FragmentFooter"/>
+    </RelativeLayout>
+</LinearLayout>

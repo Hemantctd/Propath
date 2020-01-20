@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="org.ctdworld.propath.fragment.DialogEditText"
+    >
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp_16"
+        android:background="@drawable/border_theme_color_2dp_round_25dp"
+        android:backgroundTint="@color/colorWhite">
+
+
+
+        <TextView
+            android:id="@+id/dialog_training_plan_create_item_txt_title"
+            style="@style/StyleTextView"
+            android:textSize="@dimen/dp_18"
+            android:textColor="@color/colorTheme"
+            android:text="Create Training Plan"
+            android:layout_centerHorizontal="true"/>
+
+
+        <EditText
+            android:id="@+id/dialog_training_plan_create_item_edit_title"
+            style="@style/StyleEdit"
+            android:layout_below="@id/dialog_training_plan_create_item_txt_title"
+            android:hint="Enter text"/>
+
+
+
+        <RelativeLayout
+            android:id="@+id/dialog_training_plan_create_item_layout_add_image_video"
+            style="@style/StyleTextViewWithBottomLine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_18"
+            android:layout_below="@id/dialog_training_plan_create_item_edit_title">
+
+            <TextView
+                android:id="@+id/dialog_training_plan_create_item_txt_add_image_video"
+                style="@style/StyleTextView"
+                android:layout_alignBottom="@dimen/marginBottomDialogTitle"
+                android:text="Add image/video"
+                android:textColor="@color/colorTextBlack"
+                android:textSize="@dimen/sp_15"
+                android:layout_centerVertical="true"/>
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                style="@style/StyleImageLightTheme"
+                android:id="@+id/dialog_training_plan_create_item_img_add_image_video"
+                android:layout_width="@dimen/dp_45"
+                android:layout_height="@dimen/dp_45"
+                android:tint="@android:color/transparent"
+                android:src="@drawable/img_default_black"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"/>
+
+
+        </RelativeLayout>
+
+
+        <Button
+            android:id="@+id/dialog_training_plan_create_item_btn_create"
+            style="@style/StyleButton"
+            android:layout_height="@dimen/dp_40"
+            android:layout_width="wrap_content"
+            android:paddingLeft="@dimen/dp_16"
+            android:paddingRight="@dimen/dp_16"
+            android:textSize="@dimen/sp_14"
+            android:text="@string/add"
+            android:layout_below="@id/dialog_training_plan_create_item_layout_add_image_video"
+            android:layout_marginTop="@dimen/dp_30"
+            android:layout_alignParentRight="true"/>
+
+
+    </RelativeLayout>
+
+
+
+
+</FrameLayout>

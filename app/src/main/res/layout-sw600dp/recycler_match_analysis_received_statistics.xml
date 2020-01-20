@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/dp_20"
+    android:paddingBottom="@dimen/dp_5"
+    android:paddingTop="@dimen/dp_5"
+    android:paddingRight="@dimen/dp_5"
+    android:paddingLeft="@dimen/dp_5"
+    android:id="@+id/layout_received_statistics"
+    android:background="@drawable/border_rectangle_light_grey_1dp"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/team_list_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Team List"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dp_10"
+            android:textColor="@color/colorTextBlack"
+            android:textSize="@dimen/txtSize"
+            android:layout_centerHorizontal="true"
+            android:textAlignment="center"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/dp_5"
+            android:paddingRight="@dimen/dp_5"
+            android:layout_marginTop="@dimen/dp_5"
+            android:layout_marginRight="@dimen/dp_5"
+            android:background="@drawable/border_rectangle_theme_1dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorDarkGrey"
+                android:text="XYZ12"
+                android:textSize="@dimen/txtSize"
+                android:paddingLeft="@dimen/dp_10"
+                android:paddingRight="@dimen/dp_10"
+                android:paddingTop="@dimen/dp_2"
+                android:paddingBottom="@dimen/dp_2"/>
+
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="3"
+        android:orientation="horizontal"
+        android:padding="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_10">
+
+       <TextView
+           android:layout_width="0dp"
+           android:layout_height="match_parent"
+           android:layout_weight="1.45"
+           android:drawableLeft="@drawable/groups_stat"
+           android:layout_marginRight="@dimen/dp_10"
+           android:text="Team A"
+           android:gravity="center"
+           android:textSize="@dimen/txtSize"
+           android:textColor="@color/colorDarkGrey"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.05"
+            android:background="@color/colorTheme"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5"
+            android:orientation="horizontal"
+
+            android:weightSum="2"
+           >
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:drawableLeft="@drawable/ic_logo_wallabies"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:text="Team B"
+            android:gravity="center"
+            android:layout_weight="1.7"
+            android:paddingTop="@dimen/dp_5"
+            android:paddingBottom="@dimen/dp_5"
+            android:textSize="@dimen/txtSize"
+            android:textColor="@color/colorDarkGrey"/>
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.3"
+                android:src="@drawable/ic_cancel_stat"
+                android:tint="@color/colorTheme"
+                android:paddingTop="@dimen/dp_5"
+                android:paddingBottom="@dimen/dp_5"
+              />
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="March 20, 2019"
+        android:textSize="@dimen/txtSize"
+        android:layout_gravity="center"
+        android:textAlignment="center"
+        android:layout_centerInParent="true"/>
+
+</LinearLayout>

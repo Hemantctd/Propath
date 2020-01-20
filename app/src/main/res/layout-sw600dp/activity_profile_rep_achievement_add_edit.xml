@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:orientation="vertical"
+    tools:context="org.ctdworld.propath.activity.ActivityProfileRepAchievementAddEdit">
+
+    <include layout="@layout/toolbar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginBottom="@dimen/footerHeight"
+            android:layout_marginTop="@dimen/dp_16"
+            android:layout_marginLeft="@dimen/dp_16"
+            android:layout_marginRight="@dimen/dp_16">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <!--representative achievements-->
+                    <!--enter team-->
+                    <EditText
+                        android:id="@+id/profile_rep_edit_team"
+                        style="@style/StyleEdit"
+                        android:hint="Enter Sport"/>
+
+                    <!--enter location-->
+                    <EditText
+                        android:id="@+id/profile_rep_edit_location"
+                        style="@style/StyleEdit"
+                        android:hint="Enter Location"/>
+
+
+                    <!--from -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_18"
+                        android:text="From"
+                        android:textColor="@color/colorDarkGrey"
+                        android:textColorHint="@color/colorDarkGrey"
+                        android:textSize="@dimen/sp_18" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/editHeight"
+
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_marginTop="0dp"
+                            style="@style/StyleEdit">
+
+                            <Spinner
+                                android:id="@+id/profile_rep_spin_from_month"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:backgroundTint="@color/colorDarkBlack"
+                                android:entries="@array/entries_month"
+                                android:theme="@style/ThemeSpinner" />
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            style="@style/StyleEdit"
+                            android:layout_marginLeft="@dimen/dp_15"
+                            android:layout_weight="1"
+                            android:layout_marginTop="0dp">
+
+                            <Spinner
+                                android:id="@+id/profile_rep_spin_from_year"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:backgroundTint="@color/colorDarkBlack"
+                                android:entries="@array/entries_year"
+                                android:theme="@style/ThemeSpinner" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                    <!--To -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_18"
+                        android:text="To"
+                        android:textColor="@color/colorDarkGrey"
+                        android:textColorHint="@color/colorDarkGrey"
+                        android:textSize="@dimen/sp_18" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_45"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:weightSum="2">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            style="@style/StyleEdit"
+                            android:layout_weight="1"
+                            android:layout_marginTop="0dp">
+
+                            <Spinner
+                                android:id="@+id/profile_rep_spin_to_month"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:backgroundTint="@color/colorDarkBlack"
+                                android:entries="@array/entries_month"
+                                android:theme="@style/ThemeSpinner" />
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            style="@style/StyleEdit"
+                            android:layout_marginLeft="@dimen/dp_15"
+                            android:layout_weight="1"
+                            android:layout_marginTop="0dp">
+
+                            <Spinner
+                                android:id="@+id/profile_rep_spin_to_year"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:backgroundTint="@color/colorDarkBlack"
+                                android:entries="@array/entries_year"
+                                android:theme="@style/ThemeSpinner" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                    <!--enter role, position-->
+                    <EditText
+                        android:id="@+id/profile_rep_edit_role_position"
+                        style="@style/StyleEdit"
+                        android:hint="Role/Position"/>
+
+
+                    <!--upload media-->
+                    <!-- &lt;!&ndash;enter  share link&ndash;&gt;
+                    <EditText
+                        android:id="@+id/profile_rep_edit_link"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/editHeight"
+                        android:layout_marginTop="@dimen/marginTopEditTextButton"
+                        android:background="@drawable/border_black_2dp_round_10dp"
+                        android:gravity="top"
+                        android:hint="@string/share_link"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="7dp" />
+
+
+                    &lt;!&ndash;upload media&ndash;&gt;
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/editHeight"
+                        android:layout_marginTop="@dimen/marginTopEditTextButton"
+                        android:background="@drawable/border_black_2dp_round_10dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp">
+
+
+                        <TextView
+                            android:id="@+id/profile_rep_txt_media"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Media"
+                            android:textSize="18sp"
+                            android:layout_marginRight="40dp"
+                            android:layout_centerVertical="true"/>
+
+                        <ImageView
+                            android:id="@+id/profile_rep_img_attach_media"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_upload"
+                            android:tint="@color/colorTheme"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"/>
+
+                    </RelativeLayout>
+            -->
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_25"
+                        >
+                        <!--media -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/media"
+                            android:textColor="@color/colorDarkGrey"
+                            android:textColorHint="@color/colorDarkGrey"
+                            android:textSize="@dimen/sp_18"
+                            android:textStyle="bold"/>
+
+
+                        <ImageView
+                            android:id="@+id/profile_rep_btn_upload"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_plus"
+                            android:layout_alignParentEnd="true"/>
+
+
+
+                    </RelativeLayout>
+
+
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/media_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:layout_marginBottom="@dimen/dp_20"/>
+
+
+
+
+                    <!--media -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/link"
+                        android:textColor="@color/colorDarkGrey"
+                        android:textColorHint="@color/colorDarkGrey"
+                        android:textSize="@dimen/sp_18"
+                        android:textStyle="bold"
+                        />
+
+
+
+                    <EditText
+                        android:id="@+id/link"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="@dimen/dp_10"
+                        android:layout_marginTop="@dimen/dp_7"
+                        android:hint="@string/enter_link"
+                        android:textColor="@color/colorTextBlack"
+                        android:textColorHint="@color/colorDarkGrey"
+                        android:background="@drawable/border_bottom_light_grey_1dp"/>
+
+                    <!--  <LinearLayout
+                          android:layout_width="match_parent"
+                          android:layout_height="@dimen/dp_45"
+                          android:layout_marginTop="@dimen/dp_10"
+                          android:weightSum="2">
+
+                       &lt;!&ndash;   <Button
+                              android:id="@+id/profile_rep_btn_upload"
+                              android:layout_width="0dp"
+                              android:layout_height="match_parent"
+                              android:layout_weight="1"
+                              android:background="@drawable/border_transparent_2dp_round_10dp"
+                              android:backgroundTint="@color/colorTheme"
+                              android:text="Upload"
+
+                              android:textColor="@color/colorWhite"
+                              android:textSize="@dimen/sp_18" />&ndash;&gt;
+
+                          <Button
+                              android:id="@+id/profile_rep_btn_link"
+                              android:layout_width="0dp"
+                              android:layout_height="match_parent"
+                              android:layout_marginLeft="@dimen/dp_15"
+                              android:layout_weight="1"
+                              android:background="@drawable/border_transparent_2dp_round_10dp"
+                              android:backgroundTint="@color/colorTheme"
+                              android:text="Link"
+                              android:textColor="@color/colorWhite"
+                              android:textSize="@dimen/sp_18" />
+
+                      </LinearLayout>-->
+
+
+                    <!--  <Button
+                          android:id="@+id/profile_rep_btn_add_achievement"
+                          android:layout_width="match_parent"
+                          android:layout_height="@dimen/btnHeight"
+                          android:layout_marginLeft="@dimen/dp_40"
+                          android:layout_marginTop="@dimen/dp_30"
+                          android:layout_marginRight="@dimen/dp_40"
+                          android:layout_marginBottom="@dimen/dp_30"
+                          android:background="@drawable/border_white_2dp_round_25dp"
+                          android:backgroundTint="@color/colorTheme"
+                          android:text="Submit"
+                          android:textColor="@color/colorWhite"
+                          android:textSize="@dimen/sp_18" />-->
+
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+
+
+
+        <fragment
+            android:id="@+id/container_footer"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_60"
+            android:layout_alignParentBottom="true"
+            android:name="org.ctdworld.propath.fragment.FragmentFooter"/>
+
+    </RelativeLayout>
+</LinearLayout>

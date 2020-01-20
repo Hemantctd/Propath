@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".fragment.FragmentMealPlanner"
+    android:id="@+id/meal_planner_received_refresh_layout">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/dp_16"
+        android:paddingRight="@dimen/dp_16"
+        android:paddingTop="@dimen/dp_16">
+
+        <!--<TextView
+            android:id="@+id/note_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="All Note Listing"
+            android:textColor="@color/colorDarkBlack"
+            android:textSize="20sp" />
+-->
+
+        <!--recycler for all note-->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/meal_planner_received_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/fragment_meal_planner_btn_delete"/>
+
+        <Button
+            android:id="@+id/fragment_meal_planner_btn_delete"
+            style="@style/StyleButton"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/dp_24"
+            android:layout_marginRight="@dimen/dp_36"
+            android:layout_marginLeft="@dimen/dp_36"
+            android:text="@string/delete"
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/dp_24"/>
+
+
+        <!--floating button to add note-->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fragment_meal_planner_float_button"
+            style="@style/StyleFloatButton"/>
+
+
+        <!--to show error message-->
+        <TextView
+            android:id="@+id/meal_planner_received_txt_error_message"
+            style="@style/styleTxtMessage"
+            android:textColor="@color/colorTheme"
+            android:visibility="gone"/>
+
+
+    </RelativeLayout>
+
+
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

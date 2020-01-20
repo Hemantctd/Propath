@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="org.ctdworld.propath.fragment.FragmentDashTeacher">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:background="@color/colorWhite">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:weightSum="4"
+            android:orientation="vertical"
+            android:layout_marginLeft="@dimen/dp_16"
+            android:layout_marginBottom="@dimen/dp_16">
+
+            <LinearLayout
+                android:id="@+id/dash_teacher_education"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/dash_button_border"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/dp_16"
+                android:weightSum="1">
+
+                <ImageView
+                    style="@style/StyleDashboardButtonImageView"
+                    android:src="@drawable/ic_dash_education" />
+
+                <TextView
+                    style="@style/StyleDashboardButtonTextView"
+                    android:text="@string/education"
+                    android:backgroundTint="@color/colorDashBtnTextBgEducation"/>
+
+            </LinearLayout>
+
+            <!--<LinearLayout-->
+                <!--android:id="@+id/dash_training_plan"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="0dp"-->
+                <!--android:layout_weight="1"-->
+                <!--android:background="@drawable/dash_button_border"-->
+                <!--android:orientation="vertical"-->
+                <!--android:layout_marginTop="15dp"-->
+                <!--android:weightSum="1">-->
+
+                <!--<ImageView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="0dp"-->
+                    <!--android:layout_weight=".8"-->
+                    <!--android:layout_gravity="center_horizontal"-->
+                    <!--android:src="@drawable/ic_dash_training_plan"-->
+                    <!--android:padding="@dimen/dashImgPadding"/>-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="0dp"-->
+                    <!--android:layout_weight=".2"-->
+                    <!--android:background="@drawable/dash_textview_bottom_border"-->
+                    <!--android:backgroundTint="@color/colorDashBtnTextBgTrainingPlan"-->
+                    <!--android:text="@string/training_plan"-->
+                    <!--android:textSize="@dimen/dashboardTextSize"-->
+                    <!--android:gravity="center"/>-->
+
+            <!--</LinearLayout>-->
+
+            <!--<LinearLayout-->
+                <!--android:id="@+id/dash_injury_management"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="0dp"-->
+                <!--android:layout_weight="1"-->
+                <!--android:background="@drawable/dash_button_border"-->
+                <!--android:orientation="vertical"-->
+                <!--android:layout_marginTop="15dp"-->
+                <!--android:weightSum="1">-->
+
+                <!--<ImageView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="0dp"-->
+                    <!--android:layout_weight=".8"-->
+                    <!--android:layout_gravity="center_horizontal"-->
+                    <!--android:src="@drawable/ic_dash_injury_management"-->
+                    <!--android:padding="@dimen/dashImgPadding"/>-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="0dp"-->
+                    <!--android:layout_weight=".2"-->
+                    <!--android:background="@drawable/dash_textview_bottom_border"-->
+                    <!--android:backgroundTint="@color/colorDashBtnTextBgInjuryManagement"-->
+                    <!--android:text="Injury Management"-->
+                    <!--android:textSize="@dimen/dashboardTextSize"-->
+                    <!--android:gravity="center"/>-->
+
+            <!--</LinearLayout>-->
+
+            <!--<LinearLayout-->
+                <!--android:id="@+id/dash_video_analysis"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="0dp"-->
+                <!--android:layout_weight="1"-->
+                <!--android:background="@drawable/dash_button_border"-->
+                <!--android:orientation="vertical"-->
+                <!--android:layout_marginTop="15dp"-->
+                <!--android:weightSum="1">-->
+
+                <!--<ImageView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="0dp"-->
+                    <!--android:layout_weight=".8"-->
+                    <!--android:layout_gravity="center_horizontal"-->
+                    <!--android:src="@drawable/ic_dash_video_analysis"-->
+                    <!--android:padding="@dimen/dashImgPadding"/>-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="0dp"-->
+                    <!--android:layout_weight=".2"-->
+                    <!--android:background="@drawable/dash_textview_bottom_border"-->
+                    <!--android:backgroundTint="@color/colorDashBtnTextBgSurvey"-->
+                    <!--android:text="@string/video_analysis"-->
+                    <!--android:textSize="@dimen/dashboardTextSize"-->
+                    <!--android:gravity="center"/>-->
+            <!--</LinearLayout>-->
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:weightSum="4"
+            android:orientation="vertical"
+            android:layout_marginLeft="@dimen/dp_16"
+            android:layout_marginRight="@dimen/dp_16"
+            android:layout_marginBottom="@dimen/dp_16">
+
+            <LinearLayout
+                android:id="@+id/dash_teacher_career"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/dash_button_border"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/dp_16"
+                android:weightSum="1">
+
+                <ImageView
+                    style="@style/StyleDashboardButtonImageView"
+                    android:src="@drawable/ic_dash_career"/>
+
+                <TextView
+                    style="@style/StyleDashboardButtonTextView"
+                    android:text="@string/career"
+                    android:backgroundTint="@color/colorDashBtnTextBgCareer"/>
+
+            </LinearLayout>
+
+            <!--<LinearLayout-->
+                <!--android:id="@+id/dash_statistics"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="0dp"-->
+                <!--android:layout_weight="1"-->
+                <!--android:background="@drawable/dash_button_border"-->
+                <!--android:orientation="vertical"-->
+                <!--android:layout_marginTop="15dp"-->
+                <!--android:weightSum="1">-->
+
+                <!--<ImageView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="0dp"-->
+                    <!--android:layout_weight=".8"-->
+                    <!--android:layout_gravity="center_horizontal"-->
+                    <!--android:src="@drawable/ic_dash_training_plan"-->
+                    <!--android:padding="@dimen/dashImgPadding"/>-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="0dp"-->
+                    <!--android:layout_weight=".2"-->
+                    <!--android:background="@drawable/dash_textview_bottom_border"-->
+                    <!--android:backgroundTint="@color/colorDashBtnTextBgStatistics"-->
+                    <!--android:text="Statistics"-->
+                    <!--android:textSize="@dimen/dashboardTextSize"-->
+                    <!--android:gravity="center"/>-->
+
+            <!--</LinearLayout>-->
+
+            <!--<LinearLayout-->
+                <!--android:id="@+id/dash_nutrition"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="0dp"-->
+                <!--android:layout_weight="1"-->
+                <!--android:background="@drawable/dash_button_border"-->
+                <!--android:orientation="vertical"-->
+                <!--android:layout_marginTop="15dp"-->
+                <!--android:weightSum="1">-->
+
+                <!--<ImageView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="0dp"-->
+                    <!--android:layout_weight=".8"-->
+                    <!--android:layout_gravity="center_horizontal"-->
+                    <!--android:src="@drawable/ic_dash_nutrition"-->
+                    <!--android:padding="@dimen/dashImgPadding"/>-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="0dp"-->
+                    <!--android:layout_weight=".2"-->
+                    <!--android:background="@drawable/dash_textview_bottom_border"-->
+                    <!--android:backgroundTint="@color/colorDashBtnTextBgNutrition"-->
+                    <!--android:text="@string/nutrition"-->
+                    <!--android:textSize="@dimen/dashboardTextSize"-->
+                    <!--android:gravity="center"/>-->
+
+            <!--</LinearLayout>-->
+
+            <!--<LinearLayout-->
+                <!--android:id="@+id/dash_survey"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="0dp"-->
+                <!--android:layout_weight="1"-->
+                <!--android:background="@drawable/dash_button_border"-->
+                <!--android:orientation="vertical"-->
+                <!--android:layout_marginTop="15dp"-->
+                <!--android:weightSum="1">-->
+
+                <!--<ImageView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="0dp"-->
+                    <!--android:layout_weight=".8"-->
+                    <!--android:layout_gravity="center_horizontal"-->
+                    <!--android:src="@drawable/ic_dash_training_plan"-->
+                    <!--android:padding="@dimen/dashImgPadding"/>-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="0dp"-->
+                    <!--android:layout_weight=".2"-->
+                    <!--android:background="@drawable/dash_textview_bottom_border"-->
+                    <!--android:backgroundTint="@color/colorDashBtnTextBgSurvey"-->
+                    <!--android:text="@string/questionsList"-->
+                    <!--android:textSize="@dimen/dashboardTextSize"-->
+                    <!--android:gravity="center"/>-->
+
+            <!--</LinearLayout>-->
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

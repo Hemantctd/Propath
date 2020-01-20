@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+  >
+
+    <androidx.cardview.widget.CardView
+        style="@style/StyleAdapterCardView">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/adapterCardViewInnerMargin"
+        android:weightSum="3"
+        >
+
+
+
+        <LinearLayout
+            android:id="@+id/survey_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/pastSurveyText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp_16"
+                android:maxLines="1"
+                android:textColor="@color/colorTheme"/>
+
+            <TextView
+                android:id="@+id/show_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_3"
+                android:layout_marginBottom="@dimen/dp_8"
+                android:textSize="@dimen/sp_16"
+                android:textColor="@color/colorDarkGrey"
+                />
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_3"
+                android:layout_marginBottom="@dimen/dp_8"
+                android:textSize="@dimen/sp_13"
+                android:textColor="@color/colorDarkGrey"
+                />
+        </LinearLayout>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.8"
+            android:textSize="@dimen/sp_16"
+            android:gravity="center"
+            android:id="@+id/hitsText"
+            android:layout_marginRight="@dimen/dp_3"
+            android:textColor="@color/colorTheme"
+            android:layout_marginEnd="@dimen/dp_3" />
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.7">
+
+            <ImageView
+                android:id="@+id/options"
+                style="@style/StyleImageLightTheme"
+                android:layout_width="@dimen/dp_24"
+                android:layout_height="@dimen/dp_24"
+                android:src="@drawable/ic_options_menu"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                tools:ignore="ContentDescription"
+                android:layout_alignParentEnd="true" />
+            <!--<Spinner
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tools_survey"
+                android:gravity="right"
+                style="@style/StyleSpinner"/>-->
+            <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:weightSum="6">-->
+
+            <!--<ImageView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:src="@drawable/ic_share"-->
+            <!--android:layout_weight="1"-->
+            <!--android:tint="@color/colorTheme"-->
+            <!--/>-->
+            <!--<ImageView-->
+            <!--android:layout_width="30dp"-->
+            <!--android:layout_height="30dp"-->
+            <!--android:src="@drawable/survey_icon"-->
+            <!--android:tint="@color/colorTheme"-->
+            <!--android:layout_weight="1"/>-->
+            <!--<ImageView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:src="@drawable/ic_select"-->
+            <!--android:tint="@color/colorTheme"-->
+            <!--android:layout_weight="1"/>-->
+            <!--<ImageView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:src="@drawable/ic_edit"-->
+            <!--android:tint="@color/colorTheme"-->
+            <!--android:layout_weight="1"/>-->
+            <!--<ImageView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:src="@drawable/ic_notes_survey"-->
+            <!--android:tint="@color/colorTheme"-->
+            <!--android:layout_weight="1"/>-->
+            <!--<ImageView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:tint="@color/colorTheme"-->
+            <!--android:src="@drawable/ic_delete"-->
+            <!--android:layout_weight="1"/>-->
+
+            <!--</LinearLayout>-->
+        </RelativeLayout>
+    </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

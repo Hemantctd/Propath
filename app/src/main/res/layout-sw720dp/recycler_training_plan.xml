@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        style="@style/StyleAdapterCardView">
+
+        <RelativeLayout
+            android:id="@+id/layout_data"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/adapterCardViewInnerMargin">
+
+
+            <!--title-->
+            <TextView
+                android:id="@+id/recycler_training_plan_received_txt_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dp_16"
+                android:textSize="@dimen/adapterTitleTxtSize"
+                android:textColor="@color/colorTextBlack"
+                android:layout_marginEnd="@dimen/dp_16" />
+
+
+            <!--date time-->
+            <TextView
+                android:id="@+id/recycler_training_plan_txt_date_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/adapterDateTimeTxtSize"
+                android:textColor="@color/colorDarkGrey"
+                android:layout_marginTop="@dimen/dp_8"
+                android:includeFontPadding="false"
+                android:layout_below="@id/recycler_training_plan_received_txt_description"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+
+            <ImageView
+                android:id="@+id/img_options_menu"
+                android:layout_width="@dimen/dp_24"
+                android:layout_height="@dimen/dp_24"
+                android:src="@drawable/ic_options_menu"
+                android:layout_alignParentRight="true"
+                android:tint="@color/colorTheme"
+                android:layout_alignParentEnd="true"
+                android:contentDescription="@string/options_menu"/>
+
+            <!--description-->
+            <TextView
+                android:id="@+id/recycler_training_plan_received_txt_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dp_16"
+                android:layout_below="@id/recycler_training_plan_received_txt_title"
+                android:textSize="@dimen/adapterDescriptionTxtSize"
+                android:textColor="@color/colorDarkGrey"
+                android:layout_marginTop="@dimen/dp_5"
+                android:layout_alignTop="@id/recycler_training_plan_checkbox"
+                android:layout_marginEnd="@dimen/dp_16" />
+
+
+
+            <CheckBox
+                android:id="@+id/recycler_training_plan_checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/colorIconLightTheme"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/dp_30"
+                android:visibility="gone"
+                android:layout_alignParentEnd="true"
+                tools:ignore="UnusedAttribute" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>

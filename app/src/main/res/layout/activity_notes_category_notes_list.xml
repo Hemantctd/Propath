@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context="org.ctdworld.propath.fragment.FragmentNotesAll"
+    android:orientation="vertical"
+    android:id="@+id/activity_note_category_notes_list_refresh_layout">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/toolbar"/>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+         >
+
+            <!--text all note listing-->
+           <!-- <TextView
+                android:id="@+id/fragment_notes_all_notes_of_category_txt_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="All Note Listing"
+                android:textColor="@color/colorDarkBlack"
+                android:textSize="20sp" />
+-->
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/fragment_notes_all_notes_of_category_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="@dimen/dp_16"/>
+
+
+
+            <!--floating button to add note-->
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fragment_notes_all_notes_of_category_float_button"
+                android:layout_width="@dimen/dp_56"
+                android:layout_height="@dimen/dp_56"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/dp_20"
+                android:clickable="true"
+                android:focusable="true"
+                android:src="@drawable/ic_edit"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/dp_20"
+                tools:ignore="RtlHardcoded"
+                android:layout_marginBottom="@dimen/dp_20"
+                android:layout_above="@+id/container_footer"/>
+
+
+            <fragment
+                android:id="@+id/container_footer"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_60"
+                android:layout_alignParentBottom="true"
+                android:name="org.ctdworld.propath.fragment.FragmentFooter"/>
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+<!--
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.ActivityAddToCategory"
+    android:orientation="vertical">
+
+
+    <include layout="@layout/toolbar"/>
+
+    <FrameLayout
+        android:id="@+id/activity_category_container_for_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    &lt;!&ndash;<ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+
+        <RelativeLayout
+        android:id="@+id/recycler_notes_category_layout_details"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/recycler_notes_category_name"
+        android:visibility="visible"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp">
+
+        &lt;!&ndash;note layout&ndash;&gt;
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/categoryDetails">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_rectangle_light_grey_1dp">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/ic_notes"
+                    android:tint="@color/colorTheme"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/cardIcon"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/cardIcon"
+                    android:id="@+id/textTitle"
+                    android:text="Note"
+                    android:textSize="18sp"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/open_sans_bold"
+                    android:textColor="@color/colorDarkBlack"
+                    android:layout_marginTop="7dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textTitle"
+                    android:id="@+id/textDate"
+                    android:text="Updated on :31-August-2018"
+                    android:textSize="17sp"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/colorDarkGrey"
+                    android:layout_marginTop="7dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textDate"
+                    android:layout_marginRight="10dp"
+                    android:id="@+id/textDesc"
+                    android:text="Lorem Ipsum dolor sit amet,consectatur adipiscing elit, said to eiusmod "
+                    android:textSize="16sp"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/colorDarkGrey"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginBottom="20dp"
+                    />
+                <TextView
+                    android:id="@+id/note_read_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Read More ..."
+                    android:textColor="@color/colorDarkBlack"
+                    android:layout_below="@+id/textDesc"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"/>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/note_see_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="See all"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/colorDarkBlack"
+                android:layout_gravity="bottom|right"/>
+
+        </LinearLayout>
+
+        &lt;!&ndash;media layout&ndash;&gt;
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/media_category"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/border_rectangle_light_grey_1dp"
+            android:layout_below="@+id/categoryDetails">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/ic_media"
+                android:tint="@color/colorTheme"
+                android:layout_marginTop="10dp"
+                android:id="@+id/mediaIcon"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mediaIcon"
+                android:id="@+id/mediaTitle"
+                android:text="Media"
+                android:textSize="18sp"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="@font/open_sans_bold"
+                android:textColor="@color/colorDarkBlack"
+                android:layout_marginTop="7dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mediaTitle"
+                android:id="@+id/mediaDate"
+                android:text="Updated on :31-August-2018"
+                android:textSize="17sp"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/colorDarkGrey"
+                android:layout_marginTop="7dp"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:id="@+id/mediaImage"
+                android:src="@drawable/img_athlete_patrick"
+                android:layout_below="@+id/mediaDate"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"/>
+
+            <TextView
+                android:id="@+id/media_see_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="See all ..."
+                android:textColor="@color/colorDarkBlack"
+                android:layout_below="@+id/mediaImage"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"/>
+
+        </RelativeLayout>
+
+        &lt;!&ndash;document layout&ndash;&gt;
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/documents_category"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/border_rectangle_light_grey_1dp"
+            android:layout_below="@+id/media_category">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/ic_document"
+                android:tint="@color/colorTheme"
+                android:layout_marginTop="10dp"
+                android:id="@+id/documentsIcon"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/documentsIcon"
+                android:id="@+id/documentTitle"
+                android:text="Document"
+                android:textSize="18sp"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="@font/open_sans_bold"
+                android:textColor="@color/colorDarkBlack"
+                android:layout_marginTop="7dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/documentTitle"
+                android:id="@+id/documentDate"
+                android:text="Updated on :31-August-2018"
+                android:textSize="17sp"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/colorDarkGrey"
+                android:layout_marginTop="7dp"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:id="@+id/documentImage"
+                android:src="@drawable/img_athlete_patrick"
+                android:layout_below="@+id/documentDate"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"/>
+
+            <TextView
+                android:id="@+id/documents_see_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="See all.."
+                android:textColor="@color/colorDarkBlack"
+                android:layout_below="@+id/documentImage"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"/>
+        </RelativeLayout>
+
+        &lt;!&ndash;link&ndash;&gt;
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/link_shared_category"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/border_rectangle_light_grey_1dp"
+            android:layout_below="@+id/documents_category"
+            android:layout_marginBottom="30dp">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/ic_attach"
+                android:tint="@color/colorTheme"
+                android:layout_marginTop="10dp"
+                android:id="@+id/linksIcon"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linksIcon"
+                android:id="@+id/linkTitle"
+                android:text="Links"
+                android:textSize="18sp"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="@font/open_sans_bold"
+                android:textColor="@color/colorDarkBlack"
+                android:layout_marginTop="7dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linkTitle"
+                android:id="@+id/linkDate"
+                android:text="Updated on :31-August-2018"
+                android:textSize="17sp"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/colorDarkGrey"
+                android:layout_marginTop="7dp"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linkDate"
+                android:id="@+id/sharedLayout"
+                android:layout_marginTop="10dp">
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/sharelinkIcons"
+                    android:src="@mipmap/ic_launcher"
+                    android:layout_marginLeft="40dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/sharelinkIcons"
+                    android:textColor="@color/colorDarkBlack"
+                    android:text="Mesi Goals Scored"
+                    android:id="@+id/shareText"
+                    android:textSize="15sp"
+                    android:layout_marginLeft="15dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/shareText"
+                    android:text="www.goals-by-messi-messivsronaldo.net"
+                    android:textColor="@color/colorLightGrey"
+                    android:layout_marginLeft="95dp"
+                    android:layout_marginTop="@dimen/dp_3"
+                    android:textSize="13dp"/>
+            </RelativeLayout>
+            <TextView
+                android:id="@+id/link_see_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="See all.."
+                android:textColor="@color/colorDarkBlack"
+                android:layout_below="@+id/sharedLayout"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"/>
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+    </ScrollView>&ndash;&gt;
+
+
+
+
+</LinearLayout>-->

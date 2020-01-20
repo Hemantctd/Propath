@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite">
+
+
+
+
+      <androidx.cardview.widget.CardView
+          style="@style/StyleAdapterCardView">
+
+
+
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:layout_margin="@dimen/adapterCardViewInnerMargin">
+
+
+              <!--team and options menu-->
+
+              <RelativeLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content">
+
+
+                  <TextView
+                      android:id="@+id/recycler_rep_achievement_view_txt_team"
+                      style="@style/StyleTextView"
+                      android:layout_alignParentLeft="true"
+                      android:layout_toLeftOf="@id/ic_options_menu"
+                      android:layout_marginRight="@dimen/marginLeftRightButtonEditText"
+                      android:layout_alignParentStart="true"
+                      android:layout_toStartOf="@id/ic_options_menu"
+                      android:layout_marginEnd="@dimen/marginLeftRightButtonEditText" />
+
+
+                  <ImageView
+                      android:id="@+id/ic_options_menu"
+                      style="@style/StyleImageLightTheme"
+                      android:layout_width="@dimen/optionsMenuImgSize"
+                      android:layout_height="@dimen/optionsMenuImgSize"
+                      android:src="@drawable/ic_options_menu"
+                      android:layout_gravity="right"
+                      tools:ignore="RtlHardcoded"
+                      android:contentDescription="@string/options_menu"
+                      android:layout_alignParentRight="true"/>
+
+          </RelativeLayout>
+
+
+
+
+              <!--location-->
+              <TextView
+                  android:id="@+id/recycler_rep_achievement_txt_location"
+                  style="@style/StyleTextView" 
+                  android:layout_marginTop="@dimen/marginTopViews"/>
+
+
+
+
+              <!--from-->
+              <TextView
+                  android:id="@+id/recycler_rep_achievement_txt_from"
+                  style="@style/StyleTextView" 
+                  android:layout_marginTop="@dimen/marginTopViews"/>
+
+
+
+              <!--to-->
+             <TextView
+                  android:id="@+id/recycler_rep_achievement_txt_to"
+                  style="@style/StyleTextView" 
+                  android:layout_marginTop="@dimen/marginTopViews"/>
+
+
+
+              <!--Role/Position-->
+              <TextView
+                  android:id="@+id/recycler_rep_achievement_txt_role_position"
+                  style="@style/StyleTextView" 
+                  android:layout_marginTop="@dimen/marginTopViews"/>
+
+
+
+              <!--Link-->
+              <TextView
+                  android:id="@+id/recycler_rep_achievement_txt_link"
+                  style="@style/StyleTextView"
+                  android:layout_marginTop="@dimen/marginTopViews"
+                  android:autoLink="all"/>
+
+
+              <!--Media-->
+                  <de.hdodenhof.circleimageview.CircleImageView
+                      style="@style/StyleImageLightTheme"
+                      android:id="@+id/recycler_rep_achievement_img_media"
+                      android:layout_width="@dimen/dp_70"
+                      android:layout_height="@dimen/dp_70"
+                      android:layout_marginTop="@dimen/marginTopViews"
+                      android:src="@drawable/img_default_black"/>
+
+
+
+          </LinearLayout>
+
+
+      </androidx.cardview.widget.CardView>
+
+
+
+</LinearLayout>

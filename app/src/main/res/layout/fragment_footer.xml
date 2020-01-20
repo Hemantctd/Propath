@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="org.ctdworld.propath.fragment.FragmentDashboard">
+
+    <LinearLayout
+        android:id="@+id/linear_layout_footer"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_60"
+        android:background="@color/colorAccent"
+        android:weightSum="4"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/footer_home"
+            style="@style/StyleFooterImg"
+            android:src="@drawable/ic_footer_news_feed"/>
+
+        <ImageView
+            android:id="@+id/footer_message"
+            style="@style/StyleFooterImg"
+            android:src="@drawable/ic_message" />
+
+        <!--<ImageView
+            android:id="@+id/footer_news_feed"
+            style="@style/StyleFooterImg"
+            android:src="@drawable/ic_footer_news_feed"/>-->
+
+        <ImageView
+            android:id="@+id/footer_event"
+            style="@style/StyleFooterImg"
+            android:src="@drawable/ic_footer_event"/>
+
+        <LinearLayout
+            android:id="@+id/footer_notification_layout"
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:padding="@dimen/dp_14"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_weight="0.8"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_footer_notification"/>
+
+            <TextView
+                android:id="@+id/footer_notification_textview"
+                android:layout_width="0dp"
+                android:layout_weight="0.2"
+                android:layout_height="wrap_content"
+                android:text="5"
+                android:textSize="@dimen/sp_14"
+                android:textColor="@color/colorWhite"/>
+
+        </LinearLayout>
+       <!-- <TextView
+            android:id="@+id/footer_notification"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="@color/colorWhite"
+            android:text="0"
+            android:drawableLeft="@drawable/ic_footer_notification"
+            android:scaleX=".6"
+            android:scaleY=".6"/>-->
+
+    </LinearLayout>
+
+</LinearLayout>

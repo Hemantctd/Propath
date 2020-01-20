@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="org.ctdworld.propath">
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.flash"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <application
+        android:name=".AppController"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="AllowBackup">
+        <activity android:name=".activity.ActivityMatchDayEventEdit"></activity>
+        <activity android:name=".activity.ActivityMatchDayEvent" />
+        <activity android:name=".activity.ActivityMatchDayShareEvent" />
+        <activity android:name=".activity.ActivityMatchDayTeamShare" />
+        <activity android:name=".activity.ActivityMatchDayFuture8" />
+        <activity android:name=".activity.ActivityMatchDayFuture7" />
+        <activity android:name=".activity.ActivityMatchDayFuture6" />
+        <activity android:name=".activity.ActivityMatchDayFuture5" />
+        <activity android:name=".activity.ActivityMatchDayFuture4" />
+        <activity android:name=".activity.ActivityMatchDayFuture3" />
+        <activity android:name=".activity.ActivityMatchDayFuture2" />
+        <activity android:name=".activity.ActivityMatchDayFuture1" />
+        <activity android:name=".activity.ActivityMatchDay" />
+        <activity android:name=".activity.ActivitySurveyRatingScaleDescriptorPreview" />
+        <activity android:name=".activity.ActivitySurveyRatingScaleTitlePreview" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true"
+            tools:replace="android:authorities">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <activity android:name=".activity.ActivityNutritionFeed" />
+        <activity android:name=".activity.ActivityNutritionFeedPost" />
+        <activity android:name=".activity.ActivityMealPlannerCreate" />
+        <activity
+            android:name=".activity.ActivityYouTubePlayer"
+            android:parentActivityName=".activity.ActivityNewsFeed" />
+        <activity android:name=".activity.ActivityCoachSelfReviewList" />
+        <activity android:name=".activity.ActivityCoachSelfReviewDescription" />
+        <activity android:name=".activity.ActivityCoachCreateSelfReview" />
+        <activity android:name=".activity.ActivityMatchAnalysis" /> <!-- Firebase push notification messaging service -->
+        <service
+            android:name=".service.MyFirebaseMessagingService"
+            android:exported="true"
+            tools:ignore="ExportedService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <!--
+     Set custom default icon. This is used when no icon is set for incoming notification messages.
+     See README(https://goo.gl/l4GJaQ) for more.
+        -->
+        <!-- for firebase -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ic_launcher_foreground" />
+        <!--
+             Set color used with incoming notification messages. This is used when no color is set for the incoming
+             notification message. See README(https://goo.gl/6BKBk7) for more.
+        -->
+        <!-- for firebase -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorAccent" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="@string/default_notification_chanel_id" />
+
+        <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".activity.ActivitySplash"
+            android:theme="@style/ThemeSplash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.ActivityNutritionShare"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivityNutritionComment"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivityNutritionPost"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivityTrainingPlanItemViewSlider"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivityMain"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivityLoginRegister"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivityLogin"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivityRegister"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivityVerifyEmail"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivityResetPassword"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivityForgotPass"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivitySettings"
+            android:screenOrientation="portrait"
+            android:theme="@style/ThemeSettings" />
+        <activity
+            android:name=".activity.ActivityChat"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivityEducationSchoolReviewCreate"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivityEducationProgressReport"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivityTrainingPlan"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivityTrainingPlanCreate"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivityTrainingPlanEdit"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivityCoachFeedbackCoachView"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivityNutrition"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivityNewsFeed"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivityContact"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivitySurvey"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivityFeedback"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivityViewCareerPlan"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivityProfileView"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivityContactAdd"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivityChatGroupProfile"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivityChatAddParticipantToGroup"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivityEvent"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivitySearch"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivityChatUserGroupList"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivityWebView"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivityNotification"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivityCreateSurvey"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivityCareer"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivitySelectMultipleImages"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivityCoachFeedback"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivityCoachViewFeedbackDescription"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivityNewsFeedPost"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivityChooseUserByRole"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivitySurveyQuestionsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivitySurveyPreviewAndSaveQuestions"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivitySurveySettings"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivitySurveyGroup"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivityCareerEmploymentData"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivityChatShowImageAndVideo"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivityNewsFeedSettings"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivityNewsFeedComments"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivityNewsFeedShare"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivityEducationForTeacher"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivityEducationForAthlete"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivityProgressReportList"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivityEducationSelfReviewReport"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivityFAQ"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivityEducationSelfReviewCreate"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivityEducationForOtherFourRoles"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivitySelfReviewListForOtherRoles"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivityProfileRepAchievementAddEdit"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivityProfileUpdate"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivityGetAllSharedSurvey"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivitySubmitSurvey"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivityViewSurvey"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivityViewSubmitSurvey"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivityStatSurvey"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivityNoteCategoryNotesList"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivityNoteContainer"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivityNoteCreate"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivityNoteEdit"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivityNoteSelectCategory"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivityNoteView"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivityContactsAndGroups"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivityTrainingPlanView"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivityNutritionGroup"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivityRatingScaleQuestions"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivityRatingScaleResponses"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivityRatingScaleSurvey"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivityCreateRatingScale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivityYesOrNoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivitySurveyYesOrNoQuestionsPreview"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".activity.ActivitySurveyYesOrNoTitlePreview"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivitySurveyYesOrNoQuestion"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivitySurveyMultipleChoiceQuestionsPreview"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivitySurveyMultipleChoiceTitlePreview"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivitySurveyMultipleChoiceQuestions"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivityMatchAnalysisTeamStatisticsSummary"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivityMatchPersonalStatistics"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivityMatchStatistics"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivityMatchAnalysisIntervalSummary"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivityMatchAnalysisScore"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivityMatchAnalysisCreateTeamList"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivityMatchAnalysisSetUpCreate"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivityMatchAnalysisSetUp"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivitySurveyMultipleChoiceQuestionsWithOptions"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivitySurveyYesOrNoWithOptions"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivityCareerCreateUpdate"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivityCareerPlanView"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivityCareerUserPlanList"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivitySurveyFreeResponseWithOptions"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivitySurveyFreeResponseTitlePreview"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.ActivitySurveyYesNoSubmit" />
+        <activity android:name=".activity.ActivitySurveyMultipleChoiceSubmit" />
+        <activity android:name=".activity.ActivitySurveyFreeResponseSubmit" />
+    </application>
+
+</manifest>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:paddingTop="@dimen/dp_18">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        style="@style/StyleImageLightTheme"
+        android:id="@+id/recycler_career_plan_athlete_list_img_user_pic"
+        android:layout_width="@dimen/dp_60"
+        android:layout_height="@dimen/dp_60"
+        android:src="@drawable/ic_profile"/>
+
+      <TextView
+           android:id="@+id/recycler_career_plan_athlete_list_txt_athlete_name"
+           android:textSize="@dimen/sp_18"
+           android:layout_marginLeft="@dimen/dp_16"
+           android:layout_toRightOf="@+id/recycler_career_plan_athlete_list_img_user_pic"
+           android:text="Athlete name"
+           android:textColor="@color/colorTextBlack"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_centerVertical="true"/>
+
+
+
+   <!-- <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/list_item"
+        android:layout_marginLeft="65dp"
+        android:layout_marginBottom="5dp">
+
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@drawable/ic_email"
+            android:tint="@color/colorTextBlack"
+            android:id="@+id/emailicon"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/emailicon"
+            android:textColor="@color/colorDarkGrey"
+            android:text="abc@gmail.com"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"/>
+    </RelativeLayout>
+    -->
+
+</RelativeLayout>

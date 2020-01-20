@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/img_slider"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"/>
+
+   <!-- <FrameLayout
+        android:id="@+id/layout_image_slider_layout_video"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+-->
+        <tcking.github.com.giraffeplayer2.VideoView
+            android:id="@+id/layout_image_slider_video_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone"/>
+
+        <!--<ImageView
+            android:id="@+id/layout_image_slider_img_video"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/ic_video_play"
+            android:tint="@color/colorTheme"
+            android:layout_gravity="center"/>
+
+    </FrameLayout>-->
+
+
+</FrameLayout>

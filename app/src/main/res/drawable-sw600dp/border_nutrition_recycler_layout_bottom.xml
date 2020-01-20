@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item android:top="@dimen/dp_3_minus">
+        <shape>
+            <corners android:bottomRightRadius="@dimen/dp_10" android:bottomLeftRadius="10dp"/>
+            <stroke android:color="@color/colorLightGrey" android:width="@dimen/dp_2"/>
+            <solid android:color="#ffffff"/>
+        </shape>
+    </item>
+
+
+</layer-list>

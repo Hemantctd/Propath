@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="org.ctdworld.propath.activity.ActivityNoteContainer"
+    android:orientation="vertical"
+    android:background="@color/colorPageBg">
+
+    <include layout="@layout/toolbar"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <!--tabs and viewpager-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabNotelayout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_50"
+                app:tabGravity="fill"
+                app:tabMaxWidth="@dimen/dp_0"
+                app:tabBackground="@color/colorWhite"
+                app:tabSelectedTextColor="@color/colorAccent"
+                app:tabTextColor="@color/colorTextBlack">
+
+
+                <com.google.android.material.tabs.TabItem
+                    android:id="@+id/tabUnitNotes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/all"
+                    />
+
+
+                <com.google.android.material.tabs.TabItem
+                    android:id="@+id/tabCategory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/category"
+                    />
+
+            </com.google.android.material.tabs.TabLayout>
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/notesViewPager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp_60"
+                android:paddingRight="@dimen/dp_16"
+                android:paddingLeft="@dimen/dp_16"
+                android:paddingTop="@dimen/dp_16"
+                />
+        </LinearLayout>
+
+        <!--footer-->
+        <fragment
+            android:id="@+id/container_footer"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_60"
+            android:layout_alignParentBottom="true"
+            android:name="org.ctdworld.propath.fragment.FragmentFooter"
+            />
+
+    </RelativeLayout>
+</LinearLayout>

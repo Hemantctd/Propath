@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="org.ctdworld.propath.activity.ActivityFeedback"
+    android:orientation="vertical"
+    android:background="@color/colorWhite">
+
+
+    <include layout="@layout/toolbar"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/dp_18">
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/dp_60">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dp_16"
+                android:layout_marginLeft="@dimen/dp_16"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorDarkBlack"
+                    android:text="@string/feedback_title"
+                    android:textSize="@dimen/sp_16"/>
+
+
+                <!--enter name-->
+
+                <EditText
+                    style="@style/StyleEdit"
+                    android:hint="@string/name"
+                    android:id="@+id/name"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:inputType="text"
+                    tools:ignore="Autofill" />
+
+
+
+                <!--enter email-->
+                <EditText
+                    style="@style/StyleEdit"
+                    android:layout_marginTop="@dimen/dp_18"
+                    android:hint="@string/email"
+                    android:id="@+id/email"
+                    android:inputType="textEmailAddress"
+                    tools:ignore="Autofill" />
+
+
+                <!--enter feedback-->
+                <EditText
+                    android:id="@+id/feedback"
+                    style="@style/StyleEdit"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_18"
+                    android:gravity="top|start"
+                    android:hint="@string/txt_feedback_title"
+                    android:inputType="textMultiLine"
+                    android:minHeight="@dimen/dp_70"
+                    tools:ignore="Autofill" />
+
+
+
+            <Button
+                style="@style/StyleButton"
+                android:text="@string/send"
+                android:layout_marginTop="@dimen/dp_24"
+                android:id="@+id/send"/>
+
+
+        </LinearLayout>
+
+        </ScrollView>
+
+        <!--footer-->
+        <fragment
+            android:id="@+id/container_footer"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_60"
+            android:layout_alignParentBottom="true"
+            android:name="org.ctdworld.propath.fragment.FragmentFooter"
+            />
+
+    </RelativeLayout>
+
+</LinearLayout>

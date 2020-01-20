@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.ActivitySurveyYesOrNoQuestionsPreview">
+
+    <include layout="@layout/toolbar"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/dp_20">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="none"
+                android:layout_marginBottom="@dimen/footerHeight">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                   >
+
+                    <LinearLayout
+                        android:id="@+id/common_data_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                       >
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Survey_title"
+                            android:textColor="@color/colorTheme"
+                            android:textSize="@dimen/sp_18" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_10"
+                            android:text="@string/Survey_title"
+                            android:id="@+id/set_survey_title"
+                            android:textColor="@color/colorTextBlack"
+                            android:textSize="@dimen/sp_17"
+                            android:paddingBottom="@dimen/dp_5"
+                            android:background="@drawable/border_bottom_light_grey_1dp"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_20"
+                            android:text="@string/survey_type"
+                            android:textColor="@color/colorTheme"
+                            android:textSize="@dimen/sp_18" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_10"
+                            android:text="@string/survey_type"
+                            android:id="@+id/set_survey_type"
+                            android:textColor="@color/colorTextBlack"
+                            android:textSize="@dimen/sp_17"
+                            android:paddingBottom="@dimen/dp_5"
+                            android:background="@drawable/border_bottom_light_grey_1dp" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_20"
+                            android:text="@string/survey_description"
+                            android:textColor="@color/colorTheme"
+                            android:textSize="@dimen/sp_18" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_10"
+                            android:text="@string/survey_description"
+                            android:id="@+id/set_survey_desc"
+                            android:textColor="@color/colorTextBlack"
+                            android:textSize="@dimen/sp_17"
+                            android:paddingBottom="@dimen/dp_5"
+                            android:background="@drawable/border_bottom_light_grey_1dp" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_30"
+                            android:text="@string/Survey_questions"
+                            android:textColor="@color/colorTheme"
+                            android:textSize="@dimen/sp_18"/>
+                    </LinearLayout>
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recycler_yes_no_questions"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scrollbars="none"
+                       android:layout_marginBottom="@dimen/dp_10"/>
+
+              <!--      <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="@dimen/dp_50"
+                        android:layout_marginTop="@dimen/dp_50"
+                        android:layout_marginLeft="@dimen/dp_20"
+                        android:layout_marginRight="@dimen/dp_20"
+                        android:weightSum="2">
+
+                        <Button
+                            android:id="@+id/edit_btn"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginRight="@dimen/dp_10"
+                            android:layout_marginEnd="@dimen/dp_10"
+                            android:background="@drawable/bg_button"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/btnTextSize"
+                            android:text="@string/edit"
+                            tools:ignore="ButtonStyle" />
+
+
+                        <Button
+                            android:id="@+id/save_btn"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginLeft="@dimen/dp_10"
+                            android:layout_marginStart="@dimen/dp_10"
+                            android:background="@drawable/bg_button"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/btnTextSize"
+                            android:text="@string/save"
+                            tools:ignore="ButtonStyle" />
+
+                    </LinearLayout>
+-->
+
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+
+        </LinearLayout>
+
+        <fragment
+            android:id="@+id/footer"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/footerHeight"
+            android:layout_alignParentBottom="true"
+            android:name="org.ctdworld.propath.fragment.FragmentFooter"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

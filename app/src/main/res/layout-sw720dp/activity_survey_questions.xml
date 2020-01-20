@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorWhite"
+    tools:context="org.ctdworld.propath.activity.ActivitySurveyQuestionsActivity">
+    <include layout="@layout/toolbar"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="@dimen/dp_16"
+                android:layout_marginTop="@dimen/dp_16"
+                android:layout_marginRight="@dimen/dp_16"
+                android:layout_marginBottom="@dimen/dp_50"
+                >
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/survey_questions_recycler_view"
+                android:scrollbars="none"
+                />
+
+
+
+                <ImageView
+                    android:id="@+id/img_add_questions"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_plus"
+                    android:layout_marginTop="@dimen/dp_25"
+                    android:contentDescription="@string/add"
+                    />
+
+    </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_marginTop="@dimen/dp_30"
+                    android:layout_marginBottom="@dimen/dp_50"
+                    android:layout_marginLeft="@dimen/dp_50"
+                    android:layout_marginStart="@dimen/dp_50"
+                    android:layout_marginRight="@dimen/dp_50"
+                    android:layout_marginEnd="@dimen/dp_50">
+
+
+
+                        <Button
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:background="@drawable/bg_button"
+                            android:text="@string/next"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/sp_18"
+                            android:id="@+id/btnSurveyPreview"
+                            android:layout_marginBottom="@dimen/dp_50"
+                            />
+
+
+
+    </LinearLayout>
+    </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+        </LinearLayout>
+
+        <fragment
+            android:id="@+id/footer"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/footerHeight"
+            android:layout_alignParentBottom="true"
+            android:name="org.ctdworld.propath.fragment.FragmentFooter"/>
+
+    </RelativeLayout>
+</LinearLayout>

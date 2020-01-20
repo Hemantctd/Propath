@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView style="@style/StyleAdapterCardView">
+
+        <RelativeLayout
+            android:id="@+id/survey_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/adapterCardViewInnerMargin">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_10"
+                android:layout_toStartOf="@id/img_options_menu"
+                android:layout_toLeftOf="@id/img_options_menu">
+
+                <TextView
+                    android:id="@+id/survey_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dp_5"
+                    android:layout_marginRight="@dimen/dp_5"
+                    android:layout_toStartOf="@id/survey_list_date"
+                    android:layout_toLeftOf="@id/survey_list_date"
+                    android:textColor="@color/colorDarkGrey"
+                    android:textSize="@dimen/sp_14" />
+
+                <TextView
+                    android:id="@+id/survey_list_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:textColor="@color/colorDarkGrey"
+                    android:textSize="@dimen/sp_14" />
+
+                <TextView
+                    android:id="@+id/survey_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/survey_title"
+                    android:layout_marginTop="@dimen/dp_7"
+                    android:textColor="@color/colorDarkGrey"
+                    android:textSize="@dimen/sp_14" />
+
+            </RelativeLayout>
+
+
+            <ImageView
+                android:id="@+id/img_options_menu"
+                style="@style/StyleImageLightTheme"
+                android:layout_width="@dimen/dp_24"
+                android:layout_height="@dimen/dp_24"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:contentDescription="@string/options_menu"
+                android:src="@drawable/ic_options_menu"
+                android:visibility="visible" />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

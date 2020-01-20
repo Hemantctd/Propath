@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:context="org.ctdworld.propath.fragment.DialogChatOptionsMenu"
+    android:background="@color/colorWhite"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/dp_16"
+    android:paddingRight="@dimen/dp_16">
+
+
+    <!--open chat-->
+    <!--<LinearLayout
+       android:layout_width="@dimen/optionsMenuRowWidth"
+       android:layout_height="@dimen/optionMenuRowHeight"
+       android:background="@drawable/border_bottom_light_grey_1dp"
+       android:gravity="center_vertical"
+       android:paddingLeft="@dimen/optionsMenuRowPaddingLeftRight"
+       android:paddingRight="@dimen/optionsMenuRowPaddingLeftRight">
+
+       <ImageView
+           android:layout_width="@dimen/optionsMenuImgSize"
+           android:layout_height="@dimen/optionsMenuImgSize"
+           android:src="@drawable/ic_chat_chat"
+           android:tint="@color/colorTheme"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/open_chat"
+            android:textSize="@dimen/optionsMenuTextSize"
+            android:layout_marginLeft="@dimen/optionsMenuTextMarginLeft"
+            android:layout_marginRight="@dimen/optionsMenuRowPaddingLeftRight"
+            android:textColor="@color/colorTextBlack"/>
+   </LinearLayout>-->
+
+    <!--change name-->
+    <LinearLayout
+        android:id="@+id/chat_options_menu_add_users"
+        android:layout_width="@dimen/dp_270"
+        android:layout_height="@dimen/dp_60"
+        android:background="@drawable/border_bottom_light_grey_1dp"
+        android:gravity="center_vertical">
+
+        <ImageView
+            style="@style/StyleImageLightTheme"
+            android:layout_width="@dimen/dp_24"
+            android:layout_height="@dimen/dp_24"
+            android:src="@drawable/ic_add_contact"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add User"
+            android:layout_marginLeft="@dimen/dp_16"
+            android:textSize="@dimen/optionsMenuTextSize"
+            android:textColor="@color/colorTextBlack"/>
+    </LinearLayout>
+
+
+    <!--change photo-->
+    <LinearLayout
+        android:id="@+id/chat_options_menu_remove_users"
+        android:layout_width="@dimen/dp_270"
+        android:layout_height="@dimen/dp_60"
+        android:background="@drawable/border_bottom_light_grey_1dp"
+        android:gravity="center_vertical">
+
+        <ImageView
+            style="@style/StyleImageLightTheme"
+            android:layout_width="@dimen/optionsMenuImgSize"
+            android:layout_height="@dimen/optionsMenuImgSize"
+            android:src="@drawable/ic_delete"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Remove Users"
+            android:layout_marginLeft="@dimen/optionsMenuTextMarginLeft"
+            android:textSize="@dimen/optionsMenuTextSize"
+            android:textColor="@color/colorTextBlack"/>
+
+    </LinearLayout>
+
+
+    <!--delete conversation-->
+   <!-- <LinearLayout
+        android:layout_width="@dimen/optionsMenuRowWidth"
+        android:layout_height="@dimen/optionMenuRowHeight"
+        android:background="@drawable/border_bottom_light_grey_1dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/optionsMenuRowPaddingLeftRight"
+        android:paddingRight="@dimen/optionsMenuRowPaddingLeftRight">
+
+        <ImageView
+            android:layout_width="@dimen/optionsMenuImgSize"
+            android:layout_height="@dimen/optionsMenuImgSize"
+            android:src="@drawable/ic_chat_delete_conversation"
+            android:tint="@color/colorTheme"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/delete_conversation"
+            android:textSize="@dimen/optionsMenuTextSize"
+            android:layout_marginRight="@dimen/optionsMenuRowPaddingLeftRight"
+            android:textColor="@color/colorTextBlack"
+            android:layout_marginLeft="@dimen/optionsMenuTextMarginLeft"/>
+
+    </LinearLayout>-->
+
+
+<!--    &lt;!&ndash;leave group&ndash;&gt;
+    <LinearLayout
+        android:layout_width="@dimen/optionsMenuRowWidth"
+        android:layout_height="@dimen/optionMenuRowHeight"
+        android:background="@drawable/border_bottom_light_grey_1dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/optionsMenuRowPaddingLeftRight"
+        android:paddingRight="@dimen/optionsMenuRowPaddingLeftRight">
+
+        <ImageView
+            android:layout_width="@dimen/optionsMenuImgSize"
+            android:layout_height="@dimen/optionsMenuImgSize"
+            android:src="@drawable/ic_chat_leave_group"
+            android:tint="@color/colorTheme"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/leave_group"
+            android:textSize="@dimen/optionsMenuTextSize"
+            android:layout_marginRight="@dimen/optionsMenuRowPaddingLeftRight"
+            android:textColor="@color/colorTextBlack"
+            android:layout_marginLeft="@dimen/optionsMenuTextMarginLeft"/>
+
+    </LinearLayout>-->
+
+
+    <!--ignore group-->
+    <!--<LinearLayout
+        android:layout_width="@dimen/optionsMenuRowWidth"
+        android:layout_height="@dimen/optionMenuRowHeight"
+        android:background="@drawable/border_bottom_light_grey_1dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/optionsMenuRowPaddingLeftRight"
+        android:paddingRight="@dimen/optionsMenuRowPaddingLeftRight">
+
+        <ImageView
+            android:layout_width="@dimen/optionsMenuImgSize"
+            android:layout_height="@dimen/optionsMenuImgSize"
+            android:src="@drawable/ic_chat_ignore_group"
+            android:tint="@color/colorTheme"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ignore_group"
+            android:textSize="@dimen/optionsMenuTextSize"
+            android:layout_marginRight="@dimen/optionsMenuRowPaddingLeftRight"
+            android:textColor="@color/colorTextBlack"
+            android:layout_marginLeft="@dimen/optionsMenuTextMarginLeft"/>
+
+    </LinearLayout>-->
+
+
+    <!--notification-->
+ <!--   <LinearLayout
+        android:layout_width="@dimen/optionsMenuRowWidth"
+        android:layout_height="@dimen/optionMenuRowHeight"
+        android:background="@drawable/border_bottom_light_grey_1dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/optionsMenuRowPaddingLeftRight"
+        android:paddingRight="@dimen/optionsMenuRowPaddingLeftRight">
+
+        <ImageView
+            android:layout_width="@dimen/optionsMenuImgSize"
+            android:layout_height="@dimen/optionsMenuImgSize"
+            android:src="@drawable/ic_chat_notification"
+            android:tint="@color/colorTheme"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/notifications"
+            android:textSize="@dimen/optionsMenuTextSize"
+            android:layout_marginRight="@dimen/optionsMenuRowPaddingLeftRight"
+            android:textColor="@color/colorTextBlack"
+            android:layout_marginLeft="@dimen/optionsMenuTextMarginLeft"/>
+
+    </LinearLayout>-->
+
+
+
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/creator_details"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".fragment.FragCreatingDetails">
+
+    <!--creator profile pic-->
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/img_profile_pic"
+        android:layout_width="@dimen/dp_60"
+        android:layout_height="@dimen/dp_60"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_profile" />
+    <!--<ImageView
+        android:id="@+id/img_profile_pic"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/ic_profile"/>-->
+
+
+    <!--creator details-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/paddingMarginLeftRightAllPages"
+        android:layout_marginLeft="@dimen/paddingMarginLeftRightAllPages"
+        android:layout_toEndOf="@id/img_profile_pic"
+        android:layout_toRightOf="@id/img_profile_pic"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txt_creator_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/open_sans_bold"
+            android:textColor="@color/colorTextBlack"
+            android:textSize="@dimen/sp_15" />
+
+
+        <TextView
+            android:id="@+id/txt_created_by"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_5"
+            android:textColor="@color/colorTextBlack"
+            android:textSize="@dimen/sp_13"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/txt_creator_role"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_5"
+            android:textColor="@color/colorTextBlack"
+            android:textSize="@dimen/sp_13" />
+
+        <TextView
+            android:id="@+id/txt_date_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_5"
+            android:textColor="@color/colorTextBlack"
+            android:textSize="@dimen/sp_13" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:context="org.ctdworld.propath.fragment.DialogChatUserGroupListOptionsMenu"
+    android:background="@color/colorWhite"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/dp_16"
+    android:paddingRight="@dimen/dp_16">
+
+
+    <FrameLayout
+        android:id="@+id/contact_options_menu_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <!--<LinearLayout
+        android:id="@+id/contact_options_menu_add"
+        android:layout_width="@dimen/optionsMenuRowWidth"
+       android:layout_height="@dimen/optionMenuRowHeight"
+       android:background="@drawable/border_bottom_light_grey_1dp"
+       android:gravity="center_vertical"
+       android:paddingLeft="@dimen/optionsMenuRowPaddingLeftRight"
+       android:paddingRight="@dimen/optionsMenuRowPaddingLeftRight"
+        android:visibility="visible">
+
+       <ImageView
+           android:layout_width="@dimen/optionsMenuImgSize"
+           android:layout_height="@dimen/optionsMenuImgSize"
+           android:src="@drawable/ic_add_user"
+           android:tint="@color/colorTheme"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/add_people"
+            android:layout_marginLeft="@dimen/optionsMenuTextMarginLeft"
+            android:textSize="@dimen/optionsMenuTextSize"
+            android:layout_marginRight="@dimen/optionsMenuRowPaddingLeftRight"
+            android:textColor="@color/colorTextBlack"/>
+
+   </LinearLayout>-->
+
+
+    <!--create group-->
+    <LinearLayout
+        android:id="@+id/chat_user_group_list_options_menu_create_group"
+        android:layout_width="@dimen/dp_270"
+        android:layout_height="@dimen/dp_60"
+        android:background="@drawable/border_bottom_light_grey_1dp"
+        android:gravity="center_vertical"
+        android:visibility="visible">
+
+        <ImageView
+            style="@style/StyleImageLightTheme"
+            android:layout_width="@dimen/dp_24"
+            android:layout_height="@dimen/dp_24"
+            android:src="@drawable/ic_add_to_group"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create Group"
+            android:layout_marginLeft="@dimen/dp_16"
+            android:textSize="@dimen/optionsMenuTextSize"
+            android:textColor="@color/colorTextBlack"/>
+
+    </LinearLayout>
+
+
+    <!--add contacts-->
+    <!--<LinearLayout
+        android:id="@+id/chat_user_group_list_options_menu_add_contact"
+        android:layout_width="@dimen/optionsMenuRowWidth"
+        android:layout_height="@dimen/optionMenuRowHeight"
+        android:background="@drawable/border_bottom_light_grey_1dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/optionsMenuRowPaddingLeftRight"
+        android:paddingRight="@dimen/optionsMenuRowPaddingLeftRight">
+
+        <ImageView
+            android:layout_width="@dimen/optionsMenuImgSize"
+            android:layout_height="@dimen/optionsMenuImgSize"
+            android:src="@drawable/ic_add_contact"
+            android:tint="@color/colorTheme"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/add_contact"
+            android:layout_marginLeft="@dimen/optionsMenuTextMarginLeft"
+            android:textSize="@dimen/optionsMenuTextSize"
+            android:layout_marginRight="@dimen/optionsMenuRowPaddingLeftRight"
+            android:textColor="@color/colorTextBlack"/>
+
+    </LinearLayout>-->
+
+
+    <!--requests-->
+    <!--<LinearLayout
+        android:id="@+id/chat_user_group_list_options_menu_requests"
+        android:layout_width="@dimen/optionsMenuRowWidth"
+        android:layout_height="@dimen/optionMenuRowHeight"
+        android:background="@drawable/border_bottom_light_grey_1dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/optionsMenuRowPaddingLeftRight"
+        android:paddingRight="@dimen/optionsMenuRowPaddingLeftRight">
+
+        <ImageView
+            android:layout_width="@dimen/optionsMenuImgSize"
+            android:layout_height="@dimen/optionsMenuImgSize"
+            android:src="@drawable/ic_add_contact"
+            android:tint="@color/colorTheme"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Requests"
+            android:layout_marginLeft="@dimen/optionsMenuTextMarginLeft"
+            android:textSize="@dimen/optionsMenuTextSize"
+            android:layout_marginRight="@dimen/optionsMenuRowPaddingLeftRight"
+            android:textColor="@color/colorTextBlack"/>
+
+    </LinearLayout>-->
+
+
+
+</LinearLayout>

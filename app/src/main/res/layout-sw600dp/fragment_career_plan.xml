@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="org.ctdworld.propath.fragment.FragmentCareerPlan"
+    android:orientation="vertical">
+
+
+   <!-- <include layout="@layout/toolbar"
+        android:id="@+id/career_plan_toolbar"/>-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <FrameLayout
+            android:id="@+id/fragment_career_plan_fragment_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+
+        <!--floating button to add career planData tools-->
+        <!--<android.support.design.widget.FloatingActionButton
+            android:id="@+id/activity_career_plan_floating_button"
+            android:layout_width="@dimen/dp_56"
+            android:layout_height="@dimen/dp_56"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/dp_20"
+            android:layout_marginBottom="@dimen/dp_20"
+            android:src="@drawable/ic_plus"/>-->
+
+
+
+        <!--this design has been shifted to fragment_career_plan_create-->
+        <!--<LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginBottom="@dimen/footerHeight"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_below="@id/career_plan_toolbar">
+
+
+
+
+            &lt;!&ndash;title create career planData&ndash;&gt;
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Create Career PlanData"
+                android:textColor="@color/colorTheme"
+                android:fontFamily="@font/open_sans_bold"
+                android:textSize="20sp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"/>
+
+
+
+
+            &lt;!&ndash;enter future career&ndash;&gt;
+            <EditText
+                android:id="@+id/career_plan_edit_future_career"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/editHeight"
+                android:layout_marginLeft="@dimen/careerPlanEditMarginLeftRight"
+                android:layout_marginRight="@dimen/careerPlanEditMarginLeftRight"
+                android:hint="@string/enter_future_career"
+                android:background="@drawable/border_bottom_light_grey_1dp"
+                android:layout_marginTop="40dp"/>
+
+
+
+            &lt;!&ndash;edittext where you can study&ndash;&gt;
+
+            <EditText
+                android:id="@+id/career_plan_edit_where_you_can_study"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/editHeight"
+                android:layout_marginLeft="@dimen/careerPlanEditMarginLeftRight"
+                android:layout_marginRight="@dimen/careerPlanEditMarginLeftRight"
+                android:hint="Enter Where You Can Study"
+                android:background="@drawable/border_bottom_light_grey_1dp"
+                android:layout_marginTop="@dimen/marginTopEditTextButton"/>
+
+
+            &lt;!&ndash;edittext where you can study&ndash;&gt;
+            <EditText
+                android:id="@+id/career_plan_edit_future_career_scholarship"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/editHeight"
+                android:layout_marginLeft="@dimen/careerPlanEditMarginLeftRight"
+                android:layout_marginRight="@dimen/careerPlanEditMarginLeftRight"
+                android:hint="Enter What Scholarship is available"
+                android:background="@drawable/border_bottom_light_grey_1dp"
+                android:layout_marginTop="@dimen/marginTopEditTextButton"/>
+
+
+            &lt;!&ndash;edittext where you can study&ndash;&gt;
+
+
+            <EditText
+                android:id="@+id/career_plan_edit_subject_needed"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/editHeight"
+                android:layout_marginLeft="@dimen/careerPlanEditMarginLeftRight"
+                android:layout_marginRight="@dimen/careerPlanEditMarginLeftRight"
+                android:hint="Enter School Subject Needed"
+                android:background="@drawable/border_bottom_light_grey_1dp"
+                android:layout_marginTop="@dimen/marginTopEditTextButton"/>
+
+
+
+           &lt;!&ndash; <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Crated On 30 June 2018"
+                android:layout_marginTop="@dimen/marginTopEditTextButton"
+                android:textSize="14sp"/>&ndash;&gt;
+
+
+            <Button
+                android:id="@+id/career_plan_btn_submit"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/btnHeight"
+                android:background="@drawable/border_transparent_2dp_round_25dp"
+                android:backgroundTint="@color/colorAccent"
+                android:layout_marginTop="50dp"
+                android:textColor="@color/colorWhite"
+                android:text="@string/submit"
+                android:textSize="@dimen/btnTextSize"
+                android:fontFamily="@font/open_sans_bold"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"/>
+
+
+
+
+
+
+
+
+
+
+
+
+            &lt;!&ndash;old design, EditText design is being changed a bit&ndash;&gt;
+           &lt;!&ndash; <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/editHeight"
+                android:background="@drawable/border_career_plan"
+                android:layout_marginTop="30dp">
+
+                <View
+                    android:layout_width="@dimen/careerPlanEditLeftColorWidth"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/colorAccent"
+                    android:background="@drawable/border_career_plan"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/careerPlanEditMarginLeftRight"
+                    android:layout_marginRight="@dimen/careerPlanEditMarginLeftRight"
+                    android:hint="@string/enter_future_career"
+                    android:background="@android:color/transparent"/>
+
+            </LinearLayout>
+
+
+            &lt;!&ndash;edittext where you can study&ndash;&gt;
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/editHeight"
+                android:background="@drawable/border_career_plan"
+                android:layout_marginTop="@dimen/marginTopEditTextButton">
+
+                <View
+                    android:layout_width="@dimen/careerPlanEditLeftColorWidth"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/colorAccent"
+                    android:background="@drawable/border_career_plan"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/careerPlanEditMarginLeftRight"
+                    android:layout_marginRight="@dimen/careerPlanEditMarginLeftRight"
+                    android:hint="Enter Where You Can Study"
+                    android:background="@android:color/transparent"/>
+
+            </LinearLayout>
+
+
+            &lt;!&ndash;edittext where you can study&ndash;&gt;
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/editHeight"
+                android:background="@drawable/border_career_plan"
+                android:layout_marginTop="@dimen/marginTopEditTextButton">
+
+                <View
+                    android:layout_width="@dimen/careerPlanEditLeftColorWidth"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/colorAccent"
+                    android:background="@drawable/border_career_plan"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/careerPlanEditMarginLeftRight"
+                    android:layout_marginRight="@dimen/careerPlanEditMarginLeftRight"
+                    android:hint="Enter What Scholarship is available"
+                    android:background="@android:color/transparent"/>
+
+            </LinearLayout>
+
+
+            &lt;!&ndash;edittext where you can study&ndash;&gt;
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/editHeight"
+                android:background="@drawable/border_career_plan"
+                android:layout_marginTop="@dimen/marginTopEditTextButton">
+
+                <View
+                    android:layout_width="@dimen/careerPlanEditLeftColorWidth"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/colorAccent"
+                    android:background="@drawable/border_career_plan"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/careerPlanEditMarginLeftRight"
+                    android:layout_marginRight="@dimen/careerPlanEditMarginLeftRight"
+                    android:hint="Enter School Subject Needed"
+                    android:background="@android:color/transparent"/>
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Crated On 30 June 2018"
+                android:layout_marginTop="@dimen/marginTopEditTextButton"
+                android:textSize="16sp"/>
+
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/btnHeight"
+                android:background="@drawable/border_transparent_2dp_round_25dp"
+                android:backgroundTint="@color/colorAccent"
+                android:layout_marginTop="40dp"
+                android:textColor="@color/colorWhite"
+                android:text="@string/submit"
+                android:textSize="@dimen/btnTextSize"
+                android:fontFamily="@font/open_sans_bold"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"/>
+&ndash;&gt;
+
+        </LinearLayout>-->
+
+
+      <!--  <fragment
+            android:id="@+id/career_plan_frag_footer"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/footerHeight"
+            android:layout_alignParentBottom="true"
+            android:name="FragmentFooter"/>-->
+    </RelativeLayout>
+
+</LinearLayout>

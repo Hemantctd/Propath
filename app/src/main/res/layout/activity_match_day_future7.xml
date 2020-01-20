@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="org.ctdworld.propath.activity.ActivityMatchDayFuture7"
+    android:background="@color/colorWhite"
+
+    android:id="@+id/contact_search_refresh_layout">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/toolbar"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Members"
+            android:textColor="@color/colorTheme"
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_marginLeft="@dimen/dp_16"
+            android:textSize="@dimen/sp_20"/>
+        <FrameLayout
+            android:id="@+id/fragment_search_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_20"/>
+
+        <!--layout for details-->
+        <RelativeLayout
+            android:id="@+id/contact_search_layout_for_details"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <androidx.core.widget.NestedScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fillViewport="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/contact_search_recycler_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/dp_80"
+                            android:layout_marginTop="@dimen/dp_16"
+                            android:layout_marginRight="@dimen/dp_16"
+                            android:layout_marginLeft="@dimen/dp_16"/>
+
+
+
+
+
+                    </LinearLayout>
+
+                </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+
+                <!--<RelativeLayout
+                    android:id="@+id/layout_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_18"
+                    android:layout_marginLeft="@dimen/dp_16"
+                    android:layout_marginRight="@dimen/dp_16">
+
+                    <RelativeLayout
+                        style="@style/StyleEditContainer">
+
+                        <ImageView
+                            android:id="@+id/contact_search_search"
+                            style="@style/StyleEditImgInContainer"
+                            android:src="@drawable/ic_search"
+                            tools:ignore="ContentDescription" />
+
+                        <ImageView
+                            android:id="@+id/contact_search_img_search"
+                            style="@style/StyleEditImgInContainer"
+                            android:src="@drawable/ic_mic"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentEnd="true"
+                            tools:ignore="ContentDescription" />
+
+                        <EditText
+                            android:id="@+id/contact_search_edit_search"
+                            style="@style/StyleEditInContainer"
+                            android:hint="@string/search"
+                            android:layout_marginRight="@dimen/dp_40"
+                            android:layout_toRightOf="@id/contact_search_search"
+                            android:inputType="text"
+                            tools:ignore="Autofill"
+                            android:layout_marginEnd="@dimen/dp_40"
+                            android:layout_toEndOf="@id/contact_search_search" />
+                    </RelativeLayout>
+
+                </RelativeLayout>-->
+
+
+            <fragment
+                android:id="@+id/container_footer"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_60"
+                android:layout_alignParentBottom="true"
+                android:name="org.ctdworld.propath.fragment.FragmentFooter"
+                />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/contact_search_txt_no_connection"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textSize="@dimen/sp_30"
+            android:textColor="@color/colorTheme"
+            android:fontFamily="@font/open_sans_bold"
+            android:text="@string/no_connection"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+    <!--<ProgressBar
+        android:id="@+id/contact_search_progressbar"
+        android:layout_width="@dimen/progressBarSize"
+        android:layout_height="@dimen/progressBarSize"
+        android:layout_gravity="center"
+        android:visibility="gone"/>-->
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

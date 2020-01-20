@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.FragmentMatchIndividualStatistics">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_10">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none"
+        >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/dp_20"
+        >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="3"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.3"
+            android:layout_marginRight="@dimen/dp_10"
+            android:orientation="vertical"
+            >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_group_statistics"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Team A"
+            android:textColor="@color/colorDarkGrey"
+            android:textSize="@dimen/txtSize"
+            android:textAlignment="center"
+            android:layout_marginTop="@dimen/dp_5"
+            />
+        </LinearLayout>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.4"
+            android:text="VS"
+            android:textColor="@color/colorDarkGrey"
+            android:gravity="center"
+            android:textSize="@dimen/dp_22"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1.3"
+        android:orientation="vertical"
+        android:layout_marginLeft="@dimen/dp_10"
+
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:src="@drawable/ic_group_statistics"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Team B"
+            android:textColor="@color/colorDarkGrey"
+            android:textSize="@dimen/txtSize"
+            android:textAlignment="center"
+            android:layout_gravity="right"
+            android:layout_marginTop="@dimen/dp_5"
+            />
+    </LinearLayout>
+    </LinearLayout>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_20"
+        android:text="Match Admin"
+        android:paddingBottom="@dimen/dp_5"
+        android:textColorHint="@color/colorDarkGrey"
+        android:textColor="@color/colorDarkGrey"
+        android:background="@drawable/border_bottom_light_grey_1dp"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+            android:orientation="horizontal">
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_20"
+                android:text="Date"
+                android:paddingBottom="@dimen/dp_5"
+                android:textColorHint="@color/colorDarkGrey"
+                android:textColor="@color/colorDarkGrey"
+                android:layout_weight="1"
+                android:layout_marginRight="@dimen/dp_10"
+                android:background="@drawable/border_bottom_light_grey_1dp"/>
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_20"
+                android:text="Time"
+                android:paddingBottom="@dimen/dp_5"
+                android:textColorHint="@color/colorDarkGrey"
+                android:textColor="@color/colorDarkGrey"
+                android:layout_weight="1"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:background="@drawable/border_bottom_light_grey_1dp"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+            android:orientation="horizontal">
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_20"
+                android:text="Town/City"
+                android:paddingBottom="@dimen/dp_5"
+                android:textColorHint="@color/colorDarkGrey"
+                android:textColor="@color/colorDarkGrey"
+                android:layout_weight="1"
+                android:layout_marginRight="@dimen/dp_10"
+                android:background="@drawable/border_bottom_light_grey_1dp"/>
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_20"
+                android:text="Venue"
+                android:paddingBottom="@dimen/dp_5"
+                android:textColorHint="@color/colorDarkGrey"
+                android:textColor="@color/colorDarkGrey"
+                android:layout_weight="1"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:background="@drawable/border_bottom_light_grey_1dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+            android:orientation="horizontal">
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_20"
+                android:text="Match Duration"
+                android:paddingBottom="@dimen/dp_5"
+                android:textColorHint="@color/colorDarkGrey"
+                android:textColor="@color/colorDarkGrey"
+                android:layout_weight="1"
+                android:layout_marginRight="@dimen/dp_10"
+                android:background="@drawable/border_bottom_light_grey_1dp"/>
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_20"
+                android:text="No. of Intervals"
+                android:paddingBottom="@dimen/dp_5"
+                android:textColorHint="@color/colorDarkGrey"
+                android:textColor="@color/colorDarkGrey"
+                android:layout_weight="1"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:background="@drawable/border_bottom_light_grey_1dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/dp_30">
+
+            <Button
+                android:id="@+id/create_team_a"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/btnHeight"
+                android:layout_weight="1"
+                android:background="@drawable/bg_button"
+                android:text="Create Match Team A"
+                android:textColor="@color/colorWhite"
+                android:layout_marginRight="@dimen/dp_5"/>
+
+            <Button
+                android:id="@+id/create_team_b"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/btnHeight"
+                android:layout_weight="1"
+                android:background="@drawable/bg_button"
+                android:text="Create Match Team B"
+                android:textColor="@color/colorWhite"
+                android:layout_marginLeft="@dimen/dp_5"
+               />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/next_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dp_50"
+            android:background="@drawable/bg_button"
+            android:text="Next"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/btnTextSize"
+            android:paddingLeft="@dimen/dp_50"
+            android:paddingRight="@dimen/dp_50"
+            android:paddingBottom="@dimen/dp_5"
+            android:paddingTop="@dimen/dp_5"
+            android:layout_marginBottom="@dimen/dp_10"/>
+
+    </LinearLayout>
+    </ScrollView>
+    </LinearLayout>
+</FrameLayout>

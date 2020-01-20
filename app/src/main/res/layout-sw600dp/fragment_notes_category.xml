@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="org.ctdworld.propath.fragment.FragmentNotesCategory"
+    android:background="@color/colorWhite"
+    android:id="@+id/fragment_notes_category_refresh_layout">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--search with text and voice-->
+        <include layout="@layout/fragment_search"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/fragment_notes_category_recycler_category"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/layout_filter"
+            android:layout_marginTop="@dimen/marginTopViews"/>
+
+
+            <!--floating button-->
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fragment_notes_category_float_btn"
+                android:layout_width="@dimen/dp_56"
+                android:layout_height="@dimen/dp_56"
+                android:baselineAlignBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginRight="@dimen/dp_20"
+                android:layout_marginBottom="@dimen/dp_20"
+                android:clickable="true"
+                android:focusable="true"
+                android:src="@drawable/ic_floating_icon"
+                />
+
+       <!-- </FrameLayout>-->
+
+
+        <!--message-->
+        <TextView
+            android:id="@+id/fragment_notes_category_txt_no_connection"
+            style="@style/styleTxtMessage"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

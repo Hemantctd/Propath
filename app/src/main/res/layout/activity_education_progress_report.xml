@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="org.ctdworld.propath.activity.ActivityEducationProgressReport"
+    android:background="@color/colorWhite">
+
+
+
+    <include layout="@layout/toolbar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginBottom="@dimen/footerHeight">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="@dimen/dp_16"
+            android:layout_marginRight="@dimen/dp_16">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/school_review_layout"
+                   >
+
+                    <!--User Details-->
+                    <FrameLayout
+                        android:id="@+id/fragment_container_creator_details"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_30"/>
+
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/strengths_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_below="@+id/school_review_layout"
+                    android:layout_marginTop="@dimen/dp_20"
+
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/strengths"
+                        android:textSize="@dimen/txtSize"
+                        android:textColor="@color/colorTheme"
+
+                        />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/dp_8"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:id="@+id/strength_text"
+                    android:textSize="@dimen/sp_16"
+                    android:textColor="@color/colorTextBlack"
+                    android:background="@drawable/bg_edit"
+                    android:text="@string/strengths_desc"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/improvements_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_below="@+id/strengths_layout"
+                    android:layout_marginTop="@dimen/dp_16"
+
+                    >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/improvements"
+                    android:textSize="@dimen/txtSize"
+                    android:textColor="@color/colorTheme"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:paddingBottom="@dimen/dp_8"
+                    android:id="@+id/improvements_text"
+                    android:textSize="@dimen/sp_16"
+                    android:textColor="@color/colorTextBlack"
+                    android:background="@drawable/bg_edit"
+                    android:text="@string/improvements_desc"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/suggestions_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_below="@+id/improvements_layout"
+                    android:layout_marginTop="@dimen/dp_16"
+
+                    >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/suggestions"
+                    android:textSize="@dimen/txtSize"
+                    android:textColor="@color/colorTheme"/>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:paddingBottom="@dimen/dp_8"
+                    android:id="@+id/suggestions_text"
+                    android:textSize="@dimen/sp_16"
+                    android:textColor="@color/colorTextBlack"
+                    android:background="@drawable/bg_edit"
+                    android:text="@string/suggestions_desc"/>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/assistance_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_below="@+id/suggestions_layout"
+                    android:layout_marginTop="@dimen/dp_16"
+
+                    >
+
+                <TextView
+                    android:id="@+id/assistance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/assistance_offered"
+                    android:textSize="@dimen/txtSize"
+                    android:textColor="@color/colorTheme"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:paddingBottom="@dimen/dp_8"
+                    android:id="@+id/assistance_text"
+                    android:textSize="@dimen/sp_16"
+                    android:textColor="@color/colorTextBlack"
+                    android:background="@drawable/bg_edit"
+                    android:text="@string/assistance_desc"/>
+                </LinearLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/assistance_layout"
+                    android:background="@drawable/bg_edit"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:paddingBottom="@dimen/dp_5">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_40"
+                        android:weightSum="2"
+                        tools:ignore="UselessParent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.5"
+                            android:gravity="bottom"
+                            android:hint="@string/enter_qualification"
+                            android:id="@+id/qualification_text"
+                            android:textColor="@color/colorTextBlack"
+                            android:textColorHint="@color/colorDarkGrey"
+                            android:layout_marginRight="@dimen/dp_16"
+                            android:textSize="@dimen/sp_16"
+                            android:layout_marginEnd="@dimen/dp_16" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.5"
+                            android:gravity="center_vertical"
+                            android:text="@string/progress"
+                            android:textColor="@color/colorTextBlack"
+                            android:textColorHint="@color/colorDarkBlack"
+                            android:textSize="@dimen/sp_16"
+                            tools:ignore="RtlHardcoded" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/recycler_school_review"
+                android:layout_marginTop="@dimen/dp_15"
+                android:scrollbars="none"
+                android:layout_marginBottom="@dimen/dp_10"
+             />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:visibility="gone"/>
+
+    <fragment
+        android:id="@+id/footer_education_school_review"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_60"
+        android:name="org.ctdworld.propath.fragment.FragmentFooter"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

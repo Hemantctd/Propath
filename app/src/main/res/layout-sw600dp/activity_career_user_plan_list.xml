@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:id="@+id/athlete_name_search_refresh_layout"
+    android:orientation="vertical"
+    tools:context="org.ctdworld.propath.fragment.FragmentEducationAthleteReviewChooseAthlete">
+
+
+    <!--toolbar-->
+    <include layout="@layout/toolbar"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginBottom="@dimen/footerHeight">
+
+            <!--recycler view-->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/athlete_name_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/dp_16"/>
+
+
+            <!--no connections message-->
+            <TextView
+                android:id="@+id/contact_search_txt_no_connection"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textSize="@dimen/sp_30"
+                android:textColor="@color/colorTheme"
+                android:fontFamily="@font/open_sans_bold"
+                android:text="@string/title_no_connection"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+        <fragment
+            android:id="@+id/container_footer"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_60"
+            android:layout_alignParentBottom="true"
+            android:name="org.ctdworld.propath.fragment.FragmentFooter"/>
+    </RelativeLayout>
+
+
+
+
+</LinearLayout>

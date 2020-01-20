@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.ActivityRatingScaleQuestions">
+
+    <include layout="@layout/toolbar"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/dp_20">
+
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        >
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:orientation="vertical"
+      >
+
+
+
+       <androidx.recyclerview.widget.RecyclerView
+           android:id="@+id/recycler_rating_questions"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:scrollbars="none"/>
+
+       <Button
+           android:id="@+id/rating_next"
+           android:layout_width="wrap_content"
+           android:layout_height="@dimen/btnHeight"
+           android:layout_gravity="center"
+           android:layout_marginTop="@dimen/dp_60"
+           android:background="@drawable/bg_button"
+           android:textSize="@dimen/txtSizeButton"
+           android:textColor="@color/colorPageBg"
+           android:text="@string/next"
+           android:paddingLeft="@dimen/dp_50"
+           android:paddingRight="@dimen/dp_50"
+           android:layout_marginBottom="@dimen/dp_50"
+           />
+
+
+   </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+        </LinearLayout>
+        <fragment
+            android:id="@+id/container_footer"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_60"
+            android:layout_alignParentBottom="true"
+            android:name="org.ctdworld.propath.fragment.FragmentFooter"
+            />
+    </RelativeLayout>
+</LinearLayout>

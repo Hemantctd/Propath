@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout android:background="@color/colorWhite"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/dp_8"
+        android:id="@+id/coach_feedback_data_layout"
+        android:background="@drawable/border_bottom_light_grey_1dp">
+-->
+    <androidx.cardview.widget.CardView
+        style="@style/StyleAdapterCardView">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/coach_feedback_data_layout"
+        android:paddingBottom="@dimen/dp_5"
+        android:paddingTop="@dimen/dp_10"
+        android:layout_margin="@dimen/adapterCardViewInnerMargin">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/img_options_menu"
+            android:layout_marginRight="@dimen/dp_25">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/training_plan_data"
+                android:textSize="@dimen/sp_14"
+                android:text="title"
+                android:layout_marginRight="@dimen/dp_16"
+                android:layout_toLeftOf="@id/training_plan_date"
+                android:textColor="@color/colorDarkGrey"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/training_plan_date"
+                android:textSize="@dimen/sp_14"
+                android:text="12-12-2018"
+                android:layout_marginLeft="@dimen/dp_5"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/colorDarkGrey"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/coach_list_given_by"
+                android:textSize="@dimen/sp_14"
+                android:text="submitted by : "
+                android:layout_marginTop="@dimen/dp_3"
+                android:visibility="gone"
+                android:layout_below="@+id/training_plan_data"
+                android:textColor="@color/colorDarkGrey"/>
+
+            <ImageView
+                style="@style/StyleImageLightTheme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_bottom"
+                android:id="@+id/arrow"
+                android:visibility="gone"
+                android:layout_alignParentRight="true" />
+          <!--  <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/training_plan_data"
+                android:textSize="@dimen/sp_18"
+                android:text="text"
+                android:layout_marginRight="@dimen/dp_16"
+                android:textColor="@color/colorTextBlack"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/coach_list_given_by"
+                android:textSize="@dimen/sp_16"
+                android:text="submitted by : "
+                android:paddingRight="5dp"
+                android:layout_marginTop="@dimen/dp_3"
+                android:visibility="visible"
+                android:layout_below="@+id/training_plan_data"
+                android:textColor="@color/colorDarkGrey"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/training_plan_date"
+                android:textSize="@dimen/sp_18"
+                android:gravity="right"
+                android:layout_toRightOf="@id/coach_list_given_by"
+                android:layout_alignBaseline="@id/coach_list_given_by"
+                android:text="12-12-2018"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/colorDarkGrey"/>
+
+            <ImageView
+                style="@style/StyleImageLightTheme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_bottom"
+                android:id="@+id/arrow"
+                android:visibility="gone"
+                android:layout_alignParentRight="true"/>
+-->
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/img_options_menu"
+            style="@style/StyleImageLightTheme"
+            android:layout_width="@dimen/dp_24"
+            android:layout_height="@dimen/dp_24"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_options_menu"
+            android:visibility="visible"/>
+
+    </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/dp_36"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <EditText
+            android:id="@+id/survey_type_questions"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.7"
+            android:background="@drawable/border_bottom_light_grey_1dp"
+            android:hint=" 1. Enter Question 1"
+            android:paddingBottom="@dimen/dp_8"
+            android:textColor="@color/colorTextBlack"
+            android:textColorHint="@color/colorTextBlack"
+            android:layout_marginRight="@dimen/dp_8"
+            android:textSize="@dimen/sp_18" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3"
+             android:gravity="end"
+            android:visibility="gone"
+            android:src="@drawable/ic_plus"/>
+    </LinearLayout>
+
+
+</LinearLayout>

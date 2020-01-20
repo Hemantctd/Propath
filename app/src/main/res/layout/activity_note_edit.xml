@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="org.ctdworld.propath.activity.ActivityNoteView"
+    android:orientation="vertical">
+
+    <!--toolbar-->
+    <include layout="@layout/toolbar"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginBottom="@dimen/footerHeight">
+
+
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true">
+
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/colorWhite">
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/dp_16"
+                        android:orientation="vertical">
+
+
+                        <!--fragment container for creator details-->
+                        <FrameLayout
+                            android:id="@+id/fragment_container_creator_details"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_24">
+
+                            <TextView
+                                android:id="@+id/activity_note_edit_category_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/notes_category_title"
+                                android:textSize="@dimen/sp_18"
+                                android:textColor="@color/colorDarkBlack"
+                                android:layout_centerVertical="true"/>
+
+                            <TextView
+                                android:id="@+id/activity_note_edit_txt_category"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/note_uncategorised"
+                                android:textSize="@dimen/sp_14"
+                                android:layout_toRightOf="@id/activity_note_edit_category_text"
+                                android:layout_marginLeft="@dimen/dp_16"
+                                android:layout_marginRight="@dimen/dp_16"
+                                android:layout_centerVertical="true"
+                                android:layout_toEndOf="@id/activity_note_edit_category_text" />
+
+                        </RelativeLayout>
+
+
+                        <!--title-->
+                        <RelativeLayout
+                            style="@style/StyleEditContainer"
+                            android:layout_marginTop="@dimen/dp_18">
+
+                            <EditText
+                                android:id="@+id/activity_note_edit_title"
+                                style="@style/StyleEditInContainer"
+                                android:hint="@string/enter_title"
+                                android:layout_toLeftOf="@id/activity_note_edit_img_mic_title"
+                                android:layout_marginRight="@dimen/dp_16"
+                                android:layout_toStartOf="@id/activity_note_edit_img_mic_title"
+                                android:layout_marginEnd="@dimen/dp_16"
+                                tools:ignore="Autofill"
+                                android:inputType="text" />
+
+                            <ImageView
+                                style="@style/StyleImageLightTheme"
+                                android:id="@+id/activity_note_edit_img_mic_title"
+                                android:layout_width="@dimen/dp_24"
+                                android:layout_height="@dimen/dp_24"
+                                android:layout_alignParentRight="true"
+                                android:src="@drawable/ic_mic"
+                                android:layout_centerVertical="true"
+                                android:layout_alignParentEnd="true"
+                                android:contentDescription="@string/title" />
+
+                        </RelativeLayout>
+
+                        <!--description-->
+                        <RelativeLayout
+                            style="@style/StyleEditContainer"
+                            android:layout_marginTop="@dimen/dp_18">
+
+                            <EditText
+                                android:id="@+id/activity_note_edit_description"
+                                style="@style/StyleEditInContainer"
+                                android:layout_marginRight="@dimen/dp_16"
+                                android:layout_toLeftOf="@id/activity_note_edit_img_mic_description"
+                                android:hint="@string/description"
+                                android:layout_marginEnd="@dimen/dp_16"
+                                android:layout_toStartOf="@id/activity_note_edit_img_mic_description"
+                                tools:ignore="Autofill"
+                                android:inputType="text" />
+
+                            <ImageView
+                                style="@style/StyleImageLightTheme"
+                                android:id="@+id/activity_note_edit_img_mic_description"
+                                android:layout_width="@dimen/dp_24"
+                                android:layout_height="@dimen/dp_24"
+                                android:layout_alignParentRight="true"
+                                android:src="@drawable/ic_mic"
+                                android:layout_centerVertical="true"
+                                android:layout_alignParentEnd="true"
+                                android:contentDescription="@string/description" />
+
+                        </RelativeLayout>
+
+
+                        <!--media, media text visibility is gone-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginTop="@dimen/dp_30">
+
+                            <!--media text and icon-->
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <!--documents text-->
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/media"
+                                    android:textColor="@color/colorTextBlack"
+                                    android:textSize="@dimen/sp_20"
+                                    android:fontFamily="@font/open_sans_bold"
+                                    tools:ignore="RelativeOverlap" />
+
+                                <!--icon to add document-->
+                                <ImageView
+                                    style="@style/StyleImageLightTheme"
+                                    android:id="@+id/activity_note_edit_img_add_media"
+                                    android:layout_width="@dimen/dp_24"
+                                    android:layout_height="@dimen/dp_24"
+                                    android:src="@drawable/ic_plus"
+                                    android:tint="@android:color/transparent"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerVertical="true"
+                                    android:nestedScrollingEnabled="false"
+                                    android:layout_alignParentEnd="true"
+                                    tools:targetApi="lollipop"
+                                    android:contentDescription="@string/media" />
+                            </RelativeLayout>
+
+                            <!--add media icon and recycler view to show image-->
+
+                            <!--media images-->
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/activity_note_edit_recycler_images"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp_18"
+                                android:scrollbars="horizontal"/>
+
+                        </LinearLayout>
+
+
+                        <!--document-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginTop="@dimen/dp_18">
+
+                            <!--documents text and add icon-->
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <!--documents text-->
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/document"
+                                    android:textColor="@color/colorTextBlack"
+                                    android:textSize="@dimen/sp_20"
+                                    android:fontFamily="@font/open_sans_bold"
+                                    android:layout_centerVertical="true"
+                                    tools:ignore="RelativeOverlap" />
+
+                                <!--icon to add document-->
+                                <ImageView
+                                    style="@style/StyleImageLightTheme"
+                                    android:id="@+id/activity_note_edit_img_add_docuemnt"
+                                    android:layout_width="@dimen/dp_24"
+                                    android:layout_height="@dimen/dp_24"
+                                    android:src="@drawable/ic_plus"
+                                    android:tint="@android:color/transparent"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerVertical="true"
+                                    android:nestedScrollingEnabled="false"
+                                    android:layout_alignParentEnd="true"
+                                    tools:targetApi="lollipop"
+                                    android:contentDescription="@string/document" />
+                            </RelativeLayout>
+
+
+                            <!--documents recycler-->
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/activity_note_edit_recycler_document"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp_18"/>
+
+                        </LinearLayout>
+
+
+                        <!--Links-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginTop="@dimen/dp_30">
+
+                            <!--link text and add icon-->
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <!--link text-->
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/link"
+                                    android:textColor="@color/colorTextBlack"
+                                    android:textSize="@dimen/sp_20"
+                                    android:fontFamily="@font/open_sans_bold"
+                                    android:layout_centerVertical="true"
+                                    tools:ignore="RelativeOverlap" />
+
+                                <!--icon to add document-->
+                                <ImageView
+                                    style="@style/StyleImageLightTheme"
+                                    android:id="@+id/activity_note_edit_img_add_add_link"
+                                    android:layout_width="@dimen/dp_24"
+                                    android:layout_height="@dimen/dp_24"
+                                    android:tint="@android:color/transparent"
+                                    android:src="@drawable/ic_plus"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerVertical="true"
+                                    android:contentDescription="@string/link"
+                                    android:layout_alignParentEnd="true" />
+                            </RelativeLayout>
+
+
+                            <!--title-->
+                            <EditText
+                                android:id="@+id/activity_note_edit_edit_link"
+                                style="@style/StyleEdit"
+                                android:hint="@string/enter_link"
+                                android:layout_marginTop="@dimen/dp_18"
+                                tools:ignore="Autofill"
+                                android:inputType="text" />
+
+
+                            <!--links recycler-->
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/activity_note_edit_recycler_link"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp_18"
+                                android:nestedScrollingEnabled="false"
+                                tools:targetApi="lollipop" />
+
+                        </LinearLayout>
+
+
+
+                    </LinearLayout>
+
+
+
+
+
+                </LinearLayout>
+
+
+
+
+            </ScrollView>
+        </LinearLayout>
+
+        <fragment
+            android:id="@+id/container_footer"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_60"
+            android:layout_alignParentBottom="true"
+            android:name="org.ctdworld.propath.fragment.FragmentFooter"/>
+    </RelativeLayout>
+
+
+</LinearLayout>

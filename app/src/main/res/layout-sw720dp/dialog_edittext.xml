@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="org.ctdworld.propath.fragment.DialogEditText"
+    >
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp_16"
+        android:background="@drawable/border_theme_color_2dp_round_25dp"
+        android:backgroundTint="@color/colorWhite">
+
+
+
+        <TextView
+            android:id="@+id/dialog_files_notes_txt_title"
+            style="@style/StyleTextView"
+            android:textSize="@dimen/sp_18"
+            android:textColor="@color/colorTheme"
+            android:text="Title"
+            android:layout_alignBottom="@dimen/marginBottomDialogTitle"
+            android:layout_centerHorizontal="true"/>
+
+
+        <EditText
+            android:id="@+id/dialog_files_notes_edit_name"
+            style="@style/StyleEdit"
+            android:layout_below="@id/dialog_files_notes_txt_title"
+            android:hint="Enter text"/>
+
+
+        <Button
+            android:id="@+id/dialog_files_notes_btn_enter"
+            style="@style/StyleButton"
+            android:layout_height="@dimen/dp_40"
+            android:layout_width="wrap_content"
+            android:textSize="@dimen/sp_16"
+            android:paddingLeft="@dimen/dp_16"
+            android:paddingRight="@dimen/dp_16"
+            android:text="@string/save"
+            android:layout_below="@id/dialog_files_notes_edit_name"
+            android:layout_marginTop="@dimen/dp_30"
+            android:layout_alignParentRight="true"/>
+
+
+    </RelativeLayout>
+
+
+
+
+</FrameLayout>

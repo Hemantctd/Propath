@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:id="@+id/layout_no_connection"
+    android:gravity="center"
+    android:layout_gravity="center">
+
+
+    <TextView
+        android:id="@+id/layout_no_connection_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/no_connection"
+        android:textSize="@dimen/sp_30"
+        android:textColor="@color/colorNoConnectionDark"
+        android:textStyle="bold"
+        android:background="@drawable/border_bottom_color_theme_1dp"/>
+
+    <!--<TextView
+        android:id="@+id/layout_no_connection_txt_retry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/retry"
+        android:textSize="@dimen/txtSizeNoConnection"
+        android:textColor="@color/colorNoConnectionDark"
+        android:layout_marginTop="15dp"
+        android:textAllCaps="true"
+        android:textStyle="bold"/>-->
+</LinearLayout>

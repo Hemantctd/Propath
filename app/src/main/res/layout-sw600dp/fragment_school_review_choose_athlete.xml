@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/colorWhite"
+    android:id="@+id/athlete_name_search_refresh_layout"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="org.ctdworld.propath.fragment.FragmentEducaSchoolReviewChooseAthlete">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/fragment_search_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    <RelativeLayout
+        android:id="@+id/contact_search_layout_for_details"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:ignore="UselessParent">
+
+           <!-- <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    style="@style/StyleEditContainer">
+
+                    <ImageView
+                        android:id="@+id/athlete_name_search_icon"
+                        style="@style/StyleEditImgInContainer"
+                        android:src="@drawable/ic_search"
+                        android:padding="@dimen/dp_8"
+                        android:contentDescription="@string/search" />
+
+                    <ImageView
+                        android:id="@+id/athlete_name_search"
+                        style="@style/StyleEditImgInContainer"
+                        android:src="@drawable/ic_mic"
+                        android:layout_alignParentRight="true"
+                        android:padding="@dimen/dp_8"
+                        android:contentDescription="@string/search"
+                        android:layout_alignParentEnd="true" />
+
+
+                    <EditText
+                        android:id="@+id/athlete_search_name"
+                        style="@style/StyleEditInContainer"
+                        android:hint="@string/search"
+                        android:layout_toLeftOf="@id/athlete_name_search"
+                        android:layout_toRightOf="@+id/athlete_name_search_icon"
+                        android:layout_toStartOf="@id/athlete_name_search"
+                        android:layout_toEndOf="@+id/athlete_name_search_icon"
+                        android:inputType="text"
+                        tools:ignore="Autofill" />
+                </RelativeLayout>
+
+            </RelativeLayout>-->
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/athlete_name_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/dp_16"/>
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/contact_search_txt_no_connection"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:textSize="@dimen/sp_30"
+        android:textColor="@color/colorTheme"
+        android:fontFamily="@font/open_sans_bold"
+        android:text="@string/title_no_connection"
+        android:visibility="gone"/>
+
+    </LinearLayout>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

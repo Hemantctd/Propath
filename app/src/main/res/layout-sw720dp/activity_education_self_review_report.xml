@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorWhite"
+    tools:context="org.ctdworld.propath.activity.ActivityEducationSelfReviewReport">
+
+    <include layout="@layout/toolbar"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginBottom="@dimen/footerHeight">
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/dp_16"
+                    android:layout_marginLeft="@dimen/dp_16"
+                    android:layout_marginBottom="@dimen/dp_16"
+                    android:orientation="vertical">
+
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/border_bottom_light_grey_1dp">
+
+                        <!--User Details-->
+                        <FrameLayout
+                            android:id="@+id/fragment_container_creator_details"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_30"/>
+                        <!--<RelativeLayout
+                            android:id="@+id/school_review_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:layout_marginTop="@dimen/dp_20">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/self_review_img_profile"
+                                android:layout_width="@dimen/dp_60"
+                                android:layout_height="@dimen/dp_60"
+                                android:layout_centerVertical="true"
+                                android:layout_marginBottom="@dimen/dp_10"
+                                android:src="@drawable/ic_profile"
+                                android:tint="@color/colorIconLightTheme"/>
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="@dimen/dp_20"
+                                android:layout_toRightOf="@id/self_review_img_profile"
+                                android:layout_marginStart="@dimen/dp_20"
+                                android:layout_toEndOf="@id/self_review_img_profile">
+
+                                <TextView
+                                    android:id="@+id/self_review_txt_user_name"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/dp_10"
+                                    android:text="@string/athlete_name"
+                                    android:textColor="@color/colorTextBlack"
+                                    android:textSize="@dimen/sp_18"
+                                    android:textStyle="bold"/>
+                                <TextView
+                                    android:id="@+id/role"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/dp_2"
+                                    android:text="@string/role"
+                                    android:textColor="@color/colorTextBlack"
+                                    android:layout_below="@+id/self_review_txt_user_name"
+                                    android:textSize="@dimen/sp_13"/>
+
+
+                                <TextView
+                                    android:id="@+id/self_Review_date"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/role"
+                                    android:layout_marginTop="@dimen/dp_2"
+                                    android:text="@string/created_date"
+                                    android:textColor="@color/colorTextBlack"
+                                    android:textSize="@dimen/sp_13"/>
+
+
+                            </RelativeLayout>
+                        </RelativeLayout>-->
+
+                        <!-- <TextView
+                             android:id="@+id/comments_given_by_self"
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:layout_below="@+id/school_review_layout"
+                             android:layout_marginTop="@dimen/dp_18"
+                             android:background="@drawable/bg_edit"
+                             android:text="comment given by self"
+                             android:textColor="@color/colorTextBlack"
+                             android:textSize="@dimen/sp_16"
+                             android:paddingBottom="@dimen/dp_5"/>-->
+
+                        <!--    <TextView
+                                android:id="@+id/summary_text"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/comments_given_by_self"
+                                android:layout_marginTop="@dimen/dp_18"
+                                android:background="@drawable/bg_edit"
+                                android:text="Summary"
+                                android:textColor="@color/colorTextBlack"
+                                android:textSize="@dimen/sp_16"
+                                android:paddingBottom="@dimen/dp_5"/>-->
+
+                        <LinearLayout
+                            android:id="@+id/strengths_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_below="@+id/fragment_container_creator_details">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp_25"
+                                android:text="@string/strengths"
+                                android:textColor="@color/colorTheme"
+                                android:textSize="@dimen/txtSize" />
+                            <TextView
+                                android:id="@+id/strength_text"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp_8"
+                                android:background="@drawable/bg_edit"
+                                android:text="@string/strengths_desc"
+                                android:textColor="@color/colorTextBlack"
+                                android:textSize="@dimen/sp_16"
+                                android:paddingBottom="@dimen/dp_5"/>
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:id="@+id/improvements_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginTop="@dimen/dp_10"
+                            android:layout_below="@+id/strengths_layout">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp_18"
+                                android:text="@string/improvements"
+                                android:textColor="@color/colorTheme"
+                                android:textSize="@dimen/txtSize"
+                                />
+
+                            <TextView
+                                android:id="@+id/improvements_text"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp_8"
+                                android:text="@string/improvements_desc"
+                                android:textColor="@color/colorTextBlack"
+                                android:textSize="@dimen/sp_16"
+                                android:paddingBottom="@dimen/dp_5"
+                                android:background="@drawable/bg_edit"
+                                />
+                        </LinearLayout>
+
+
+
+                        <LinearLayout
+                            android:id="@+id/suggestion_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginTop="@dimen/dp_10"
+                            android:layout_below="@+id/improvements_layout">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp_18"
+                                android:text="@string/suggestions"
+                                android:textColor="@color/colorTheme"
+                                android:textSize="@dimen/txtSize"
+                                />
+                            <TextView
+                                android:id="@+id/suggestion_text"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp_18"
+                                android:background="@drawable/bg_edit"
+                                android:text="@string/suggestions_desc"
+                                android:textColor="@color/colorTextBlack"
+                                android:textSize="@dimen/sp_16"
+                                android:paddingBottom="@dimen/dp_5"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/assistance_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginTop="@dimen/dp_10"
+                            android:layout_below="@+id/suggestion_layout">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp_18"
+                                android:text="@string/assistance_requested"
+                                android:textColor="@color/colorTheme"
+                                android:textSize="@dimen/txtSize"
+                                />
+
+                            <TextView
+                                android:id="@+id/assistance_text"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp_18"
+                                android:background="@drawable/bg_edit"
+                                android:text="@string/assistance_desc"
+                                android:textColor="@color/colorTextBlack"
+                                android:textSize="@dimen/sp_16"
+                                android:paddingBottom="@dimen/dp_5"/>
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/assistance_layout"
+                            android:background="@drawable/bg_edit"
+                            android:layout_marginTop="@dimen/dp_20"
+                            android:paddingBottom="@dimen/dp_5">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dp_40"
+                                android:weightSum="2"
+                                tools:ignore="UselessParent">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1.5"
+                                    android:gravity="bottom"
+                                    android:hint="@string/enter_qualification"
+                                    android:id="@+id/qualification_text"
+                                    android:textColor="@color/colorDarkBlack"
+                                    android:textColorHint="@color/colorDarkBlack"
+                                    android:layout_marginRight="@dimen/dp_16"
+                                    android:textSize="@dimen/sp_18"
+                                    android:layout_marginEnd="@dimen/dp_16" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.5"
+                                    android:gravity="right|bottom"
+                                    android:text="@string/self_review"
+                                    android:textColor="@color/colorDarkBlack"
+                                    android:textColorHint="@color/colorDarkBlack"
+                                    android:textSize="@dimen/sp_18"
+                                    tools:ignore="RtlHardcoded" />
+
+                            </LinearLayout>
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/recycler_self_review_report"
+                        android:layout_marginTop="@dimen/dp_18"
+                        android:layout_marginBottom="@dimen/dp_18"
+                        android:scrollbars="none"
+
+                        />
+
+
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone"/>
+
+        <fragment
+            android:id="@+id/container_footer"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_60"
+            android:layout_alignParentBottom="true"
+            android:name="org.ctdworld.propath.fragment.FragmentFooter"/>
+    </RelativeLayout>
+
+</LinearLayout>

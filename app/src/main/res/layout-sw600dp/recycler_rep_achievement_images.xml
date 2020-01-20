@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        style="@style/StyleImageLightTheme"
+        android:id="@+id/recycler_rep_achievement_image"
+        android:layout_width="@dimen/repAchievementAdapterImageSize"
+        android:layout_height="@dimen/repAchievementAdapterImageSize"
+        android:src="@drawable/img_default_black"
+        android:tint="@android:color/transparent"
+        android:layout_marginLeft="@dimen/dp_8"
+        android:layout_marginRight="@dimen/dp_8"
+        android:scaleType="centerCrop"/>
+
+</LinearLayout>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="org.ctdworld.propath.fragment.FragmentNotesOptionsMenu"
+    android:background="@color/colorWhite"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/paddingMarginLeftRightAllPages"
+    android:paddingRight="@dimen/paddingMarginLeftRightAllPages">
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/fragment_notes_options_menu_layout_copy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp">
+
+        <ImageView
+            style="@style/StyleImageLightTheme"
+            android:id="@+id/fragment_notes_options_menu_img_copy"
+            android:layout_width="@dimen/iconSize"
+            android:layout_height="@dimen/iconSize"
+            android:src="@drawable/ic_survey_copy_icon"
+            android:layout_centerVertical="true"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/fragment_notes_options_menu_img_copy"
+            android:text="@string/copy"
+            android:textColor="@color/colorTextBlack"
+            android:layout_marginLeft="@dimen/paddingMarginLeftRightAllPages"
+            android:layout_centerVertical="true"
+            android:textSize="@dimen/txtSize"/>
+
+    </RelativeLayout>
+
+
+    <!--share-->
+    <RelativeLayout
+        android:id="@+id/fragment_notes_options_menu_layout_share"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp">
+
+    <ImageView
+        style="@style/StyleImageLightTheme"
+        android:id="@+id/fragment_notes_options_menu_img_share"
+        android:layout_width="@dimen/iconSize"
+        android:layout_height="@dimen/iconSize"
+        android:src="@drawable/ic_share"
+        android:layout_centerVertical="true"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/fragment_notes_options_menu_img_share"
+            android:text="@string/share"
+            android:textColor="@color/colorTextBlack"
+            android:layout_marginLeft="@dimen/paddingMarginLeftRightAllPages"
+            android:layout_centerVertical="true"
+            android:textSize="@dimen/txtSize"/>
+
+    </RelativeLayout>
+
+
+    <!--delete note-->
+    <RelativeLayout
+        android:id="@+id/fragment_notes_options_menu_layout_delete_note"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp">
+
+        <ImageView
+            style="@style/StyleImageLightTheme"
+            android:id="@+id/fragment_notes_options_menu_img_delete_note"
+            android:layout_width="@dimen/iconSize"
+            android:layout_height="@dimen/iconSize"
+            android:src="@drawable/ic_delete"
+            android:layout_centerVertical="true"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/fragment_notes_options_menu_img_delete_note"
+            android:text="@string/notes_delete"
+            android:textColor="@color/colorTextBlack"
+            android:layout_marginLeft="@dimen/paddingMarginLeftRightAllPages"
+            android:layout_centerVertical="true"
+            android:textSize="@dimen/txtSize"/>
+
+    </RelativeLayout>
+
+
+    <!--edit note-->
+    <RelativeLayout
+        android:id="@+id/fragment_notes_options_menu_layout_edit_note"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp">
+
+        <ImageView
+            style="@style/StyleImageLightTheme"
+            android:id="@+id/fragment_notes_options_menu_img_edit_note"
+            android:layout_width="@dimen/iconSize"
+            android:layout_height="@dimen/iconSize"
+            android:src="@drawable/ic_edit"
+            android:layout_centerVertical="true"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/fragment_notes_options_menu_img_edit_note"
+            android:text="@string/notes_edit"
+            android:textColor="@color/colorTextBlack"
+            android:layout_marginLeft="@dimen/paddingMarginLeftRightAllPages"
+            android:layout_centerVertical="true"
+            android:textSize="@dimen/txtSize"/>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

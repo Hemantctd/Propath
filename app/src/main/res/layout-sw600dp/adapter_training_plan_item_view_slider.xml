@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorPageBg">
+
+
+    <TextView
+        android:id="@+id/adapter_training_plan_item_view_txt_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/title"
+        android:textColor="@color/colorTextBlack"
+        android:textSize="@dimen/sp_18"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/dp_16"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:id="@+id/layout_image_video_icon"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!--ImageView -->
+            <ImageView
+                style="@style/StyleImageLightTheme"
+                android:id="@+id/adapter_training_plan_item_view_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:tint="@android:color/transparent"
+                android:src="@drawable/img_default_black"
+                android:layout_marginTop="@dimen/dp_16"
+                android:contentDescription="@string/image" />
+
+            <!--video icon-->
+            <ImageView
+                android:id="@+id/adapter_training_plan_item_view_img_video_icon_play"
+                android:layout_width="@dimen/dp_50"
+                android:layout_height="@dimen/dp_50"
+                android:src="@drawable/ic_video_play"
+                android:layout_centerInParent="true"
+                android:tint="@color/colorTheme"
+                android:visibility="gone"
+                android:contentDescription="@string/video" />
+
+        </RelativeLayout>
+
+
+        <!--video view-->
+        <tcking.github.com.giraffeplayer2.VideoView
+            android:id="@+id/adapter_training_plan_item_view_video"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/img_athlete_patrick"
+            android:layout_marginTop="@dimen/dp_16"
+            android:visibility="gone"/>
+
+
+
+
+    </RelativeLayout>
+
+
+        <!--cancel button
+        <LinearLayout
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="right"
+            android:background="@drawable/border_transparent_2dp_round_25dp"
+            android:backgroundTint="@color/colorTheme"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/adapter_chat_selected_images_img_cancel"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/ic_cancel"
+                android:layout_gravity="center"/>
+
+
+        </LinearLayout>-->
+
+
+</LinearLayout>

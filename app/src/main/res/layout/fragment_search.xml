@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--search with text and voice-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_filter"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPageBg">
+
+    <RelativeLayout style="@style/StyleEditContainer">
+
+        <ImageView
+            android:id="@+id/img_search"
+            style="@style/StyleEditImgInContainer"
+            android:contentDescription="@string/search"
+            android:src="@drawable/ic_search" />
+
+        <ImageView
+            android:id="@+id/img_mic"
+            style="@style/StyleEditImgInContainer"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:contentDescription="@string/search"
+            android:src="@drawable/ic_mic" />
+
+        <EditText
+            android:id="@+id/edit_search"
+            style="@style/StyleEditInContainer"
+            android:layout_toStartOf="@id/img_mic"
+            android:layout_toLeftOf="@id/img_mic"
+            android:layout_toEndOf="@id/img_search"
+            android:layout_toRightOf="@id/img_search"
+            android:hint="@string/search"
+            android:inputType="text"
+            tools:ignore="Autofill" />
+    </RelativeLayout>
+
+</RelativeLayout>
+

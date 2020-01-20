@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_18">
+
+        <ImageView
+            style="@style/StyleImageLightTheme"
+            android:id="@+id/recycler_note_link_img"
+            android:layout_width="@dimen/dp_24"
+            android:layout_height="@dimen/dp_24"
+            android:src="@drawable/ic_attach"
+            android:rotation="45"
+            android:layout_centerVertical="true"/>
+
+
+        <TextView
+            android:id="@+id/recycler_note_link_create_txt_link"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/recycler_note_link_img"
+            android:layout_toLeftOf="@id/recycler_note_link_create_img_remove"
+            android:textSize="@dimen/sp_16"
+            android:layout_marginLeft="@dimen/recycleLeftImageMarginRight"
+            android:layout_marginRight="@dimen/dp_16"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:text="link wil come here"
+            android:textColor="@color/colorTextBlack"/>
+
+        <ImageView
+            style="@style/StyleImageLightTheme"
+            android:id="@+id/recycler_note_link_create_img_remove"
+            android:layout_width="@dimen/dp_24"
+            android:layout_height="@dimen/dp_24"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_cancel"/>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

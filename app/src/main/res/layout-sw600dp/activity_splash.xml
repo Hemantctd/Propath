@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="org.ctdworld.propath.activity.ActivitySplash"
+    android:background="@color/colorWhite">
+
+
+
+    <!--<include layout="@layout/layout_logo"
+        android:id="@+id/img_logo"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="150dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"/>
+-->
+
+    <RelativeLayout
+        android:id="@+id/img_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_150"
+        android:layout_centerHorizontal="true"
+        tools:ignore="UselessParent">
+
+        <ImageView
+            android:id="@+id/activity_splash_img_logo"
+            style="@style/StyleLogo"
+            android:layout_width="@dimen/dp_250"
+            android:layout_height="@dimen/dp_250"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/activity_splash_txt_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textSize="@dimen/sp_20"
+            android:layout_marginTop="@dimen/dp_16"
+            android:scaleY="1.2"
+            android:textColor="@color/colorTheme"
+            android:fontFamily="@font/open_sans_bold"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/activity_splash_img_logo"
+            android:textAllCaps="true"/>
+
+
+        <TextView
+            android:id="@+id/activity_splash_txt_tag_line"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_tag_line"
+            android:textSize="@dimen/txtSizeTagLine"
+            android:layout_marginTop="@dimen/dp_10"
+            android:textColor="@color/colorTheme"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/activity_splash_txt_logo"
+            android:textAllCaps="true"/>
+
+    </RelativeLayout>
+
+
+
+
+
+
+
+    <!--    <TextView
+            android:id="@+id/txt_a"
+            style="@style/StyleTextSplashScreen"
+            android:text="A" />
+
+        <TextView
+            android:id="@+id/txt_t_1"
+            style="@style/StyleTextSplashScreen"
+            android:text="T" />
+        <TextView
+            android:id="@+id/txt_h"
+            style="@style/StyleTextSplashScreen"
+            android:text="H" />
+        <TextView
+            android:id="@+id/txt_l"
+            style="@style/StyleTextSplashScreen"
+            android:text="L" />
+        <TextView
+            android:id="@+id/txt_e_1"
+            style="@style/StyleTextSplashScreen"
+            android:text="E" />
+        <TextView
+            android:id="@+id/txt_t_2"
+            style="@style/StyleTextSplashScreen"
+            android:text="T" />
+        <TextView
+            android:id="@+id/txt_e_2"
+            style="@style/StyleTextSplashScreen"
+            android:text="E" />
+        <TextView
+            android:id="@+id/txt_l_2"
+            style="@style/StyleTextSplashScreen"
+            android:text="L"
+            android:layout_marginLeft="15dp"/>
+        <TextView
+            style="@style/StyleTextSplashScreen"
+            android:text="I" />
+        <TextView
+            style="@style/StyleTextSplashScreen"
+            android:text="F" />
+        <TextView
+            style="@style/StyleTextSplashScreen"
+            android:text="E"
+            android:typeface="serif"/>-->
+
+
+</RelativeLayout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="50sp">
+
+    <ImageView
+        android:id="@+id/img_logo"
+        style="@style/StyleLogo"/>
+
+    <TextView
+        android:id="@+id/activity_splash_txt_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:textSize="@dimen/sp_20"
+        android:layout_marginTop="@dimen/dp_8"
+        android:scaleY="1.2"
+        android:textColor="@color/colorTheme"
+        android:fontFamily="@font/open_sans_bold"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/img_logo"
+        android:textAllCaps="true"
+        />
+
+
+    <TextView
+        android:id="@+id/activity_splash_txt_tag_line"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_tag_line"
+        android:textSize="@dimen/txtSizeTagLine"
+        android:layout_marginTop="@dimen/dp_10"
+        android:textColor="@color/colorTheme"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/activity_splash_txt_logo"
+        android:textAllCaps="true"/>
+
+</RelativeLayout>

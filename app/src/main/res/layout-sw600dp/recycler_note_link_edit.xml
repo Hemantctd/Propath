@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_18">
+
+        <ImageView
+            style="@style/StyleImageLightTheme"
+            android:id="@+id/recycler_note_link_img"
+            android:layout_width="@dimen/dp_24"
+            android:layout_height="@dimen/dp_24"
+            android:src="@drawable/ic_attach"
+            android:rotation="45"
+            android:layout_centerVertical="true"/>
+
+
+        <EditText
+            android:id="@+id/recycler_note_link_create_edit_edit_link"
+            style="@style/StyleEdit"
+            android:minHeight="@dimen/dp_50"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/recycler_note_link_img"
+            android:layout_toLeftOf="@id/recycler_note_link_create_edit_img_remove"
+            android:hint="link url"
+            android:layout_marginLeft="@dimen/dp_16"
+            android:layout_marginRight="@dimen/dp_16"
+            android:layout_centerVertical="true"
+            />
+
+        <ImageView
+            style="@style/StyleImageLightTheme"
+            android:id="@+id/recycler_note_link_create_edit_img_remove"
+            android:layout_width="@dimen/dp_24"
+            android:layout_height="@dimen/dp_24"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_cancel"/>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

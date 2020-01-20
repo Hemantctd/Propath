@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorWhite"
+    tools:context="org.ctdworld.propath.activity.ActivitySearch">
+    <include layout="@layout/toolbar"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_25"
+                android:layout_marginLeft="@dimen/sp_20"
+                android:layout_marginRight="@dimen/sp_20">
+
+                <RelativeLayout
+                    style="@style/StyleEditContainer">
+                    <ImageView
+                        android:id="@+id/contact_search_img_search_icon"
+                        style="@style/StyleEditImgInContainer"
+                        android:src="@drawable/ic_search"
+                        android:tint="@color/colorDarkBlack"
+                        android:padding="@dimen/dp_10"/>
+                    <ImageView
+                        android:id="@+id/contact_search_img_search"
+                        style="@style/StyleEditImgInContainer"
+                        android:src="@drawable/ic_mic"
+                        android:tint="@color/colorDarkBlack"
+                        android:layout_alignParentRight="true"
+                        android:padding="@dimen/dp_10"/>
+
+                    <EditText
+                        android:id="@+id/search_edit_search"
+                        style="@style/StyleEditInContainer"
+                        android:hint="Search"
+                        android:layout_toRightOf="@+id/contact_search_img_search_icon"/>
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/search_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/dp_60"
+                android:layout_marginTop="@dimen/sp_20"
+                android:layout_marginRight="@dimen/sp_20"
+                android:layout_marginLeft="@dimen/sp_20"/>
+
+
+        </LinearLayout>
+        <fragment
+            android:id="@+id/container_footer"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_60"
+            android:layout_alignParentBottom="true"
+            android:name="org.ctdworld.propath.fragment.FragmentFooter"
+            />
+    </RelativeLayout>
+</LinearLayout>

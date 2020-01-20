@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="org.ctdworld.propath.activity.ActivityMain">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include layout="@layout/toolbar"
+            android:id="@+id/main_activity_toolbar"/>
+
+        <fragment
+            android:id="@+id/frag_dashboard_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:name="org.ctdworld.propath.fragment.FragmentDashboardContainer"
+            android:layout_below="@id/main_activity_toolbar"
+            android:layout_marginBottom="@dimen/dp_60"/>
+
+        <fragment
+            android:id="@+id/dash_frag_footer"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_60"
+            android:name="org.ctdworld.propath.fragment.FragmentFooter"
+            android:layout_alignParentBottom="true"/>
+
+        <ProgressBar
+            android:id="@+id/activity_main_progress_bar"
+            android:layout_width="@dimen/dp_60"
+            android:layout_height="@dimen/dp_60"
+            android:layout_centerInParent="true"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigation_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        app:menu="@menu/menu_navigation_drawer"
+        android:theme="@style/ThemeNavigationView"
+        tools:context=".fragments.FragmentNavigationDrawer"
+        app:itemBackground="@drawable/navigation_item_selector"
+        app:itemTextColor="@color/colorDarkBlack"
+        app:itemIconTint="@color/colorAccent"
+        android:layout_gravity="start">
+
+        <TextView
+            android:id="@+id/activity_main_navigation_log_out"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btnHeight"
+            android:layout_marginLeft="@dimen/dp_40"
+            android:layout_marginRight="@dimen/dp_40"
+            android:background="@drawable/border_black_2dp_round_25dp"
+            android:text="@string/txt_sign_out"
+            android:textAllCaps="true"
+            android:textSize="@dimen/sp_20"
+            android:gravity="center"
+            android:textColor="@color/colorDarkBlack"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="@dimen/dp_50"/>
+
+    </com.google.android.material.navigation.NavigationView>
+
+</androidx.drawerlayout.widget.DrawerLayout>

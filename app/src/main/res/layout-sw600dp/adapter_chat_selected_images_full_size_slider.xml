@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorLightBlack">
+
+
+
+        <!--ImageView to show images-->
+        <ImageView
+            android:id="@+id/adapter_chat_selected_images_img_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"/>
+
+
+        <!--cancel button-->
+        <LinearLayout
+            android:layout_width="@dimen/dp_30"
+            android:layout_height="@dimen/dp_30"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="right"
+            android:background="@drawable/border_transparent_2dp_round_25dp"
+            android:backgroundTint="@color/colorTheme"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/adapter_chat_selected_images_img_cancel"
+                android:layout_width="@dimen/dp_16"
+                android:layout_height="@dimen/dp_16"
+                android:src="@drawable/ic_cancel"
+                android:layout_gravity="center"/>
+
+
+        </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:paddingTop="@dimen/dp_16">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:orientation="vertical"
+        android:background="@color/colorGrey"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/StyleEditInContainer"
+        android:id="@+id/careerPlan"
+        android:hint="career planData"
+        android:layout_toLeftOf="@id/date"
+        android:layout_marginRight="@dimen/dp_16"
+        android:text="career planData"
+        android:textSize="@dimen/sp_18"
+        android:layout_alignParentLeft="true"
+        android:background="@color/colorWhite"
+        android:textColor="@color/colorGrey"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorGrey"
+        android:text="19 june 2018"
+        android:layout_centerVertical="true"
+        android:textSize="@dimen/sp_18"
+        android:id="@+id/date"
+        android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:orientation="vertical"
+        android:background="@color/colorGrey"
+        android:layout_marginBottom="5dp"/>
+</LinearLayout>

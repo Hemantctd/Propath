@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:baselineAligned="false">
+
+
+    <RelativeLayout
+        android:id="@+id/layout_like"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="start">
+
+        <ImageView
+            style="@style/StyleImageLightTheme"
+            android:id="@+id/like_btn"
+            android:layout_width="@dimen/dp_20"
+            android:layout_height="@dimen/dp_20"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_like"
+            android:contentDescription="@string/like"/>
+
+        <TextView
+            android:id="@+id/like_text"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/like"
+            android:layout_marginLeft="@dimen/dp_8"
+            android:textSize="@dimen/sp_13"
+            android:layout_toRightOf="@+id/like_btn"
+            android:textColor="@color/colorDarkGrey"
+            android:gravity="center"
+            android:layout_toEndOf="@+id/like_btn"
+            android:layout_marginStart="@dimen/dp_8" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/comment_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center">
+
+
+        <ImageView
+            style="@style/StyleImageLightTheme"
+            android:id="@+id/comment_btn"
+            android:layout_width="@dimen/dp_20"
+            android:layout_height="@dimen/dp_20"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_comment"
+            android:contentDescription="@string/comment" />
+        <TextView
+            android:id="@+id/comment_text"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/comment"
+            android:layout_marginLeft="@dimen/dp_8"
+            android:textSize="@dimen/sp_13"
+            android:layout_toRightOf="@+id/comment_btn"
+            android:textColor="@color/colorDarkGrey"
+            android:gravity="center"
+            android:layout_marginStart="@dimen/dp_8"
+            android:layout_toEndOf="@+id/comment_btn" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/share_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="end"
+        >
+        <ImageView
+            style="@style/StyleImageLightTheme"
+            android:id="@+id/share_btn"
+            android:layout_width="@dimen/dp_20"
+            android:layout_height="@dimen/dp_20"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_share"
+            android:contentDescription="@string/share"/>
+        <TextView
+            android:id="@+id/share_text"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/share"
+            android:layout_marginLeft="@dimen/dp_8"
+            android:textSize="@dimen/sp_13"
+            android:layout_toRightOf="@+id/share_btn"
+            android:textColor="@color/colorDarkGrey"
+            android:gravity="center"
+            android:layout_marginStart="@dimen/dp_8"
+            android:layout_toEndOf="@+id/share_btn" />
+    </RelativeLayout>
+
+</LinearLayout>

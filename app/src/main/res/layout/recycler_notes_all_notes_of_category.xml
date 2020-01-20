@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_16"
+        android:layout_marginBottom="@dimen/dp_16">
+
+
+        <!--options icon-->
+        <ImageView
+            style="@style/StyleImageLightTheme"
+            android:id="@+id/recycler_notes_all_notes_of_category_img_options"
+            android:layout_width="@dimen/dp_24"
+            android:layout_height="@dimen/dp_24"
+            android:src="@drawable/ic_options_menu"
+            android:layout_alignParentRight="true"
+            />
+
+
+       <!-- left most image, title, description-->
+        <RelativeLayout
+            android:id="@+id/recycler_notes_all_notes_of_category_layout_click"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@id/recycler_notes_all_notes_of_category_img_options">
+
+            <!--left most icon-->
+            <ImageView
+                style="@style/StyleImageLightTheme"
+                android:id="@+id/recycler_notes_all_notes_of_category_img_left_most"
+                android:layout_width="@dimen/dp_60"
+                android:layout_height="@dimen/dp_60"
+                android:tint="@android:color/transparent"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:src="@drawable/ic_notes_all"
+                android:layout_marginRight="@dimen/dp_16"/>
+
+            <!--title-->
+            <TextView
+                android:id="@+id/recycler_notes_all_notes_of_category_txt_tile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/recycler_notes_all_notes_of_category_img_left_most"
+                android:textSize="@dimen/sp_18"
+                android:text="title"
+                android:textColor="@color/colorDarkBlack"/>
+
+
+            <!--category-->
+            <TextView
+                android:id="@+id/recycler_notes_all_notes_of_category_txt_category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/recycler_notes_all_notes_of_category_img_left_most"
+                android:textSize="@dimen/sp_16"
+                android:layout_below="@id/recycler_notes_all_notes_of_category_txt_tile"
+                android:text="title"
+                android:textColor="@color/colorDarkBlack"
+                android:visibility="gone"/>
+
+
+            <!--description-->
+            <TextView
+                android:id="@+id/recycler_notes_all_notes_of_category_txt_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/recycler_notes_all_notes_of_category_img_left_most"
+                android:textSize="@dimen/sp_14"
+                android:layout_below="@+id/recycler_notes_all_notes_of_category_txt_category"
+                android:layout_marginTop="@dimen/dp_5"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:text="Lorem Ipsum dolor sit amet,consectatur adipiscing elit, said to eiusmod ..."
+                android:textColor="@color/colorDarkGrey"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

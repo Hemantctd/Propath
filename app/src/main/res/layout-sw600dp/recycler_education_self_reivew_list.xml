@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite">
+
+    <androidx.cardview.widget.CardView
+        style="@style/StyleAdapterCardView">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/progress_report_layout"
+            android:layout_margin="@dimen/adapterCardViewInnerMargin">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/img_options_menu"
+                android:layout_marginRight="@dimen/dp_25"
+                android:layout_toStartOf="@id/img_options_menu"
+                android:layout_marginEnd="@dimen/dp_25">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/progress_list_name"
+                    android:textSize="@dimen/sp_14"
+                    android:layout_marginRight="@dimen/dp_16"
+                    android:layout_toLeftOf="@id/progress_list_date"
+                    android:textColor="@color/colorDarkGrey"
+                    android:layout_marginEnd="@dimen/dp_16"
+                    android:layout_toStartOf="@id/progress_list_date" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/progress_list_date"
+                    android:textSize="@dimen/sp_14"
+                    android:layout_alignParentRight="true"
+                    android:textColor="@color/colorDarkGrey"
+                    android:layout_alignParentEnd="true" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/progress_list_given_by"
+                    android:textSize="@dimen/sp_14"
+                    android:layout_marginTop="@dimen/dp_3"
+                    android:visibility="gone"
+                    android:layout_below="@+id/progress_list_name"
+                    android:textColor="@color/colorDarkGrey"/>
+
+                <ImageView
+                    style="@style/StyleImageLightTheme"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_arrow_bottom"
+                    android:id="@+id/arrow"
+                    android:visibility="gone"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:contentDescription="@string/self_review"/>
+
+            </RelativeLayout>
+
+
+
+            <ImageView
+                android:id="@+id/img_options_menu"
+                style="@style/StyleImageLightTheme"
+                android:layout_width="@dimen/dp_24"
+                android:layout_height="@dimen/dp_24"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ic_options_menu"
+                android:visibility="visible"
+                android:layout_alignParentEnd="true"
+                android:contentDescription="@string/options_menu" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</LinearLayout>

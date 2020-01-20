@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.FragmentSurveyCreate"
+    android:id="@+id/refresh_layout"
+    android:orientation="vertical"
+    android:background="@color/colorWhite"
+    >
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+       >
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/createSurvey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_plus"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="@dimen/dp_16"
+            android:layout_marginBottom="@dimen/dp_10"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginLeft="@dimen/paddingMarginLeftRightAllPages"
+        android:layout_marginRight="@dimen/paddingMarginLeftRightAllPages"
+        android:layout_marginBottom="@dimen/dp_16"
+        >
+
+
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+  >
+
+    <!--<Button
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/btnHeight"
+        android:text="Create Survey"
+        android:layout_marginRight="@dimen/dp_30"
+        android:layout_marginLeft="@dimen/dp_30"
+        android:layout_marginTop="@dimen/dp_20"
+        android:background="@drawable/border_transparent_2dp_round_10dp"
+        android:backgroundTint="@color/colorTheme"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/sp_18"
+        android:id="@+id/createSurvey"
+    />-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="3"
+        android:layout_marginTop="@dimen/dp_20"
+
+        >
+
+    <TextView
+    android:layout_width="0dp"
+    android:layout_height="match_parent"
+    android:layout_weight="1.5"
+    android:text="Past Surveys"
+    android:textSize="@dimen/sp_17"
+    android:gravity="left"
+    android:textColor="@color/colorTheme"/>
+    <TextView
+    android:layout_width="0dp"
+    android:layout_height="match_parent"
+    android:layout_weight="0.8"
+    android:text="Submitted"
+    android:textSize="@dimen/sp_17"
+    android:gravity="center"
+
+    android:textColor="@color/colorTheme"/>
+    <TextView
+    android:layout_width="0dp"
+    android:layout_height="match_parent"
+    android:layout_weight="0.7"
+    android:text="Tools"
+    android:textSize="@dimen/sp_17"
+    android:gravity="right"
+    android:textColor="@color/colorTheme"/>
+
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/past_surveys_recycler_view"
+        android:layout_marginTop="@dimen/dp_10"
+        android:scrollbars="none"
+
+        />
+
+
+
+
+    </LinearLayout>
+
+
+    </LinearLayout>
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+   />
+    </RelativeLayout>
+</LinearLayout>

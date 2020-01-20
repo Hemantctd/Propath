@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/dp_20">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:orientation="horizontal">
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/border_bottom_light_grey_1dp"
+            android:padding="@dimen/dp_5"
+            android:layout_marginRight="@dimen/dp_5"
+            android:text="1. Name"
+            android:textSize="@dimen/txtSize"/>
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/border_bottom_light_grey_1dp"
+            android:padding="@dimen/dp_5"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:text="Stats"
+            android:textSize="@dimen/txtSize"/>
+    </LinearLayout>
+
+
+
+</LinearLayout>

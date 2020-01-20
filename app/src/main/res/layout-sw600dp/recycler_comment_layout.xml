@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPageBg">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_16"
+        android:id="@+id/frame_layout">
+
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/commentsLayout"
+            android:background="@drawable/border_bottom_light_grey_1dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            style="@style/StyleImageLightTheme"
+            android:id="@+id/user_profile_icon"
+            android:layout_width="@dimen/dp_60"
+            android:layout_height="@dimen/dp_60"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_profile"/>
+
+           <TextView android:id="@+id/user_profile_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_16"
+                android:layout_toRightOf="@+id/user_profile_icon"
+                android:text="Profile Name"
+                android:textSize="@dimen/sp_18"
+                android:textColor="@color/colorTheme" />
+
+            <TextView
+                android:id="@+id/comments_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/user_profile_name"
+                android:layout_marginLeft="@dimen/dp_16"
+                android:layout_toRightOf="@+id/user_profile_icon"
+                android:text="date"
+                android:textSize="@dimen/sp_16"
+                android:textColor="@color/colorDarkGrey" />
+            <TextView
+                android:id="@+id/comments"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/comments_date"
+                android:layout_toRightOf="@+id/user_profile_icon"
+                android:layout_marginLeft="@dimen/dp_16"
+                android:layout_marginTop="@dimen/dp_3"
+                android:text="comments"
+                android:textSize="@dimen/sp_16"
+                android:paddingBottom="@dimen/dp_8"
+                android:textColor="@color/colorDarkGrey" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:id="@+id/optionsLayout"
+            >
+            <ImageView
+                style="@style/StyleImageLightTheme"
+                android:id="@+id/options_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ic_options_menu"
+                android:visibility="gone"
+                />
+
+            <LinearLayout
+                android:id="@+id/edit_comment_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/colorPageBg"
+                android:layout_toLeftOf="@+id/options_img"
+                android:visibility="gone"
+                >
+
+                <TextView
+                    android:id="@+id/edit_profile_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Edit Comment"
+                    android:textColor="@color/colorDarkGrey"
+                    android:layout_marginRight="@dimen/dp_16"
+                    android:textStyle="bold"
+                    android:layout_centerVertical="true"
+                    android:paddingBottom="@dimen/dp_8"
+                    android:paddingLeft="@dimen/dp_16"
+                    android:paddingRight="@dimen/dp_16"
+                    android:background="@drawable/border_bottom_light_grey_1dp"
+                    />
+                <TextView
+                    android:id="@+id/delete_profile_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Delete Comment"
+                    android:textColor="@color/colorDarkGrey"
+                    android:layout_marginRight="@dimen/dp_16"
+                    android:textStyle="bold"
+                    android:layout_marginTop="@dimen/dp_18"
+                    android:layout_marginLeft="@dimen/dp_16"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/options_img"/>
+
+            </LinearLayout>
+        </RelativeLayout>
+
+
+    </FrameLayout>
+
+</LinearLayout>

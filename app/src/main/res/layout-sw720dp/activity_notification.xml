@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="org.ctdworld.propath.activity.ActivityNotification"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
+
+
+    <!--toolbar-->
+    <include layout="@layout/toolbar"/>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/connection_request_status_refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/connection_request_status_layout_details"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!--chats recycler view-->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_notification"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/paddingMarginLeftRightAllPages"
+                android:layout_marginRight="@dimen/paddingMarginLeftRightAllPages"
+                android:layout_above="@id/footer_notification"
+                android:visibility="visible"/>
+
+            <!--no connection message-->
+            <TextView
+                android:id="@+id/connection_request_status_txt_no_connections"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/no_connection"
+                android:textSize="@dimen/sp_30"
+                android:textColor="@color/colorNoConnectionDark"
+                android:gravity="center"
+                android:visibility="gone"/>
+
+            <!--footer-->
+            <fragment
+                android:id="@+id/footer_notification"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_60"
+                android:layout_alignParentBottom="true"
+                android:name="org.ctdworld.propath.fragment.FragmentFooter"/>
+
+        </RelativeLayout>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+</LinearLayout>

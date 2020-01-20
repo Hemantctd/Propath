@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="org.ctdworld.propath.activity.ActivityVerifyEmail"
+    android:background="@color/colorWhite"
+    android:fitsSystemWindows="true">
+
+
+    <include layout="@layout/layout_logo"/>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_16"
+            android:layout_marginRight="@dimen/dp_16"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+
+            <LinearLayout
+                style="@style/StyleEditContainer"
+                android:layout_marginTop="@dimen/dp_18">
+                <ImageView
+                    style="@style/StyleEditImgInContainer"
+                    android:src="@drawable/ic_password"/>
+
+                <EditText
+                    android:id="@+id/verify_email_edit_otp"
+                    style="@style/StyleEditInContainer"
+                    android:hint="@string/otp"
+                    android:inputType="numberPassword"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/verify_email_txt_resend_otp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/resend_otp"
+                android:layout_gravity="right"
+                android:layout_marginRight="@dimen/dp_16"
+                android:layout_marginTop="@dimen/dp_10"/>
+
+            <Button
+                android:id="@+id/verify_email_btn_verify"
+                style="@style/StyleButton"
+                android:text="@string/verify"
+                android:layout_marginTop="@dimen/dp_35"/>
+
+        </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/verify_email_progressbar"
+        android:layout_width="@dimen/dp_60"
+        android:layout_height="@dimen/dp_60"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+
+
+
+</RelativeLayout>

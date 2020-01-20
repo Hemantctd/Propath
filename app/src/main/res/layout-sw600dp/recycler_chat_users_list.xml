@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:layout_marginTop="@dimen/dp_18">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/recycler_contact_search_layout">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            style="@style/StyleImageLightTheme"
+            android:id="@+id/img_user"
+            android:layout_width="@dimen/dp_60"
+            android:layout_height="@dimen/dp_60"
+            android:src="@drawable/ic_profile"
+            android:layout_centerVertical="true" />
+
+
+        <TextView
+            android:id="@+id/txt_name"
+            android:textSize="@dimen/sp_16"
+            android:layout_marginLeft="@dimen/dp_16"
+            android:layout_toRightOf="@+id/img_user"
+            android:textColor="@color/colorDarkGrey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"/>
+
+        <!--  <FrameLayout
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignParentRight="true">
+
+              &lt;!&ndash;<ImageView&ndash;&gt;
+                  &lt;!&ndash;android:id="@+id/recycler_contact_search_img_send_request"&ndash;&gt;
+                  &lt;!&ndash;android:layout_width="24dp"&ndash;&gt;
+                  &lt;!&ndash;android:layout_height="24dp"&ndash;&gt;
+                  &lt;!&ndash;android:src="@drawable/ic_add_contact"&ndash;&gt;
+                  &lt;!&ndash;android:tint="@color/colorTheme"&ndash;&gt;
+                  &lt;!&ndash;android:layout_marginTop="5dp"/>&ndash;&gt;
+
+              <ProgressBar
+                  android:id="@+id/recycler_contact_search_progress_bar"
+                  android:layout_width="20dp"
+                  android:layout_height="20dp"
+                  android:visibility="gone"/>
+
+
+          </FrameLayout>-->
+
+
+        <!--  <RelativeLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_below="@id/recycler_contact_search_txt_user_name"
+              android:layout_toRightOf="@id/recycler_contact_search_img_user_pic"
+              android:layout_marginLeft="25dp"
+              android:layout_marginBottom="5dp">
+
+              <ImageView
+                  android:layout_width="16dp"
+                  android:layout_height="16dp"
+                  android:src="@drawable/ic_email"
+                  android:tint="@color/colorGrey"
+                  android:id="@+id/emailicon"
+                  android:layout_centerVertical="true"/>
+              <TextView
+                  android:id="@+id/recycler_contact_search_txt_email"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_toRightOf="@+id/emailicon"
+                  android:textColor="@color/colorDarkGrey"
+                  android:text="abc@gmail.com"
+                  android:layout_marginLeft="10dp"
+                  android:layout_centerVertical="true"/>
+          </RelativeLayout>-->
+
+    </RelativeLayout>
+
+</RelativeLayout>

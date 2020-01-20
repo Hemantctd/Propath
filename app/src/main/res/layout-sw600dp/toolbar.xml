@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true"
+    android:background="@color/colorTheme"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark"
+    android:id="@+id/toolbar"
+    app:contentInsetStartWithNavigation="0dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+
+        <!--profile image and title-->
+        <LinearLayout
+            android:id="@+id/toolbar_layout_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical">
+
+            <!--profile image-->
+            <de.hdodenhof.circleimageview.CircleImageView
+                style="@style/StyleImageDarkTheme"
+                android:id="@+id/toolbar_img_profile"
+                android:layout_width="@dimen/dp_32"
+                android:layout_height="@dimen/dp_32"
+                android:src="@drawable/ic_profile_white"
+                android:layout_marginRight="@dimen/dp_8"
+                android:visibility="gone"
+                android:layout_marginEnd="@dimen/dp_8" />
+
+
+            <!--title-->
+            <TextView
+                android:id="@+id/toolbar_txt_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp_18"
+                android:text="@string/title"
+                android:textColor="@color/colorWhite"
+                android:layout_toRightOf="@id/toolbar_img_profile"
+                android:layout_toEndOf="@id/toolbar_img_profile"
+                tools:ignore="ObsoleteLayoutParam" />
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/toolbar_search_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/dp_16"
+                android:layout_marginRight="@dimen/dp_50"
+                android:layout_marginTop="@dimen/dp_5"
+                android:layout_marginBottom="@dimen/dp_8"
+                android:hint="@string/search"
+                android:paddingLeft="@dimen/dp_10"
+                android:drawableLeft="@drawable/ic_search"
+                android:drawablePadding="@dimen/dp_5"
+                android:background="@drawable/border_bottom_white_1dp"
+                android:textColorHint="@color/colorWhite"
+                android:visibility="gone"
+                android:layout_marginStart="@dimen/dp_16"
+                android:layout_marginEnd="@dimen/dp_50"
+                android:paddingStart="@dimen/dp_10"
+                android:drawableStart="@drawable/ic_search"
+                tools:ignore="Autofill,RtlSymmetry"
+                android:inputType="text" />
+           <!-- <SearchView
+                android:id="@+id/toolbar_search_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/border_white_2dp_round_50dp"
+                android:layout_marginBottom="@dimen/dp_8"
+                android:layout_marginLeft="@dimen/dp_16"
+                android:layout_marginRight="@dimen/dp_50"
+                android:queryHint="Search User"
+                android:visibility="gone"/>
+-->
+            <!--icons-->
+            <RelativeLayout
+                android:id="@+id/icons_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/dp_16"
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="@dimen/dp_16"
+                android:layout_alignParentEnd="true">
+
+                <!--options menu icon-->
+                <ImageView
+                    style="@style/StyleImageDarkTheme"
+                    android:id="@+id/toolbar_img_options_menu"
+                    android:layout_width="@dimen/dp_24"
+                    android:layout_height="@dimen/dp_24"
+                    android:src="@drawable/ic_options_menu"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:visibility="gone"
+                    tools:ignore="ContentDescription"
+                    android:layout_alignParentEnd="true" />
+
+                <!--edit icon-->
+                <ImageView
+                    style="@style/StyleImageDarkTheme"
+                    android:id="@+id/toolbar_img_edit"
+                    android:layout_width="@dimen/dp_24"
+                    android:layout_height="@dimen/dp_24"
+                    android:src="@drawable/ic_edit"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:visibility="gone"
+                    tools:ignore="ContentDescription"
+                    android:layout_alignParentEnd="true" />
+
+                <!--it can be customizable-->
+                <ImageView
+                    style="@style/StyleImageDarkTheme"
+                    android:id="@+id/toolbar_img_1_customisable"
+                    android:layout_width="@dimen/dp_24"
+                    android:layout_height="@dimen/dp_24"
+                    android:src="@drawable/img_default_black"
+                    android:layout_centerVertical="true"
+                    android:visibility="gone"
+                    tools:ignore="ContentDescription" />
+
+                <!--it can be customizable-->
+                <ImageView
+                    android:id="@+id/toolbar_img_2_customisable"
+                    android:layout_width="@dimen/dp_24"
+                    android:layout_height="@dimen/dp_24"
+                    android:src="@drawable/img_default_black"
+                    android:layout_centerVertical="true"
+                    android:visibility="gone"
+                    tools:ignore="ContentDescription" />
+
+                <!--it can be customizable-->
+                <ImageView
+                    style="@style/StyleImageDarkTheme"
+                    android:id="@+id/toolbar_img_3_customisable"
+                    android:layout_width="@dimen/dp_24"
+                    android:layout_height="@dimen/dp_24"
+                    android:src="@drawable/img_default_black"
+                    android:layout_centerVertical="true"
+                    android:visibility="gone"
+                    tools:ignore="ContentDescription" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+
+
+
+    </LinearLayout>
+
+
+</androidx.appcompat.widget.Toolbar>

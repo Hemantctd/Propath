@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:orientation="vertical"
+    tools:context="org.ctdworld.propath.activity.ActivityNutritionGroup"
+   >
+
+
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/contact_search_refresh_layout"
+        android:layout_marginBottom="@dimen/footerHeight">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <include layout="@layout/toolbar"/>
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                       >
+
+                        <RelativeLayout
+                            style="@style/StyleEditContainer">
+
+
+                            <ImageView
+                                android:id="@+id/contact_search_search"
+                                style="@style/StyleEditImgInContainer"
+                                android:src="@drawable/ic_search"
+                                tools:ignore="ContentDescription" />
+
+                            <EditText
+                                android:id="@+id/contact_search_edit_search"
+                                style="@style/StyleEditInContainer"
+                                android:hint="@string/search"
+                                android:layout_toRightOf="@+id/contact_search_search"
+                                android:layout_marginRight="@dimen/dp_40"
+                                android:layout_toEndOf="@+id/contact_search_search"
+                                android:layout_marginEnd="@dimen/dp_40"
+                                android:inputType="text"
+                                tools:ignore="Autofill" />
+                            <ImageView
+                                android:id="@+id/contact_search_img_search"
+                                style="@style/StyleEditImgInContainer"
+                                android:src="@drawable/ic_mic"
+                                android:layout_alignParentRight="true"
+                                tools:ignore="ContentDescription"
+                                android:layout_alignParentEnd="true" />
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+                    <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginTop="20dp"-->
+                    <!--android:text=" Friends and Groups"-->
+                    <!--android:layout_marginLeft="20dp"-->
+                    <!--android:id="@+id/groups"-->
+                    <!--android:textSize="22dp"-->
+                    <!--android:textColor="@color/colorTheme"/>-->
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_16"
+                        android:layout_marginRight="@dimen/dp_16"
+                        android:id="@+id/nutritionRecyclerView"
+                        android:layout_marginTop="@dimen/dp_18"
+                        android:nestedScrollingEnabled="false"
+                        tools:ignore="UnusedAttribute" />
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_50"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/sp_18"
+                        android:layout_marginLeft="@dimen/dp_40"
+                        android:layout_marginRight="@dimen/dp_40"
+                        android:layout_marginTop="@dimen/dp_36"
+                        android:background="@drawable/bg_button"
+                        android:layout_marginBottom="@dimen/dp_36"
+                        android:id="@+id/groupDone"
+                        android:text="@string/done"/>
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+        </LinearLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    <fragment
+        android:id="@+id/container_footer"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_60"
+        android:layout_alignParentBottom="true"
+        android:name="org.ctdworld.propath.fragment.FragmentFooter"/>
+
+</RelativeLayout>

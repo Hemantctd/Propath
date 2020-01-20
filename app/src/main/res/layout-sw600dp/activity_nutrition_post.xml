@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPageBg"
+    android:orientation="vertical"
+    tools:context="org.ctdworld.propath.activity.ActivityNutritionPost">
+
+    <include layout="@layout/toolbar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/dp_50">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true"
+                tools:ignore="UselessParent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:orientation="vertical"
+
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/nutrition_profile_icon"
+                            style="@style/StyleImageLightTheme"
+                            android:layout_width="@dimen/dp_50"
+                            android:layout_height="@dimen/dp_50"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/dp_20"
+                            android:src="@drawable/ic_profile"
+                            android:tint="@color/colorIconLightTheme"
+                            android:layout_marginStart="@dimen/dp_20" />
+
+                        <TextView
+                            android:id="@+id/nutrition_profile_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="@dimen/dp_20"
+                            android:layout_marginTop="@dimen/dp_15"
+                            android:layout_toRightOf="@+id/nutrition_profile_icon"
+                            android:background="@android:color/transparent"
+                            android:hint="@string/profile_name"
+                            android:textColor="@color/colorTextBlack"
+                            android:textColorHint="@color/colorTextBlack"
+                            android:textSize="@dimen/sp_16"
+                            android:textStyle="bold"
+                            android:layout_marginStart="@dimen/dp_20"
+                            android:layout_toEndOf="@+id/nutrition_profile_icon" />
+
+                        <LinearLayout
+                            android:id="@+id/select_nutrition_type"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/nutrition_profile_name"
+                            android:layout_marginLeft="@dimen/dp_90"
+                            android:layout_marginTop="@dimen/dp_5"
+                            android:background="@drawable/border_rectangle_grey1dp"
+                            android:layout_marginStart="@dimen/dp_90">
+
+                            <LinearLayout
+                                android:id="@+id/groups_layout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                tools:ignore="UseCompoundDrawables">
+
+                                <ImageView
+                                    style="@style/StyleImageLightTheme"
+                                    android:layout_width="@dimen/dp_25"
+                                    android:layout_height="@dimen/dp_25"
+                                    android:layout_gravity="center_vertical"
+                                    android:paddingLeft="@dimen/dp_5"
+                                    android:src="@drawable/connections" />
+                                    android:src="@drawable/connections"
+                                    android:paddingStart="@dimen/dp_5"
+                                    tools:ignore="ContentDescription,RtlSymmetry" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/dp_10"
+                                    android:layout_marginRight="@dimen/dp_20"
+                                    android:gravity="center|center_vertical"
+                                    android:padding="@dimen/dp_3"
+                                    android:text="@string/groups"
+                                    android:textColor="@color/colorTextBlack"
+                                    android:textSize="@dimen/sp_16"
+
+                                    android:layout_marginStart="@dimen/dp_10"
+                                    android:layout_marginEnd="@dimen/dp_20" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+
+                    <EditText
+                        android:id="@+id/nutrition_post_data"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_20"
+                        android:layout_marginTop="@dimen/dp_20"
+                        android:layout_marginRight="@dimen/dp_20"
+                        android:background="@android:color/transparent"
+                        android:hint="@string/txt_message_hint_news_feed"
+                        android:textColor="@color/colorDarkGrey"
+                        android:textColorHint="@color/colorDarkGrey"
+                        android:textSize="@dimen/sp_15"
+                        android:inputType="text"
+                        tools:ignore="Autofill" />
+
+                    <FrameLayout
+                        android:id="@+id/frame_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_20"
+                        android:layout_marginTop="@dimen/dp_20"
+                        android:layout_marginRight="@dimen/dp_20">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+
+                     >
+                    <ImageView
+                        android:id="@+id/nutrition_image_post"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_20"
+                        android:layout_marginTop="@dimen/dp_20"
+                        android:layout_marginRight="@dimen/dp_20"
+                        android:scaleType="centerCrop"
+                        android:adjustViewBounds="true"
+                        android:visibility="gone"
+
+                        tools:ignore="ContentDescription" />
+
+
+                            <VideoView
+                                android:id="@+id/nutrition_video_view"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:visibility="gone" />
+
+                            <ImageView
+                                android:id="@+id/unmute"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginTop="@dimen/dp_20"
+                                android:layout_marginRight="@dimen/dp_20"
+                                android:padding="3dp"
+                                android:src="@drawable/ic_mute"
+                                android:visibility="gone" />
+
+                            <ImageView
+                                android:id="@+id/mute"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginTop="@dimen/dp_20"
+                                android:layout_marginRight="@dimen/dp_20"
+                                android:padding="3dp"
+                                android:src="@drawable/ic_unmute"
+                                android:visibility="gone" />
+                        </RelativeLayout>
+                    </FrameLayout>
+
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/dp_42"
+            android:background="@color/colorDarkGrey"
+            android:orientation="vertical" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_alignParentBottom="true">
+
+            <!--<ImageView
+                android:id="@+id/news_feed_settings"
+                android:layout_width="24dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/settings_feed"/>-->
+
+            <!--     <ImageView
+                     style="@style/StyleImageLightTheme"
+                     android:id="@+id/nutrition_attach_icon"
+                     android:layout_width="@dimen/dp_24"
+                     android:layout_height="@dimen/dp_24"
+                     android:layout_marginLeft="@dimen/dp_32"
+                     android:layout_toRightOf="@+id/news_feed_settings"
+                     android:src="@drawable/ic_attach"
+                     android:layout_centerVertical="true"
+                     android:rotation="45"/>
+
+                 <ImageView
+                     style="@style/StyleImageLightTheme"
+                     android:layout_width="@dimen/sp_30"
+                     android:layout_height="match_parent"
+                     android:layout_marginLeft="@dimen/dp_20"
+                     android:layout_toRightOf="@+id/img_attach_media"
+                     android:src="@drawable/ic_video_play"
+                     android:visibility="gone"/>-->
+
+
+            <ImageView
+                android:id="@+id/nutrition_attach_icon"
+                android:layout_width="@dimen/dp_24"
+                android:layout_height="@dimen/dp_24"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp_16"
+                android:layout_toRightOf="@id/img_camera"
+                android:src="@drawable/ic_attach"
+                android:tint="@color/colorTheme" />
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/dp_16"
+                android:layout_toEndOf="@id/img_camera"
+                tools:ignore="ContentDescription" />
+
+
+            <ImageView
+                android:id="@+id/img_camera"
+                style="@style/StyleImageLightTheme"
+                android:layout_width="@dimen/dp_24"
+                android:layout_height="@dimen/dp_24"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp_16"
+                android:src="@drawable/ic_camera" />
+                android:src="@drawable/ic_camera"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/dp_16"
+                tools:ignore="ContentDescription" />
+
+
+            <Button
+                android:id="@+id/nutrition_post_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="@dimen/dp_5"
+                android:layout_marginRight="@dimen/sp_16"
+                android:layout_marginBottom="@dimen/dp_5"
+                android:background="@drawable/border_news_feed_button_1dp"
+                android:text="@string/post"
+                android:textColor="@color/colorTheme"
+                android:textSize="@dimen/sp_18"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/sp_16"
+                tools:ignore="RelativeOverlap" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+</LinearLayout>

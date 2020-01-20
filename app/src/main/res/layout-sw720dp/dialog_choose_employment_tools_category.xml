@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="org.ctdworld.propath.fragment.DialogChooseEmploymentToolsCategory">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp_60"
+        android:background="@drawable/border_theme_color_2dp_round_25dp"
+        android:backgroundTint="@color/colorWhite">
+
+
+
+        <TextView
+            android:id="@+id/dialog_choose_employment_tools_category_txt_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sp_20"
+            android:fontFamily="@font/open_sans_bold"
+            android:textColor="@color/colorTheme"
+            android:text="Select Category"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:background="@drawable/border_bottom_color_theme_1dp"
+            android:textAllCaps="true"/>
+
+
+        <TextView
+            android:id="@+id/dialog_choose_employment_tools_category_txt_application_letter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/dialog_choose_employment_tools_category_txt_title"
+            android:layout_marginTop="@dimen/dp_24"
+            android:text="Application Letter"
+            android:textColor="@color/colorTextBlack"
+            android:textAllCaps="true"
+            android:textSize="@dimen/sp_18"
+            android:fontFamily="@font/open_sans_bold"
+            android:background="@drawable/border_bottom_light_grey_1dp"
+            android:layout_centerHorizontal="true"/>
+
+
+        <TextView
+            android:id="@+id/dialog_choose_employment_tools_category_txt_curriculum_vitae"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/dialog_choose_employment_tools_category_txt_application_letter"
+            android:layout_marginTop="@dimen/dp_18"
+            android:text="Curriculum Vitae"
+            android:textColor="@color/colorTextBlack"
+            android:textAllCaps="true"
+            android:textSize="@dimen/sp_18"
+            android:fontFamily="@font/open_sans_bold"
+            android:background="@drawable/border_bottom_light_grey_1dp"
+            android:layout_centerHorizontal="true"/>
+
+
+        <TextView
+            android:id="@+id/dialog_choose_employment_tools_category_txt_interview_checklist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/dialog_choose_employment_tools_category_txt_curriculum_vitae"
+            android:layout_marginTop="@dimen/dp_18"
+            android:text="Interview Checklist"
+            android:textAllCaps="true"
+            android:textColor="@color/colorTextBlack"
+            android:textSize="@dimen/sp_18"
+            android:fontFamily="@font/open_sans_bold"
+            android:background="@drawable/border_bottom_light_grey_1dp"
+            android:layout_centerHorizontal="true"/>
+
+
+        <TextView
+            android:id="@+id/dialog_choose_employment_tools_category_txt_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cancel"
+            android:layout_below="@id/dialog_choose_employment_tools_category_txt_interview_checklist"
+            android:layout_marginTop="@dimen/dp_18"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/colorTheme"
+            android:textSize="@dimen/sp_16"
+            android:fontFamily="@font/open_sans_bold"/>
+
+
+    </RelativeLayout>
+
+
+</FrameLayout>

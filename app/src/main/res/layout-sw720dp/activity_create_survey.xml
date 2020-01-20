@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorWhite"
+    tools:context="org.ctdworld.propath.activity.ActivityCreateSurvey">
+
+    <include layout="@layout/toolbar"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/dp_16">
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/dp_60"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dp_16"
+                android:layout_marginLeft="@dimen/dp_16"
+                android:id="@+id/layout"
+                android:orientation="vertical">
+
+                <!--title-->
+
+                <EditText
+                    style="@style/StyleEdit"
+                    android:hint="@string/Survey_title"
+                    android:id="@+id/surveyTitle"
+                    android:textColorHint="@color/colorDarkBlack"
+                    android:textColor="@color/colorDarkBlack"
+                    android:inputType="text"
+                    tools:ignore="Autofill" />
+
+
+
+                <!--search box-->
+
+                <EditText
+                    style="@style/StyleEdit"
+                    android:layout_marginTop="@dimen/dp_25"
+                    android:hint="@string/survey_description"
+                    android:id="@+id/surveyDesc"
+                    android:textColorHint="@color/colorDarkBlack"
+                    android:textColor="@color/colorDarkBlack"
+                    android:inputType="text"
+                    tools:ignore="Autofill" />
+
+
+
+                <!--add question title-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/add_questions"
+                    android:textSize="@dimen/sp_18"
+                    android:textColor="@color/colorDarkBlack"
+                    android:layout_marginTop="@dimen/dp_45"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_35"
+                    android:orientation="horizontal"
+                   >
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="0.4"
+                        style="@style/StyleEditContainer">
+
+                        <Spinner
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/select_no_of_questions"
+                            android:backgroundTint="@color/colorDarkBlack"
+                            android:theme="@style/ThemeSpinner"
+                            android:entries="@array/entries_question_numbers"
+                            tools:ignore="UnusedAttribute" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="0.6"
+                        style="@style/StyleEditContainer"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_marginStart="@dimen/dp_10">
+
+                        <Spinner
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:theme="@style/ThemeSpinner"
+                            android:id="@+id/selectQuestionType"
+                            android:backgroundTint="@color/colorDarkBlack"
+                            android:entries="@array/entries_question_type_data"
+                            tools:ignore="UnusedAttribute" />
+                    </LinearLayout>
+
+                    <!--<Button-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_weight="0.3"-->
+                        <!--android:layout_height="@dimen/btnHeight"-->
+                        <!--android:text="@string/add"-->
+                        <!--android:background="@drawable/border_transparent_2dp_round_10dp"-->
+                        <!--android:textColor="@color/colorWhite"-->
+                        <!--android:layout_marginLeft="15dp"-->
+                        <!--android:textSize="@dimen/btnTextSize"-->
+                        <!--android:backgroundTint="@color/colorTheme"/>-->
+
+                </LinearLayout>
+
+
+
+                <ImageView
+                    android:layout_width="@dimen/dp_40"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_marginTop="@dimen/dp_30"
+                    android:src="@drawable/ic_plus"
+                    tools:ignore="ContentDescription" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/btnHeight"
+                    android:text="@string/add"
+                    android:layout_marginTop="@dimen/dp_50"
+                    android:id="@+id/addSurveyQuestions"
+                    android:background="@drawable/border_transparent_2dp_round_10dp"
+                    android:backgroundTint="@color/colorTheme"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/sp_18"
+                    android:layout_marginLeft="@dimen/dp_40"
+                    android:layout_marginRight="@dimen/dp_40"
+                    android:layout_gravity="bottom"
+                    tools:ignore="UnusedAttribute" />
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <!--footer-->
+        <fragment
+            android:id="@+id/container_footer"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_60"
+            android:layout_alignParentBottom="true"
+            android:name="org.ctdworld.propath.fragment.FragmentFooter"
+            />
+
+    </RelativeLayout>
+</LinearLayout>

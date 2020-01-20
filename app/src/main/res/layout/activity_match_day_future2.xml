@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.ActivityMatchDayFuture2">
+
+    <include layout="@layout/toolbar"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/dp_20">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingLeft="@dimen/dp_25"
+                    android:paddingRight="@dimen/dp_25"
+                    android:paddingTop="@dimen/dp_10"
+                    android:paddingBottom="@dimen/dp_10"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:text="Date"
+                    android:textSize="@dimen/sp_16"
+                    android:textAlignment="center"
+                    android:drawableLeft="@drawable/ic_date"
+                    android:background="@drawable/border_rectangle_grey1dp"/>
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingLeft="@dimen/dp_25"
+                    android:paddingRight="@dimen/dp_25"
+                    android:paddingTop="@dimen/dp_10"
+                    android:paddingBottom="@dimen/dp_10"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:drawableLeft="@drawable/ic_watch"
+                    android:text="Time"
+                    android:textSize="@dimen/sp_16"
+                    android:textAlignment="center"
+                    android:background="@drawable/border_rectangle_grey1dp"/>
+
+            </LinearLayout>
+
+
+
+
+
+        </LinearLayout>
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_25"
+            android:paddingBottom="@dimen/dp_10"
+            android:background="@drawable/border_bottom_light_grey_1dp"
+            android:hint="Scorer Team A"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_20"
+                android:paddingBottom="@dimen/dp_10"
+                android:background="@drawable/border_bottom_light_grey_1dp"
+                android:hint="Scorer Team B"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/dp_25">
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingLeft="@dimen/dp_25"
+                    android:paddingRight="@dimen/dp_25"
+                    android:paddingTop="@dimen/dp_10"
+                    android:paddingBottom="@dimen/dp_10"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:hint="Town/City"
+                    android:textColorHint="@color/colorGrey"
+                    android:textSize="@dimen/sp_16"
+                    android:textAlignment="center"
+                    android:background="@drawable/border_rectangle_grey1dp"/>
+
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingLeft="@dimen/dp_25"
+                    android:paddingRight="@dimen/dp_25"
+                    android:paddingTop="@dimen/dp_10"
+                    android:paddingBottom="@dimen/dp_10"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:hint="Venue"
+                    android:textColorHint="@color/colorGrey"
+                    android:textSize="@dimen/sp_16"
+                    android:textAlignment="center"
+                    android:background="@drawable/border_rectangle_grey1dp"/>
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/dp_25">
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingLeft="@dimen/dp_25"
+                    android:paddingRight="@dimen/dp_25"
+                    android:paddingTop="@dimen/dp_10"
+                    android:paddingBottom="@dimen/dp_10"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:hint="Match Duration"
+                    android:textColorHint="@color/colorGrey"
+                    android:textSize="@dimen/sp_16"
+                    android:textAlignment="center"
+                    android:background="@drawable/border_rectangle_grey1dp"/>
+
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingLeft="@dimen/dp_25"
+                    android:paddingRight="@dimen/dp_25"
+                    android:paddingTop="@dimen/dp_10"
+                    android:paddingBottom="@dimen/dp_10"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:hint="No of Intervals"
+                    android:textColorHint="@color/colorGrey"
+                    android:textSize="@dimen/sp_16"
+                    android:textAlignment="center"
+                    android:background="@drawable/border_rectangle_grey1dp"/>
+
+
+
+
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/create"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dp_50"
+                android:background="@drawable/bg_button"
+                android:paddingLeft="@dimen/dp_25"
+                android:paddingRight="@dimen/dp_25"
+                android:text="Create Match"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/sp_16"/>
+
+
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

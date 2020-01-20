@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorWhite"
+    tools:context="org.ctdworld.propath.activity.ActivitySurveySettings">
+
+    <include layout="@layout/toolbar"/>
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginLeft="@dimen/dp_16"
+    android:layout_marginRight="@dimen/dp_16"
+    android:layout_marginTop="@dimen/dp_50"
+    android:padding="5dp"
+    android:id="@+id/enable_survey_layout"
+    android:background="@drawable/border_bottom_light_grey_1dp">
+
+   <TextView
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="@string/enable_survey"
+       android:layout_alignParentLeft="true"
+       android:layout_alignParentStart="true"
+       android:textSize="@dimen/sp_18"
+       android:textColor="@color/colorTextBlack"
+       tools:ignore="RelativeOverlap" />
+
+    <CheckBox
+        android:id="@+id/enable_disable_survey"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        app:buttonTint="@color/colorTheme" />
+
+</RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:layout_marginRight="@dimen/dp_20"
+        android:id="@+id/show_names_layout"
+        android:layout_marginTop="@dimen/dp_30"
+        android:layout_below="@+id/enable_survey_layout"
+        android:padding="@dimen/dp_5"
+        android:background="@drawable/border_bottom_light_grey_1dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/show_names"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:textSize="@dimen/sp_18"
+            android:textColor="@color/colorTextBlack"
+            tools:ignore="RelativeOverlap" />
+
+        <CheckBox
+            android:id="@+id/hideAndShowName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            app:buttonTint="@color/colorTheme" />
+
+    </RelativeLayout>
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/dp_60"
+    android:weightSum="1"
+    android:layout_marginLeft="@dimen/dp_40"
+    android:layout_marginRight="@dimen/dp_40"
+    android:layout_above="@+id/container_footer">
+
+    <Button
+        android:id="@+id/settingsDone"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/sp_18"
+        android:background="@drawable/bg_button"
+        android:layout_weight="1"
+        android:text="@string/done"/>
+
+</LinearLayout>
+
+       <ProgressBar
+           android:id="@+id/progress_bar"
+           android:layout_width="@dimen/dp_60"
+           android:layout_height="@dimen/dp_60"
+           android:layout_centerHorizontal="true"
+           android:layout_centerVertical="true"
+           android:visibility="gone"/>
+
+    <fragment
+        android:id="@+id/container_footer"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_60"
+        android:layout_alignParentBottom="true"
+        android:name="org.ctdworld.propath.fragment.FragmentFooter"/>
+   </RelativeLayout>
+
+</LinearLayout>

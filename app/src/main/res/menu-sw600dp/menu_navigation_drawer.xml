@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menu_home"
+        android:checkable="true"
+        android:checked="true"
+        android:icon="@drawable/ic_dashboard"
+        android:title="Home" />
+
+   <!-- <item
+        android:id="@+id/menu_search"
+        android:checkable="false"
+        android:icon="@drawable/ic_search"
+        android:title="Search" />-->
+
+    <item
+        android:id="@+id/menu_profile"
+        android:checkable="false"
+        android:icon="@drawable/ic_profile"
+        android:title="Profile" />
+
+
+    <!--<item-->
+        <!--android:id="@+id/menu_add_contacts"-->
+        <!--android:checkable="false"-->
+        <!--android:icon="@drawable/ic_add_contact"-->
+        <!--android:title="@string/add_contact" />-->
+
+
+    <item
+        android:id="@+id/menu_contacts"
+        android:checkable="false"
+        android:icon="@drawable/ic_contact"
+        android:title="@string/contacts" />
+
+    <!-- <item
+        android:id="@+id/menu_groups"
+        android:title="@string/groups"
+        android:icon="@drawable/ic_group"
+        android:checkable="true" />-->
+
+    <item
+        android:id="@+id/menu_notes"
+        android:checkable="false"
+        android:icon="@drawable/ic_notes"
+        android:title="@string/files_notes" />
+
+
+    <!--<item
+        android:id="@+id/menu_video"
+        android:title="@string/video"
+        android:icon="@drawable/ic_video"
+        android:checkable="false" />-->
+
+    <item
+        android:id="@+id/menu_survey"
+        android:title="@string/questionsList"
+        android:icon="@drawable/ic_dash_training_plan"
+        android:checkable="false" />
+    <item
+        android:id="@+id/menu_shop"
+        android:title="@string/shop"
+        android:icon="@drawable/ic_shop"
+        android:checkable="true" />
+
+
+    <item
+        android:id="@+id/menu_invite"
+        android:layout_height="wrap_content"
+        android:checkable="false"
+        android:icon="@drawable/ic_invite"
+        android:title="@string/invite" />
+
+    <item
+        android:id="@+id/menu_setting"
+        android:checkable="false"
+        android:icon="@drawable/ic_settings"
+        android:title="@string/settings" />
+
+
+     <item
+        android:id="@+id/menu_feedback"
+        android:title="@string/feedback"
+        android:icon="@drawable/ic_feedback"
+        android:checkable="false"/>
+
+</menu>

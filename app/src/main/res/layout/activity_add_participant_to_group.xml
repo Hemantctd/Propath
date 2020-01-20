@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorWhite"
+    tools:context="org.ctdworld.propath.activity.ActivityChatAddParticipantToGroup"
+    android:id="@+id/activity_add_participants_refresh_layout">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/toolbar"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginBottom="@dimen/footerHeight"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:layout_marginRight="@dimen/dp_20">
+
+
+            <RelativeLayout
+                style="@style/StyleEditContainer"
+                android:layout_marginTop="@dimen/dp_25">
+
+                <ImageView
+                    android:id="@+id/add_participant_search_icon"
+                    style="@style/StyleEditImgInContainer"
+                    android:src="@drawable/ic_search"
+                    android:padding="@dimen/dp_10"
+                    tools:ignore="ContentDescription" />
+                <ImageView
+                    android:id="@+id/add_participant_to_group_img_search"
+                    style="@style/StyleEditImgInContainer"
+                    android:src="@drawable/ic_mic"
+                    android:layout_alignParentRight="true"
+                    android:padding="@dimen/dp_10"
+                    android:layout_alignParentEnd="true"
+                    tools:ignore="ContentDescription" />
+
+                <EditText
+                    android:id="@+id/add_participant_to_group_edit_search"
+                    style="@style/StyleEditInContainer"
+                    android:hint="@string/search"
+                    android:layout_marginRight="@dimen/dp_40"
+                    android:textColorHint="@color/colorDarkBlack"
+                    android:layout_toRightOf="@+id/add_participant_search_icon"
+                    android:textColor="@color/colorDarkBlack"
+                    android:inputType="text"
+                    tools:ignore="Autofill"
+                    android:layout_toEndOf="@+id/add_participant_search_icon"
+                    android:layout_marginEnd="@dimen/dp_40" />
+
+            </RelativeLayout>
+
+            <!--<RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="25dp">
+
+                <TextView
+                    android:id="@+id/groupText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:text="Add Patrticipants"
+                    android:textColor="@color/colorDarkBlack"
+                    android:textSize="20sp" />
+            </RelativeLayout>-->
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/activity_add_participants_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/dp_20" />
+
+
+        </LinearLayout>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/activity_add_participants_floating_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="@dimen/dp_70"
+            android:layout_marginRight="@dimen/dp_10"
+            android:baselineAlignBottom="true"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/ic_arrow_right"
+            tools:ignore="RelativeOverlap"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/dp_10" />
+
+        <fragment
+            android:id="@+id/container_footer"
+            android:name="org.ctdworld.propath.fragment.FragmentFooter"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_60"
+            android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+
+    </LinearLayout>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

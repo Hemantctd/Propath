@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        style="@style/StyleAdapterCardView">
+
+        <RelativeLayout
+            android:id="@+id/commentsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/adapterCardViewInnerMargin">
+
+            <!--user pic-->
+            <de.hdodenhof.circleimageview.CircleImageView
+                style="@style/StyleImageLightTheme"
+                android:id="@+id/user_profile_icon"
+                android:layout_width="@dimen/dp_50"
+                android:layout_height="@dimen/dp_50"
+                android:src="@drawable/ic_profile"/>
+
+            <!--options menu-->
+            <ImageView
+                style="@style/StyleImageLightTheme"
+                android:layout_width="@dimen/dp_24"
+                android:layout_height="@dimen/dp_24"
+                android:id="@+id/optionsImg"
+                android:visibility="visible"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ic_options_menu"
+                android:layout_alignParentEnd="true"
+                android:contentDescription="@string/options_menu" />
+
+
+            <!--user name-->
+            <TextView
+                android:id="@+id/user_profile_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_16"
+                android:layout_toRightOf="@+id/user_profile_icon"
+                android:textSize="@dimen/adapterTitleTxtSize"
+                android:gravity="top"
+                android:includeFontPadding="false"
+                android:textColor="@color/colorTheme"
+                android:layout_marginStart="@dimen/dp_16"
+                android:layout_toEndOf="@+id/user_profile_icon"
+                tools:ignore="RelativeOverlap" />
+
+            <!--date time-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/user_profile_name"
+                android:layout_marginLeft="@dimen/dp_16"
+                android:layout_toRightOf="@id/user_profile_icon"
+                android:id="@+id/comments_date"
+                android:layout_marginTop="@dimen/dp_3"
+                android:textSize="@dimen/adapterDateTimeTxtSize"
+                android:textColor="@color/colorDarkGrey"
+                android:layout_marginStart="@dimen/dp_16"
+                android:layout_toEndOf="@id/user_profile_icon" />
+
+            <!--comment message-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/user_profile_icon"
+                android:layout_marginTop="@dimen/dp_12"
+                android:id="@+id/comments"
+                android:autoLink="all"
+                android:textSize="@dimen/adapterDescriptionTxtSize"
+                android:textColor="@color/colorDarkGrey"/>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</androidx.cardview.widget.CardView>

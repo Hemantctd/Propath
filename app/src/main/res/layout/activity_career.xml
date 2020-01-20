@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="org.ctdworld.propath.activity.ActivityCareer"
+    android:orientation="vertical"
+    android:background="@color/colorWhite">
+
+
+    <include layout="@layout/toolbar"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/dp_60"
+            android:orientation="vertical">
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/activity_career_tab_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40"
+                app:tabTextColor="@color/colorTheme"
+                app:tabBackground="@color/colorWhite"
+                app:tabIndicatorColor="@color/colorTheme"
+                app:tabGravity="fill"
+                app:tabMaxWidth="@dimen/dp_0"
+                app:tabIndicatorHeight="@dimen/dp_2"
+                app:tabMode="fixed"
+                app:tabSelectedTextColor="@color/colorTheme"/>
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/activity_career_view_pager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/dp_16"
+                android:layout_marginLeft="@dimen/dp_16"
+                android:layout_marginRight="@dimen/dp_16"/>
+
+        </LinearLayout>
+
+
+        <fragment
+            android:id="@+id/container_footer"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_60"
+            android:layout_alignParentBottom="true"
+            android:name="org.ctdworld.propath.fragment.FragmentFooter"/>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite">
+
+    <RelativeLayout
+        android:id="@+id/recycler_career_employment_data_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp_16">
+
+        <ImageView
+            style="@style/StyleImageLightTheme"
+            android:id="@+id/recycler_career_employment_data_img_left"
+            android:layout_width="@dimen/dp_60"
+            android:layout_height="@dimen/dp_60"
+            android:tint="@android:color/transparent"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/ic_unit_notes"/>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_toLeftOf="@id/recycler_career_employment_data_img_download"
+            android:layout_toRightOf="@id/recycler_career_employment_data_img_left"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_16"
+            android:layout_marginRight="@dimen/dp_16">
+
+            <TextView
+                android:id="@+id/recycler_career_employment_data_txt_file_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp_18"
+                android:text="File Name"
+                android:textColor="@color/colorTextBlack"/>
+
+            <TextView
+                android:id="@+id/recycler_career_employment_data_txt_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp_14"
+                android:layout_below="@+id/recycler_career_employment_data_txt_file_name"
+                android:text="14-09-2018 "
+                android:textColor="@color/colorDarkGrey"/>
+
+            <TextView
+                android:id="@+id/recycler_career_employment_data_txt_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_8"
+                android:textSize="@dimen/sp_14"
+                android:layout_toRightOf="@+id/recycler_career_employment_data_txt_date"
+                android:layout_alignBaseline="@id/recycler_career_employment_data_txt_date"
+                android:text="00:00 p.m. "
+                android:textColor="@color/colorDarkGrey"/>
+
+
+        </RelativeLayout>
+
+
+        <ImageView
+            style="@style/StyleImageLightTheme"
+            android:id="@+id/recycler_career_employment_data_img_download"
+            android:layout_width="@dimen/dp_24"
+            android:layout_height="@dimen/dp_24"
+            android:src="@drawable/ic_download"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"/>
+
+
+    </RelativeLayout>
+
+</LinearLayout>
